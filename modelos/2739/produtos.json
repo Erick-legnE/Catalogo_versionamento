@@ -1,0 +1,27 @@
+{
+  "entidade_id": "2739",
+  "entidade_nome": "2739",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "27390002",
+      "modelo": "2739",
+      "tamanho": "18",
+      "cor_codigo": "C076",
+      "tingimento": "X",
+      "cor_nome": "149/406010",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 2739 4F TAM 18 COR C076 B RILHO PERS TING      ",
+      "qtd_saldo": 19,
+      "unidade": "GR",
+      "cliente": "Alenice Industria Têxtil",
+      "representante": "Marvic Têxtil Representações",
+      "foto": null
+    }
+  ]
+}

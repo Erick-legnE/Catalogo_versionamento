@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_122",
+  "entidade_nome": "Sallo Confecção e Comercio de Roupas",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "103690104",
+      "modelo": "10369",
+      "tamanho": "18",
+      "cor_codigo": "C2967",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10369 4F TAM 18 COR C2967 FOSCO PERS",
+      "qtd_saldo": 11,
+      "unidade": "GR",
+      "cliente": "Sallo Confecção e Comercio de Roupas",
+      "representante": "Grandes Contas",
+      "foto": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entidade_id": "1380",
+  "entidade_nome": "1380",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "13800004",
+      "modelo": "1380",
+      "tamanho": "14",
+      "cor_codigo": "C108",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 1380 4F TAM 14 COR C108 BRILHO PERS",
+      "qtd_saldo": 180,
+      "unidade": "GR",
+      "cliente": "Krindges Industrial",
+      "representante": "J M Pereira e Cia.",
+      "foto": null
+    }
+  ]
+}

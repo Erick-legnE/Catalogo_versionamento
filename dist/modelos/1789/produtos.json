@@ -1,0 +1,27 @@
+{
+  "entidade_id": "1789",
+  "entidade_nome": "1789",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "17890003",
+      "modelo": "1789",
+      "tamanho": "18",
+      "cor_codigo": "C076",
+      "tingimento": null,
+      "cor_nome": "PEROLADO ",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 1789 4F TAM 18 COR C076 BRILHO PERS (GS)",
+      "qtd_saldo": 6,
+      "unidade": "GR",
+      "cliente": "BAUMGARTEN INDUSTRIA DE CONFECCOES LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

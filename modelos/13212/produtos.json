@@ -1,0 +1,27 @@
+{
+  "entidade_id": "13212",
+  "entidade_nome": "13212",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "132120001",
+      "modelo": "13212",
+      "tamanho": "14",
+      "cor_codigo": "C2163",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 13212 4F TAM 14 COR C2163 FOSCO PERS TING E EST",
+      "qtd_saldo": 10,
+      "unidade": "GR",
+      "cliente": "",
+      "representante": "",
+      "foto": null
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil Botões — Pastilhas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-body: #f8fafc;
+            --header-bg: #1e293b;
+            --primary: #00bad2;
+            --primary-hover: #0099ad;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            --transition: all 0.25s ease;
+        }
+
+        [data-theme="dark"] {
+            --bg-body: #0f172a;
+            --header-bg: #020617;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --card-bg: #1e293b;
+            --border: #334155;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Nunito Sans', sans-serif; }
+        body { background: var(--bg-body); color: var(--text-main); min-height: 100vh; padding-bottom: 3rem; transition: background 0.3s ease; }
+
+        header {
+            background: var(--header-bg);
+            color: #fff;
+            padding: 1.5rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 4px solid var(--primary);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-content {
+            max-width: 650px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .header-top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title { font-size: 1.5rem; font-weight: 900; }
+        .header-title span { color: var(--primary); }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover { background: rgba(255, 255, 255, 0.2); }
+
+        .search-box { width: 100%; position: relative; }
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 2.5rem 0.75rem 1.25rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-input::placeholder { color: #94a3b8; }
+        .search-input:focus { border-color: var(--primary); background: rgba(255, 255, 255, 0.18); }
+
+        .clear-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #94a3b8;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        .stats-bar {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .grid {
+            max-width: 1200px;
+            margin: 1.5rem auto 0;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .card:hover { transform: translateY(-4px); }
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #000; /* Ensures background behind image is always white */
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
+
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+.carousel-track img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zooms slightly to fill space */
+    border-radius: 50%; /* Cuts out square/ring corners */
+    clip-path: circle(46% at center); /* Trims the outer 4% black ring edge */
+    background-color: #000;
+    flex-shrink: 0;
+    padding: 6px;
+}
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(15, 23, 42, 0.65);
+            color: #fff;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.85rem;
+            backdrop-filter: blur(4px);
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .nav-btn:hover { opacity: 1; background: var(--primary); }
+        .nav-btn.prev { left: 8px; }
+        .nav-btn.next { right: 8px; }
+
+        .photo-indicator {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.65);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .card-info { padding: 0.85rem; text-align: center; }
+        .color-code { font-size: 1.1rem; font-weight: 900; color: var(--primary); }
+
+        .sentinel {
+            width: 100%;
+            height: 40px;
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner {
+            width: 28px;
+            height: 28px;
+            border: 3px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="header-top">
+                <h1 class="header-title">Brasil <span>Botões</span> — Pastilhas</h1>
+                <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙 Escuro</button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search" class="search-input" placeholder="Buscar por código (ex: C001, C15)..." oninput="handleSearch()">
+                <button class="clear-btn" id="clear-btn" onclick="clearSearch()">✕</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="stats-bar" id="stats-bar">Carregando pastilhas...</div>
+
+    <main class="grid" id="pastilhas-grid"></main>
+
+    <div class="sentinel" id="sentinel">
+        <div class="spinner" id="spinner"></div>
+    </div>
+
+    <script>
+        const BATCH_SIZE = 30;
+        let todosDados = [];
+        let dadosFiltrados = [];
+        let ponteiroAtual = 0;
+        const carouselStates = {};
+
+        // System Dark Mode Preference & Storage Init
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.getElementById('theme-btn').textContent = '☀️ Claro';
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                document.getElementById('theme-btn').textContent = '🌙 Escuro';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                document.getElementById('theme-btn').textContent = '☀️ Claro';
+            }
+        }
+
+        async function carregarJSON() {
+            try {
+                const res = await fetch('pastilhas.json');
+                todosDados = await res.json();
+                
+                // Read URL search params on load
+                const urlParams = new URLSearchParams(window.location.search);
+                const queryParam = urlParams.get('q');
+                
+                if (queryParam) {
+                    document.getElementById('search').value = queryParam;
+                    document.getElementById('clear-btn').style.display = 'block';
+                    executarBusca(queryParam);
+                } else {
+                    dadosFiltrados = [...todosDados];
+                    renderizarLote(true);
+                }
+            } catch (e) {
+                console.error("Erro ao carregar 'pastilhas.json'.", e);
+                document.getElementById('pastilhas-grid').innerHTML = `<div class="no-results">Erro ao carregar os dados das pastilhas.</div>`;
+                document.getElementById('spinner').style.display = 'none';
+            }
+        }
+
+        function renderizarLote(reset = false) {
+            const grid = document.getElementById('pastilhas-grid');
+            if (reset) {
+                grid.innerHTML = '';
+                ponteiroAtual = 0;
+            }
+
+            const proximoLote = dadosFiltrados.slice(ponteiroAtual, ponteiroAtual + BATCH_SIZE);
+
+            if (dadosFiltrados.length === 0) {
+                grid.innerHTML = `<div class="no-results">Nenhuma pastilha encontrada para essa busca.</div>`;
+                document.getElementById('spinner').style.display = 'none';
+                atualizarStats();
+                return;
+            }
+
+            proximoLote.forEach((item, idxAbs) => {
+                const idx = ponteiroAtual + idxAbs;
+                const hasMultiple = item.imagens && item.imagens.length > 1;
+
+                const cardHtml = `
+                    <div class="card">
+                        <div class="carousel-container">
+                            <div class="carousel-track" id="track-${idx}">
+                                ${item.imagens.map((img, i) => `
+                                    <img src="${img}" alt="${item.cor_codigo}" loading="${idx < 12 && i === 0 ? 'eager' : 'lazy'}">
+                                `).join('')}
+                            </div>
+                            ${hasMultiple ? `
+                                <button class="nav-btn prev" onclick="moveSlide(${idx}, -1)">❮</button>
+                                <button class="nav-btn next" onclick="moveSlide(${idx}, 1)">❯</button>
+                                <span class="photo-indicator" id="indicator-${idx}">1/${item.imagens.length}</span>
+                            ` : ''}
+                        </div>
+                        <div class="card-info">
+                            <div class="color-code">${item.cor_codigo}</div>
+                        </div>
+                    </div>
+                `;
+                grid.insertAdjacentHTML('beforeend', cardHtml);
+            });
+
+            ponteiroAtual += BATCH_SIZE;
+            atualizarStats();
+
+            // Hide spinner if no more items
+            document.getElementById('spinner').style.display = (ponteiroAtual < dadosFiltrados.length) ? 'block' : 'none';
+        }
+
+        function atualizarStats() {
+            const total = dadosFiltrados.length;
+            const exibidos = Math.min(ponteiroAtual, total);
+            document.getElementById('stats-bar').textContent = total > 0 ? `Exibindo ${exibidos} de ${total} pastilhas` : '';
+        }
+
+        function handleSearch() {
+            const query = document.getElementById('search').value;
+            document.getElementById('clear-btn').style.display = query ? 'block' : 'none';
+            
+            // Sync with URL
+            const url = new URL(window.location);
+            if (query) url.searchParams.set('q', query);
+            else url.searchParams.delete('q');
+            window.history.replaceState({}, '', url);
+
+            executarBusca(query);
+        }
+
+        function clearSearch() {
+            const searchInput = document.getElementById('search');
+            searchInput.value = '';
+            handleSearch();
+            searchInput.focus();
+        }
+
+        function executarBusca(queryRaw) {
+            const query = queryRaw.toLowerCase().trim();
+
+            if (!query) {
+                dadosFiltrados = [...todosDados];
+            } else {
+                dadosFiltrados = todosDados.filter(item => {
+                    const code = item.cor_codigo.toLowerCase();
+                    const numOnly = code.replace(/\D/g, '');
+                    return code.includes(query) || (numOnly && numOnly.includes(query));
+                });
+            }
+
+            renderizarLote(true);
+        }
+
+        function moveSlide(cardIdx, direction) {
+            const track = document.getElementById(`track-${cardIdx}`);
+            const indicator = document.getElementById(`indicator-${cardIdx}`);
+            if (!track) return;
+
+            const totalImages = track.children.length;
+            if (!(cardIdx in carouselStates)) carouselStates[cardIdx] = 0;
+
+            carouselStates[cardIdx] = (carouselStates[cardIdx] + direction + totalImages) % totalImages;
+            const currentIdx = carouselStates[cardIdx];
+
+            track.style.transform = `translateX(-${currentIdx * 100}%)`;
+            if (indicator) indicator.textContent = `${currentIdx + 1}/${totalImages}`;
+        }
+
+        // IntersectionObserver for Infinite Scroll
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && ponteiroAtual < dadosFiltrados.length) {
+                renderizarLote(false);
+            }
+        }, { rootMargin: '200px' });
+
+        observer.observe(document.getElementById('sentinel'));
+
+        carregarJSON();
+    </script>
+</body>
+</html>

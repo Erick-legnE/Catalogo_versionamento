@@ -1,0 +1,27 @@
+{
+  "entidade_id": "4186",
+  "entidade_nome": "4186",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "41860001",
+      "modelo": "4186",
+      "tamanho": "18",
+      "cor_codigo": "C404",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 4186 4F TAM 18 COR C404  FOSCO PERS ",
+      "qtd_saldo": 61,
+      "unidade": "GR",
+      "cliente": "KYLY INDUSTRIA TEXTIL LTDA.",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entidade_id": "12789",
+  "entidade_nome": "12789",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "127890002",
+      "modelo": "12789",
+      "tamanho": "18",
+      "cor_codigo": "C2088",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 12789 4F TAM 18 COR C2088 FOSCO PERS",
+      "qtd_saldo": 16,
+      "unidade": "GR",
+      "cliente": "K2 COMERCIO E INDUSTRIA LTDA",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

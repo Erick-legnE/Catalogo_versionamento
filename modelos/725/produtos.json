@@ -1,0 +1,27 @@
+{
+  "entidade_id": "725",
+  "entidade_nome": "725",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "7250019",
+      "modelo": "725",
+      "tamanho": "14",
+      "cor_codigo": "C1201",
+      "tingimento": "1201",
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "BRILHO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTÃO POL DIF 725 2F TAM 14 COR C1201 BRI LISO TIN",
+      "qtd_saldo": 110,
+      "unidade": "GR",
+      "cliente": "Cia.. Hering",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

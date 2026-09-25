@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil Botões — Portal de Atendimento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-body: #f1f5f9;
+            --header-bg: #1e293b;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --primary: #00bad2;
+            --primary-dark: #0099ad;
+            --accent-yellow: #fbd722;
+            --border: #e2e8f0;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-hover: 0 12px 24px -4px rgba(0, 186, 210, 0.15);
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --featured-bg: linear-gradient(135deg, #ffffff 0%, #f0fdff 100%);
+            --tag-bg: #f1f5f9;
+            --danger: #ef4444;
+        }
+
+        [data-theme="dark"] {
+            --bg-body: #0f172a;
+            --header-bg: #020617;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+            --featured-bg: linear-gradient(135deg, #1e293b 0%, #082f35 100%);
+            --tag-bg: #0f172a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito Sans', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--header-bg) 0%, #0f172a 100%);
+            color: #ffffff;
+            padding: 3rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+            border-bottom: 6px solid var(--primary);
+        }
+
+        .header-actions {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-header {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 0.4rem 0.85rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .btn-header:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-header.active-user {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-wrapper {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 1.25rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 14px;
+            display: block;
+        }
+
+        .brand-title {
+            font-size: 2.25rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .brand-title span {
+            color: var(--primary);
+        }
+
+        .brand-subtitle {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            max-width: 500px;
+            font-weight: 400;
+        }
+
+        .search-container {
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 480px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.85rem 1.25rem 0.85rem 3rem;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+            backdrop-filter: blur(6px);
+            transition: var(--transition);
+        }
+
+        .search-input::placeholder {
+            color: #94a3b8;
+        }
+
+        .search-input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(0, 186, 210, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            margin: -1.75rem auto 3rem;
+            padding: 0 1.5rem;
+            flex: 1;
+        }
+
+        .section-block {
+            margin-top: 2.75rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            height: 2px;
+            flex: 1;
+            background: var(--border);
+            margin-left: 0.75rem;
+        }
+
+        .grid, .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary);
+        }
+
+        .card.featured {
+            grid-column: 1 / -1;
+            background: var(--featured-bg);
+            border: 3px solid var(--primary);
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .featured-badge {
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-header h2, .card-header h3 {
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--text-main);
+            margin-bottom: 0.35rem;
+        }
+
+        .card-header p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .card-meta {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            background: var(--tag-bg);
+            color: var(--text-muted);
+            padding: 3px 8px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        .tag.restricted {
+            background: #fff1f2;
+            color: #e11d48;
+            border-color: #fecdd3;
+        }
+
+        [data-theme="dark"] .tag.restricted {
+            background: #4c0519;
+            color: #fda4af;
+            border-color: #881337;
+        }
+
+        .card-btn {
+            margin-top: 1.25rem;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: var(--transition);
+        }
+
+        .card:hover .card-btn {
+            color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        .empty-notice {
+            grid-column: 1 / -1;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-style: italic;
+            padding: 1rem 0;
+        }
+
+        .load-more-wrapper {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .load-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.75rem;
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary-dark);
+            font-size: 0.9rem;
+            font-weight: 800;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        [data-theme="dark"] .load-more-btn {
+            color: var(--primary);
+        }
+
+        .load-more-btn:hover {
+            background: var(--primary);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 186, 210, 0.25);
+        }
+
+        /* LOGIN MODAL */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(6px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 1rem;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 400px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .modal-header {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .modal-header h3 {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--text-main);
+        }
+
+        .modal-header p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: var(--bg-body);
+            color: var(--text-main);
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 0.85rem;
+            border-radius: var(--radius-md);
+            border: none;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-dark);
+        }
+
+        .login-error {
+            color: var(--danger);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding: 2rem 1rem;
+            border-top: 1px solid var(--border);
+            background: var(--card-bg);
+            margin-top: auto;
+        }
+
+        @media (max-width: 960px) {
+            .grid, .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .grid, .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .card.featured {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .hero {
+                padding-top: 2rem;
+            }
+            .brand-title {
+                font-size: 1.75rem;
+            }
+            .header-actions {
+                top: 0.75rem;
+                right: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="header-actions">
+            <button class="btn-header" onclick="toggleTheme()" id="theme-btn">🌙 Escuro</button>
+            <button class="btn-header" onclick="openLoginModal()" id="auth-btn">🔑 Entrar</button>
+        </div>
+        <div class="hero-content">
+            <div class="logo-wrapper">
+                <img src="logo_simbolo.jpeg" alt="Brasil Botões" class="logo-img">
+            </div>
+            <h1 class="brand-title">Brasil <span>Botões</span></h1>
+            <p class="brand-subtitle">Portal Central de Catálogos & Atendimento Personalizado</p>
+
+            <div class="search-container">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <input type="text" id="portal-search" class="search-input" placeholder="Buscar cliente ou representante..." oninput="filterPortals()">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ACESSO GERAL -->
+        <section class="section-block">
+            <div class="section-header">
+                <span class="section-title">Acesso Geral (Livre)</span>
+            </div>
+            <div class="grid">
+                <a href="catalogo_geral.html" class="card featured portal-card" data-name="catálogo geral pronta entrega estoque">
+                    <div>
+                        <span class="featured-badge">Pronta Entrega</span>
+                        <div class="card-header">
+                            <h2>Catálogo Geral de Produtos</h2>
+                            <p>Consulta completa do estoque em tempo real com fotos, furações e disponibilidades.</p>
+                        </div>
+                        <div class="card-meta">
+                            <span class="tag">Atendimento Geral</span>
+                            <span class="tag">Atualizado</span>
+                        </div>
+                    </div>
+                    <div class="card-btn">Acessar Catálogo →</div>
+                </a>
+
+                <a href="pastilhas.html" class="card portal-card" data-name="pastilhas acervo cores frente verso">
+                    <div class="card-header">
+                        <h2>Catálogo de Pastilhas</h2>
+                        <p>Visualização simplificada de cores e amostras com galeria frente/verso.</p>
+                    </div>
+                    <div class="card-meta">
+                        <span class="tag">Galeria</span>
+                        <span class="tag">Cores</span>
+                    </div>
+                    <div class="card-btn">Ver Pastilhas →</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO REPRESENTANTES -->
+        <section class="section-block" id="section-representantes">
+            <div class="section-header">
+                <span class="section-title">Representantes Autorizados</span>
+            </div>
+            <div id="grid-representantes" class="grid-container"></div>
+            <div class="load-more-wrapper">
+                <button id="btn-load-reps" class="load-more-btn" onclick="loadMore('representante')">
+                    Carregar mais representantes (+3)
+                </button>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CLIENTES -->
+        <section class="section-block" id="section-clientes">
+            <div class="section-header">
+                <span class="section-title">Clientes Autorizados</span>
+            </div>
+            <div id="grid-clientes" class="grid-container"></div>
+            <div class="load-more-wrapper">
+                <button id="btn-load-clis" class="load-more-btn" onclick="loadMore('cliente')">
+                    Carregar mais clientes (+3)
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL DE AUTENTICAÇÃO -->
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeLoginModal()">✕</button>
+            <div class="modal-header">
+                <h3 id="modal-title">Área Restrita</h3>
+                <p id="modal-subtitle">Informe seu usuário e senha de acesso</p>
+            </div>
+            <form onsubmit="handleLogin(event)">
+                <div class="login-error" id="login-error">Usuário ou senha incorretos!</div>
+                <div class="form-group">
+                    <label for="input-username">Usuário / ID</label>
+                    <input type="text" id="input-username" class="form-control" placeholder="Ex: nome-slug" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-password">Senha de Acesso</label>
+                    <input type="password" id="input-password" class="form-control" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-submit">Acessar Catálogo</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; Brasil Botões LTDA — Portal de Atendimento
+    </footer>
+
+    <script>
+        const MASTER_KEY = "brasilbotoesmelhor";
+        const PAGE_SIZE = 3;
+        let subsitesData = [];
+        let usuariosData = [];
+        let targetUrl = null; // Store pending redirect target if clicked on a restricted card
+
+        let visibleCounts = {
+            representante: PAGE_SIZE,
+            cliente: PAGE_SIZE
+        };
+
+        async function inicializar() {
+            await Promise.all([carregarSubsites(), carregarUsuarios()]);
+            checkActiveSession();
+        }
+
+        async function carregarSubsites() {
+            try {
+                const response = await fetch('subsites_index.json');
+                subsitesData = await response.json();
+                renderSection('representante');
+                renderSection('cliente');
+            } catch (erro) {
+                console.error('Erro ao carregar índice de sub-sites:', erro);
+            }
+        }
+
+        async function carregarUsuarios() {
+            try {
+                const response = await fetch('usuarios.json');
+                usuariosData = await response.json();
+            } catch (erro) {
+                console.warn('usuarios.json não encontrado ou inválido.', erro);
+            }
+        }
+
+        function checkActiveSession() {
+            const userJson = sessionStorage.getItem('bb_authenticated_user');
+            const authBtn = document.getElementById('auth-btn');
+            if (userJson) {
+                const user = JSON.parse(userJson);
+                authBtn.textContent = `👤 ${user.nome.split(' ')[0]}`;
+                authBtn.classList.add('active-user');
+                authBtn.onclick = logout;
+            } else {
+                authBtn.textContent = '🔑 Entrar';
+                authBtn.classList.remove('active-user');
+                authBtn.onclick = () => openLoginModal();
+            }
+        }
+
+        function criarCard(item) {
+            const pathUrl = item.url ? item.url : `${item.tipo}s/${item.slug}/index.html`;
+            return `
+                <div class="card portal-card" data-name="${item.nome.toLowerCase()}" onclick="accessCatalog('${pathUrl}', '${item.slug}')">
+                    <div class="card-header">
+                        <h3>${item.nome}</h3>
+                        <p>Catálogo dedicado de produtos.</p>
+                    </div>
+                    <div class="card-meta">
+                        <span class="tag restricted">🔒 Restrito</span>
+                        <span class="tag">${item.badge}</span>
+                        <span class="tag">${item.qtd} produtos</span>
+                    </div>
+                    <div class="card-btn">Acessar área restrita →</div>
+                </div>
+            `;
+        }
+
+        function accessCatalog(url, slug) {
+            const session = sessionStorage.getItem('bb_authenticated_user');
+            if (session) {
+                const user = JSON.parse(session);
+                // Allow access if admin or matching target slug
+                if (user.slug === slug || user.username === 'admin') {
+                    window.location.href = url;
+                    return;
+                }
+            }
+            // Require login
+            targetUrl = url;
+            openLoginModal(slug);
+        }
+
+        function renderSection(tipo) {
+            const query = document.getElementById('portal-search').value.toLowerCase().trim();
+            const gridId = tipo === 'representante' ? 'grid-representantes' : 'grid-clientes';
+            const btnId = tipo === 'representante' ? 'btn-load-reps' : 'btn-load-clis';
+            
+            const grid = document.getElementById(gridId);
+            const btn = document.getElementById(btnId);
+
+            let filtered = subsitesData.filter(i => i.tipo === tipo);
+
+            if (query) {
+                filtered = filtered.filter(i => i.nome.toLowerCase().includes(query));
+            }
+
+            const totalFiltered = filtered.length;
+            const itemsToDisplay = query ? filtered : filtered.slice(0, visibleCounts[tipo]);
+
+            if (itemsToDisplay.length === 0) {
+                grid.innerHTML = `<p class="empty-notice">Nenhum ${tipo === 'representante' ? 'representante' : 'cliente'} encontrado.</p>`;
+                if (btn) btn.style.display = 'none';
+                return;
+            }
+
+            grid.innerHTML = itemsToDisplay.map(criarCard).join('');
+
+            if (btn) {
+                if (!query && visibleCounts[tipo] < totalFiltered) {
+                    btn.style.display = 'inline-flex';
+                } else {
+                    btn.style.display = 'none';
+                }
+            }
+        }
+
+        function loadMore(tipo) {
+            visibleCounts[tipo] += PAGE_SIZE;
+            renderSection(tipo);
+        }
+
+        function filterPortals() {
+            const query = document.getElementById('portal-search').value.toLowerCase().trim();
+            const staticCards = document.querySelectorAll('.grid .portal-card');
+            
+            staticCards.forEach(card => {
+                const name = card.getAttribute('data-name') || '';
+                card.style.display = name.includes(query) ? 'flex' : 'none';
+            });
+
+            renderSection('representante');
+            renderSection('cliente');
+        }
+
+        /* MODAL & LOGIN LOGIC */
+        function openLoginModal(targetSlug = null) {
+            document.getElementById('login-modal').classList.add('active');
+            document.getElementById('login-error').style.display = 'none';
+            
+            if (targetSlug) {
+                document.getElementById('input-username').value = targetSlug;
+                document.getElementById('input-password').focus();
+            } else {
+                document.getElementById('input-username').focus();
+            }
+        }
+
+        function closeLoginModal() {
+            document.getElementById('login-modal').classList.remove('active');
+            targetUrl = null;
+        }
+
+        function handleLogin(event) {
+    event.preventDefault();
+    const usernameInput = document.getElementById('input-username').value.trim();
+    const passwordInput = document.getElementById('input-password').value.trim();
+    const errorDiv = document.getElementById('login-error');
+
+    let usuarioEncontrado = null;
+
+    // Check if the user entered the Master Key
+    if (passwordInput === MASTER_KEY) {
+        // Find user by username/slug or default to an Admin session
+        usuarioEncontrado = usuariosData.find(u => 
+            u.username === usernameInput || u.slug === usernameInput || u.id === usernameInput
+        ) || {
+            id: "user_admin",
+            nome: "Administrador Master",
+            slug: usernameInput || "admin",
+            username: "admin",
+            ativo: true
+        };
+    } else {
+        // Standard lookup checking exact user password
+        usuarioEncontrado = usuariosData.find(u => 
+            (u.username === usernameInput || u.slug === usernameInput || u.id === usernameInput) &&
+            u.password === passwordInput && u.ativo !== false
+        );
+    }
+
+    if (usuarioEncontrado) {
+        sessionStorage.setItem('bb_authenticated_user', JSON.stringify(usuarioEncontrado));
+        checkActiveSession();
+        closeLoginModal();
+
+        if (targetUrl) {
+            window.location.href = targetUrl;
+        } else {
+            const matchedSubsite = subsitesData.find(s => s.slug === usuarioEncontrado.slug);
+            if (matchedSubsite) {
+                window.location.href = `${matchedSubsite.tipo}s/${matchedSubsite.slug}/index.html`;
+            } else {
+                alert(`Bem-vindo, ${usuarioEncontrado.nome}!`);
+            }
+        }
+    } else {
+        errorDiv.style.display = 'block';
+    }
+}
+
+        function logout() {
+            if (confirm('Deseja encerrar sua sessão?')) {
+                sessionStorage.removeItem('bb_authenticated_user');
+                checkActiveSession();
+            }
+        }
+
+        /* Theme Toggle */
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.getElementById('theme-btn').textContent = '☀️ Claro';
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                document.getElementById('theme-btn').textContent = '🌙 Escuro';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                document.getElementById('theme-btn').textContent = '☀️ Claro';
+            }
+        }
+
+        inicializar();
+    </script>
+</body>
+</html>

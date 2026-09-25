@@ -1,0 +1,27 @@
+{
+  "entidade_id": "10190",
+  "entidade_nome": "10190",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "101900023",
+      "modelo": "10190",
+      "tamanho": "28",
+      "cor_codigo": "C145",
+      "tingimento": null,
+      "cor_nome": "MARROM IMITA. MADEIRA",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10190 4F TAM 28 COR C145 BRILHO PERS",
+      "qtd_saldo": 9,
+      "unidade": "GR",
+      "cliente": "Veste S.a.estilo",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

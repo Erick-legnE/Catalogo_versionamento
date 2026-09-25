@@ -1,0 +1,27 @@
+{
+  "entidade_id": "13731",
+  "entidade_nome": "13731",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "137310001",
+      "modelo": "13731",
+      "tamanho": "16",
+      "cor_codigo": "C2177",
+      "tingimento": null,
+      "cor_nome": "TRANSPARENTE COM MARROM E PRETO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 13731 4F TAM 16 COR C2177 BRILHO PERS",
+      "qtd_saldo": 33,
+      "unidade": "GR",
+      "cliente": "MPL de Roupas",
+      "representante": "Grandes Contas",
+      "foto": null
+    }
+  ]
+}

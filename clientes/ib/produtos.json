@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_083",
+  "entidade_nome": "IB Comercio e Industria",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "102230401",
+      "modelo": "10223",
+      "tamanho": "18",
+      "cor_codigo": "C513",
+      "tingimento": null,
+      "cor_nome": "IMBUIA",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "PE",
+      "acabamento": "BRILHO PERS",
+      "material": "MADEIRA",
+      "descricao": "BOTAO MDR 10223 PE TAM 18 COR C513 BRILHO PERS",
+      "qtd_saldo": 1,
+      "unidade": "GR",
+      "cliente": "IB Comercio e Industria",
+      "representante": "CVI",
+      "foto": null
+    }
+  ]
+}

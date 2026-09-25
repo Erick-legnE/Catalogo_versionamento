@@ -1,0 +1,27 @@
+{
+  "entidade_id": "1647",
+  "entidade_nome": "1647",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "16470001",
+      "modelo": "1647",
+      "tamanho": "18",
+      "cor_codigo": "C124",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 1647 4F TAM 18 COR C124  FOSCO PERS ",
+      "qtd_saldo": 10,
+      "unidade": "GR",
+      "cliente": "K2 COMERCIO E INDUSTRIA LTDA",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

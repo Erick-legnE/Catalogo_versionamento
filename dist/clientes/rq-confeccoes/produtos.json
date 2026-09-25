@@ -1,0 +1,45 @@
+{
+  "entidade_id": "user_132",
+  "entidade_nome": "RQ INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "900010065",
+      "modelo": "90001",
+      "tamanho": "30",
+      "cor_codigo": "C001",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 90001 4F TAM 30 COR C001 FOSCO PERS",
+      "qtd_saldo": 22,
+      "unidade": "GR",
+      "cliente": "RQ INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+      "representante": "GRANDES CONTAS",
+      "foto": null
+    },
+    {
+      "cod_red": "120870006",
+      "modelo": "12087",
+      "tamanho": "14",
+      "cor_codigo": "C121",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 12087 4F TAM 14 COR C121 BRILHO PERS",
+      "qtd_saldo": 94,
+      "unidade": "GR",
+      "cliente": "RQ INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+      "representante": "GRANDES CONTAS",
+      "foto": null
+    }
+  ]
+}

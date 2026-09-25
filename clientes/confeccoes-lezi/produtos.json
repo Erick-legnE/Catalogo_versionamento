@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_057",
+  "entidade_nome": "Confecções Lezi",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "3540051",
+      "modelo": "354",
+      "tamanho": "24",
+      "cor_codigo": "C001",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 354 4F TAM 24 COR C001 FO SCO PERS       ",
+      "qtd_saldo": 9,
+      "unidade": "GR",
+      "cliente": "Confecções Lezi",
+      "representante": "CVI",
+      "foto": null
+    }
+  ]
+}

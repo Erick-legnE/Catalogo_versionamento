@@ -1,0 +1,27 @@
+{
+  "entidade_id": "12818",
+  "entidade_nome": "12818",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "128180001",
+      "modelo": "12818",
+      "tamanho": "20",
+      "cor_codigo": "C120",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 12818 DIF 2F TAM 20 COR C120 FOSCO LISO",
+      "qtd_saldo": 3,
+      "unidade": "GR",
+      "cliente": "Lunelli Industria",
+      "representante": "Marvic Têxtil Representações",
+      "foto": null
+    }
+  ]
+}

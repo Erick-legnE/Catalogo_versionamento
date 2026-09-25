@@ -1,0 +1,46 @@
+{
+  "entidade_id": "10159",
+  "entidade_nome": "10159",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "101590036",
+      "modelo": "10159",
+      "tamanho": "24",
+      "cor_codigo": "C1350",
+      "tingimento": null,
+      "cor_nome": "FARELO BEGE",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10159 4F TAM 24 COR C1350 FOSCO LISO",
+      "qtd_saldo": 10,
+      "unidade": "GR",
+      "cliente": "ELIAN INDUSTRIA TEXTIL LTDA.",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    },
+    {
+      "cod_red": "101590045",
+      "modelo": "10159",
+      "tamanho": "24",
+      "cor_codigo": "C2879",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10159 2F TAM 24 COR C2879 FOSCO LISO",
+      "qtd_saldo": 30,
+      "unidade": "GR",
+      "cliente": "ELIAN INDUSTRIA TEXTIL LTDA.",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

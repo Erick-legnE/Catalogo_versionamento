@@ -1,0 +1,46 @@
+{
+  "entidade_id": "12040",
+  "entidade_nome": "12040",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "120400001",
+      "modelo": "12040",
+      "tamanho": "24",
+      "cor_codigo": "C100",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "1F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "PINGENTE POL STRAS 12040 1F TAM 24 COR C100 BR PER",
+      "qtd_saldo": 23,
+      "unidade": "GR",
+      "cliente": "Brandili Têxtil",
+      "representante": "Vison Representações",
+      "foto": null
+    },
+    {
+      "cod_red": "120400005",
+      "modelo": "12040",
+      "tamanho": "24",
+      "cor_codigo": "C476",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "1F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "PINGENTE POL STRASS 12040 1F TAM 24 COR C076 BR PER (PC)",
+      "qtd_saldo": 24,
+      "unidade": "GR",
+      "cliente": "Brandili Têxtil",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

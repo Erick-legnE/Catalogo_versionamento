@@ -1,0 +1,27 @@
+{
+  "entidade_id": "12151",
+  "entidade_nome": "12151",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "121510003",
+      "modelo": "12151",
+      "tamanho": "14",
+      "cor_codigo": "C149",
+      "tingimento": null,
+      "cor_nome": "AMARELADO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 12151 4F TAM 14 COR C149 BRILHO PERSON",
+      "qtd_saldo": 36,
+      "unidade": "GR",
+      "cliente": "F.m. Magalhaes e Cia.",
+      "representante": "J M Pereira e Cia.",
+      "foto": null
+    }
+  ]
+}

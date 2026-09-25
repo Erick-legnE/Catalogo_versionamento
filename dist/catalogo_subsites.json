@@ -1,0 +1,139 @@
+{
+  "config": {
+    "regra_subsite": "Ocorrencias > 5",
+    "total_subsites_representantes": 6,
+    "total_subsites_clientes": 15
+  },
+  "sub_sites": {
+    "representantes": [
+      {
+        "nome_original": "MUNDI",
+        "slug": "mundi",
+        "total_itens": 9,
+        "tipo": "representante"
+      },
+      {
+        "nome_original": "LOV",
+        "slug": "lov",
+        "total_itens": 12,
+        "tipo": "representante"
+      },
+      {
+        "nome_original": "DUDALINA",
+        "slug": "dudalina",
+        "total_itens": 7,
+        "tipo": "representante"
+      },
+      {
+        "nome_original": "INDIVIDUAL",
+        "slug": "individual",
+        "total_itens": 31,
+        "tipo": "representante"
+      },
+      {
+        "nome_original": "COLORITTA",
+        "slug": "coloritta",
+        "total_itens": 11,
+        "tipo": "representante"
+      },
+      {
+        "nome_original": "GANGSTER",
+        "slug": "gangster",
+        "total_itens": 8,
+        "tipo": "representante"
+      }
+    ],
+    "clientes": [
+      {
+        "nome_original": "HERING",
+        "slug": "hering",
+        "total_itens": 45,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "KYLY",
+        "slug": "kyly",
+        "total_itens": 51,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "MARVIC",
+        "slug": "marvic",
+        "total_itens": 12,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "BRANDILI",
+        "slug": "brandili",
+        "total_itens": 41,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "LUNELLI",
+        "slug": "lunelli",
+        "total_itens": 24,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "IAEL",
+        "slug": "iael",
+        "total_itens": 9,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "VESTE",
+        "slug": "veste",
+        "total_itens": 22,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "K2",
+        "slug": "k2",
+        "total_itens": 6,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "ALENICE",
+        "slug": "alenice",
+        "total_itens": 10,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "MARISOL",
+        "slug": "marisol",
+        "total_itens": 11,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "ELIAN",
+        "slug": "elian",
+        "total_itens": 22,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "DELIZ",
+        "slug": "deliz",
+        "total_itens": 7,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "MAR QUENTE",
+        "slug": "mar-quente",
+        "total_itens": 9,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "CVI",
+        "slug": "cvi",
+        "total_itens": 6,
+        "tipo": "cliente"
+      },
+      {
+        "nome_original": "VISON",
+        "slug": "vison",
+        "total_itens": 11,
+        "tipo": "cliente"
+      }
+    ]
+  }
+}

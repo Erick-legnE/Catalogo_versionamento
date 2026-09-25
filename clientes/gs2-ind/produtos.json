@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_080",
+  "entidade_nome": "GS2 Ind_stria e . de Conf",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "13630043",
+      "modelo": "1363",
+      "tamanho": "28",
+      "cor_codigo": "C002",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 1363 4F TAM 28 COR C002 FOSCO PERS TING E EST",
+      "qtd_saldo": 1,
+      "unidade": "GR",
+      "cliente": "GS2 Ind_stria e . de Conf",
+      "representante": "J M Pereira e Cia.",
+      "foto": null
+    }
+  ]
+}

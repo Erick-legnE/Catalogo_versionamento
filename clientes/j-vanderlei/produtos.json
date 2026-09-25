@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_087",
+  "entidade_nome": "J. Vanderlei da Silva - Confecções",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "2840013",
+      "modelo": "284",
+      "tamanho": "32",
+      "cor_codigo": "C011",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 284 4F TAM 32 COR C011 FO SCO PERS      ",
+      "qtd_saldo": 12,
+      "unidade": "GR",
+      "cliente": "J. Vanderlei da Silva - Confecções",
+      "representante": "J M Pereira e Cia.",
+      "foto": null
+    }
+  ]
+}

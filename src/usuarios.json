@@ -1,0 +1,138 @@
+[
+  {
+    "id": "user_001",
+    "nome": "ALENICE",
+    "slug": "alenice",
+    "username": "alenice",
+    "password": "3xMbSg0q",
+    "ativo": true
+  },
+  {
+    "id": "user_002",
+    "nome": "AMC",
+    "slug": "amc",
+    "username": "amc",
+    "password": "pMdIBMMi",
+    "ativo": true
+  },
+  {
+    "id": "user_003",
+    "nome": "BRANDILI",
+    "slug": "brandili",
+    "username": "brandili",
+    "password": "qTleAxUm",
+    "ativo": true
+  },
+  {
+    "id": "user_004",
+    "nome": "CVI",
+    "slug": "cvi",
+    "username": "cvi",
+    "password": "JSxSj5fQ",
+    "ativo": true
+  },
+  {
+    "id": "user_005",
+    "nome": "DELIZ",
+    "slug": "deliz",
+    "username": "deliz",
+    "password": "U71DtcP4",
+    "ativo": true
+  },
+  {
+    "id": "user_006",
+    "nome": "ELIAN",
+    "slug": "elian",
+    "username": "elian",
+    "password": "zZLTFmw1",
+    "ativo": true
+  },
+  {
+    "id": "user_007",
+    "nome": "HERING",
+    "slug": "hering",
+    "username": "hering",
+    "password": "jcnhI4P5",
+    "ativo": true
+  },
+  {
+    "id": "user_008",
+    "nome": "IAEL",
+    "slug": "iael",
+    "username": "iael",
+    "password": "erUbHhFz",
+    "ativo": true
+  },
+  {
+    "id": "user_009",
+    "nome": "K2",
+    "slug": "k2",
+    "username": "k2",
+    "password": "yLWvfUEO",
+    "ativo": true
+  },
+  {
+    "id": "user_010",
+    "nome": "KAESSE",
+    "slug": "kaesse",
+    "username": "kaesse",
+    "password": "k2Wxd6Q2",
+    "ativo": true
+  },
+  {
+    "id": "user_011",
+    "nome": "KYLY",
+    "slug": "kyly",
+    "username": "kyly",
+    "password": "xcOYNpi7",
+    "ativo": true
+  },
+  {
+    "id": "user_012",
+    "nome": "LUNELLI",
+    "slug": "lunelli",
+    "username": "lunelli",
+    "password": "KdRvhfVH",
+    "ativo": true
+  },
+  {
+    "id": "user_013",
+    "nome": "MAR QUENTE",
+    "slug": "mar-quente",
+    "username": "mar-quente",
+    "password": "Nfw1GrsE",
+    "ativo": true
+  },
+  {
+    "id": "user_014",
+    "nome": "MARISOL",
+    "slug": "marisol",
+    "username": "marisol",
+    "password": "nt9PECVq",
+    "ativo": true
+  },
+  {
+    "id": "user_015",
+    "nome": "MARVIC",
+    "slug": "marvic",
+    "username": "marvic",
+    "password": "zGWlZEt8",
+    "ativo": true
+  },
+  {
+    "id": "user_016",
+    "nome": "VESTE",
+    "slug": "veste",
+    "username": "veste",
+    "password": "ce9GZX7s",
+    "ativo": true
+  },
+  {
+    "id": "user_017",
+    "nome": "VISON",
+    "slug": "vison",
+    "username": "vison",
+    "password": "Cc27e2CP",
+    "ativo": true
+  }
+]

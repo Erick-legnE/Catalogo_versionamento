@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_071",
+  "entidade_nome": "Fan Prust Jeans",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "102230018",
+      "modelo": "10223",
+      "tamanho": "20",
+      "cor_codigo": "C100",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "PE",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10223 PE TAM 20 COR C100 BRILHO PERS      ",
+      "qtd_saldo": 21,
+      "unidade": "GR",
+      "cliente": "Fan Prust Jeans",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

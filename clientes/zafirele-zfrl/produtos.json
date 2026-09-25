@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_136",
+  "entidade_nome": "Zafirele - Zfrl - Eirelli",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "101480037",
+      "modelo": "10148",
+      "tamanho": "20",
+      "cor_codigo": "C422",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10148 4F TAM 20 COR C422 BRILHO PERS",
+      "qtd_saldo": 20,
+      "unidade": "GR",
+      "cliente": "Zafirele - Zfrl - Eirelli",
+      "representante": "CVI",
+      "foto": null
+    }
+  ]
+}

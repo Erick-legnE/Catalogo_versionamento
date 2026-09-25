@@ -1,0 +1,27 @@
+{
+  "entidade_id": "4541",
+  "entidade_nome": "4541",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "45410002",
+      "modelo": "4541",
+      "tamanho": "18",
+      "cor_codigo": "C148",
+      "tingimento": "X",
+      "cor_nome": "PARA PRETO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 4541 4F TAM 18 COR C148 FOSCO PERS TING",
+      "qtd_saldo": 0,
+      "unidade": "GR",
+      "cliente": "Deliz Industria",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

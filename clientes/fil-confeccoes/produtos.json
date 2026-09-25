@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_061",
+  "entidade_nome": "De Fil S Confecções",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "102720036",
+      "modelo": "10272",
+      "tamanho": "18",
+      "cor_codigo": "C132",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10272 4F TAM 18 COR C132 FOSCO PERS",
+      "qtd_saldo": 39,
+      "unidade": "GR",
+      "cliente": "De Fil S Confecções",
+      "representante": "A H de Oliveira Representações",
+      "foto": null
+    }
+  ]
+}

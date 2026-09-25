@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_102",
+  "entidade_nome": "Marp Industria Têxtil",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "25630014",
+      "modelo": "2563",
+      "tamanho": "42",
+      "cor_codigo": "C122",
+      "tingimento": null,
+      "cor_nome": "GRAFITE",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "PLAQUINHA POL 2563 2F TAM 42 COR C122 FOSCO PERS",
+      "qtd_saldo": 59,
+      "unidade": "GR",
+      "cliente": "Marp Industria Têxtil",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

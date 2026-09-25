@@ -1,0 +1,27 @@
+{
+  "entidade_id": "1119",
+  "entidade_nome": "1119",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "11190001",
+      "modelo": "1119",
+      "tamanho": "14",
+      "cor_codigo": "C100",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 1119 4F TAM 14 COR C100  BRILHO PERS TING ",
+      "qtd_saldo": 32,
+      "unidade": "GR",
+      "cliente": "ELIAN INDUSTRIA TEXTIL LTDA.",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

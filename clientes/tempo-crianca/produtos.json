@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_126",
+  "entidade_nome": "Tempo de Crianca Moda Infantil",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "118320006",
+      "modelo": "11832",
+      "tamanho": "45",
+      "cor_codigo": "C408",
+      "tingimento": null,
+      "cor_nome": "BRANCO COM SERRAGEM",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "PLAQUINHA POL 11832 2F TAM 45 COR C408 FOSCO PERS (GS)",
+      "qtd_saldo": 15,
+      "unidade": "GR",
+      "cliente": "Tempo de Crianca Moda Infantil",
+      "representante": "Rona Representações",
+      "foto": null
+    }
+  ]
+}

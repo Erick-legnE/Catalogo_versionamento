@@ -1,0 +1,1325 @@
+[
+  {
+    "id": "user_001",
+    "nome": "BANA BANA",
+    "slug": "bana-bana",
+    "username": "bana-bana",
+    "password": "VYAnYOkd",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_002",
+    "nome": "BEAGLE",
+    "slug": "beagle",
+    "username": "beagle",
+    "password": "DiJpZVLL",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_003",
+    "nome": "COLORITTA",
+    "slug": "coloritta",
+    "username": "coloritta",
+    "password": "I507pAFE",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_004",
+    "nome": "DLZ",
+    "slug": "dlz",
+    "username": "dlz",
+    "password": "o5DUEMxe",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_005",
+    "nome": "DUDALINA",
+    "slug": "dudalina",
+    "username": "dudalina",
+    "password": "KQOFK3wx",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_006",
+    "nome": "FLOR",
+    "slug": "flor",
+    "username": "flor",
+    "password": "pmA8tpuZ",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_007",
+    "nome": "FORUM",
+    "slug": "forum",
+    "username": "forum",
+    "password": "sItOWKqG",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_008",
+    "nome": "GANGSTER",
+    "slug": "gangster",
+    "username": "gangster",
+    "password": "PBhjTPQZ",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_009",
+    "nome": "INDIVIDUAL",
+    "slug": "individual",
+    "username": "individual",
+    "password": "e7lNdCTM",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_010",
+    "nome": "LILICA",
+    "slug": "lilica",
+    "username": "lilica",
+    "password": "cfJYOUD3",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_011",
+    "nome": "LOV",
+    "slug": "lov",
+    "username": "lov",
+    "password": "3JnjhKZv",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_012",
+    "nome": "MUNDI",
+    "slug": "mundi",
+    "username": "mundi",
+    "password": "iIoxnkpN",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_013",
+    "nome": "PAULA RAIA",
+    "slug": "paula-raia",
+    "username": "paula-raia",
+    "password": "03HsX15u",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_014",
+    "nome": "SOUL",
+    "slug": "soul",
+    "username": "soul",
+    "password": "VeDDZctN",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_015",
+    "nome": "UP BABY",
+    "slug": "up-baby",
+    "username": "up-baby",
+    "password": "VAigPxGL",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_016",
+    "nome": "ALENICE",
+    "slug": "alenice",
+    "username": "alenice",
+    "password": "Ymgmvh7R",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_017",
+    "nome": "AMC",
+    "slug": "amc",
+    "username": "amc",
+    "password": "Arj4ycRd",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_018",
+    "nome": "BRANDILI",
+    "slug": "brandili",
+    "username": "brandili",
+    "password": "YdZUAK8I",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_019",
+    "nome": "CVI",
+    "slug": "cvi",
+    "username": "cvi",
+    "password": "6PPYxJyB",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_020",
+    "nome": "DELIZ",
+    "slug": "deliz",
+    "username": "deliz",
+    "password": "f0eQwk4M",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_021",
+    "nome": "ELIAN",
+    "slug": "elian",
+    "username": "elian",
+    "password": "dtknzpjM",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_022",
+    "nome": "CIA. HERING",
+    "slug": "hering",
+    "username": "hering",
+    "password": "miAfiOjC",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_023",
+    "nome": "IAEL",
+    "slug": "iael",
+    "username": "iael",
+    "password": "DjWjlgod",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_024",
+    "nome": "K2 COMERCIO E INDUSTRIA LTDA",
+    "slug": "k2",
+    "username": "k2",
+    "password": "h2KxJmn4",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_025",
+    "nome": "KAESSE",
+    "slug": "kaesse",
+    "username": "kaesse",
+    "password": "NqX8p6YX",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_026",
+    "nome": "KYLY",
+    "slug": "kyly",
+    "username": "kyly",
+    "password": "S0dhvMk4",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_027",
+    "nome": "LUNELLI",
+    "slug": "lunelli",
+    "username": "lunelli",
+    "password": "9TSIg1Q0",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_028",
+    "nome": "MAR - QUENTE CONFECCOES LTDA",
+    "slug": "mar-quente",
+    "username": "mar-quente",
+    "password": "kSrLsuEx",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_029",
+    "nome": "MARISOL",
+    "slug": "marisol",
+    "username": "marisol",
+    "password": "A532X5Mn",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_030",
+    "nome": "MARVIC",
+    "slug": "marvic",
+    "username": "marvic",
+    "password": "438WE50S",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_031",
+    "nome": "VESTE",
+    "slug": "veste",
+    "username": "veste",
+    "password": "0Jjaw3H2",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_032",
+    "nome": "VISON REPRESENTACOES LTDA",
+    "slug": "vison",
+    "username": "vison",
+    "password": "Ito3TjUo",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_033",
+    "nome": "A H DE OLIVEIRA REPRESENTACOES",
+    "slug": "h-oliveira",
+    "username": "h-oliveira",
+    "password": "1ZPKbKLA",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_034",
+    "nome": "E.P. REPRESENTACOES EIRELI",
+    "slug": "p",
+    "username": "p",
+    "password": "LKSTpTaL",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_035",
+    "nome": "GABRIEL E PAPINI REPRESENTACOES LTDA",
+    "slug": "gabriel-papini",
+    "username": "gabriel-papini",
+    "password": "y0W7ilpc",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_036",
+    "nome": "GRANDES CONTAS",
+    "slug": "grandes-contas",
+    "username": "grandes-contas",
+    "password": "0MkEMdPU",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_037",
+    "nome": "J M PEREIRA E CIA LTDA.",
+    "slug": "j-m",
+    "username": "j-m",
+    "password": "Ug2z5nhb",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_038",
+    "nome": "JEAN PIERRE REPRESENTACOES TEXTEIS LTDA",
+    "slug": "jean-pierre",
+    "username": "jean-pierre",
+    "password": "yZFJ8dkb",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_039",
+    "nome": "MARVIC TEXTIL REPRESENTACOES LTDA",
+    "slug": "marvic-textil",
+    "username": "marvic-textil",
+    "password": "mM2doxOm",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_040",
+    "nome": "MARVIC TEXTIL REPRESENTAÇOES LTDA",
+    "slug": "marvic-textil-2",
+    "username": "marvic-textil-2",
+    "password": "t5V5YpbU",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_041",
+    "nome": "RONA REPRESENTACOES LTDA",
+    "slug": "rona",
+    "username": "rona",
+    "password": "ROpnRP5P",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_042",
+    "nome": "STUDIO NEW REPRESENTACOES LTDA ME",
+    "slug": "studio-new",
+    "username": "studio-new",
+    "password": "7VJUkbdQ",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_043",
+    "nome": "SUZANA M. FAINGOLD",
+    "slug": "suzana-m",
+    "username": "suzana-m",
+    "password": "auVjNysJ",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_044",
+    "nome": "VANESSA DANIELLE MEDEIROS CINTRA - COM DE ARTIGOS DO VEST",
+    "slug": "vanessa-danielle",
+    "username": "vanessa-danielle",
+    "password": "WXZUi5Fr",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_045",
+    "nome": "VENDA DIRETA",
+    "slug": "venda-direta",
+    "username": "venda-direta",
+    "password": "aR19QXf8",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_046",
+    "nome": "VISON REPRESENTAÇOES LTDA",
+    "slug": "vison-2",
+    "username": "vison-2",
+    "password": "FxJfxHX9",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_047",
+    "nome": "A.M.C. TEXTIL LTDA.",
+    "slug": "m-c",
+    "username": "m-c",
+    "password": "YJpYRQXO",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_048",
+    "nome": "ABRANGE INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+    "slug": "abrange-confeccoes",
+    "username": "abrange-confeccoes",
+    "password": "W24SeQd4",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_049",
+    "nome": "ACTUM INDUSTRIA E COMERCIO LTDA",
+    "slug": "actum",
+    "username": "actum",
+    "password": "NQAsLo91",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_050",
+    "nome": "AD-FASHION COMERCIO DE ROUPAS LTDA-EPP",
+    "slug": "ad-fashion",
+    "username": "ad-fashion",
+    "password": "4WJPa0qh",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_051",
+    "nome": "ALENICE INDUSTRIA TEXTIL LTDA",
+    "slug": "alenice-textil",
+    "username": "alenice-textil",
+    "password": "QADwFCy3",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_052",
+    "nome": "ALEXANDRE BITENCOURT ROSENDO",
+    "slug": "alexandre-bitencourt",
+    "username": "alexandre-bitencourt",
+    "password": "oU0TNUi5",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_053",
+    "nome": "APPLICATO CONFECCOES LTDA",
+    "slug": "applicato-confeccoes",
+    "username": "applicato-confeccoes",
+    "password": "D795Sb88",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_054",
+    "nome": "AVALON TEXTIL LTDA",
+    "slug": "avalon-textil",
+    "username": "avalon-textil",
+    "password": "rTZhyI4x",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_055",
+    "nome": "AVIAMENTOS BRUSQUE LTDA.",
+    "slug": "aviamentos-brusque",
+    "username": "aviamentos-brusque",
+    "password": "Z4TkzEMu",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_056",
+    "nome": "BAMBOO JEANS LTDA",
+    "slug": "bamboo-jeans",
+    "username": "bamboo-jeans",
+    "password": "mhQIEH1o",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_057",
+    "nome": "BASICO&CO S.A.",
+    "slug": "basico-co",
+    "username": "basico-co",
+    "password": "Ky9047q6",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_058",
+    "nome": "BAUMGARTEN INDUSTRIA DE CONFECCOES LTDA",
+    "slug": "baumgarten-confeccoes",
+    "username": "baumgarten-confeccoes",
+    "password": "6Q7JVe6j",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_059",
+    "nome": "BLUTEXTIL INDUSTRIA E COMERCIO LTDA",
+    "slug": "blutextil",
+    "username": "blutextil",
+    "password": "JvRqWyPV",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_060",
+    "nome": "BRANDILI TEXTIL LTDA.",
+    "slug": "brandili-textil",
+    "username": "brandili-textil",
+    "password": "MOOFPnhJ",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_061",
+    "nome": "BRETZEL TRAJES TIPICOS LTDA",
+    "slug": "bretzel-trajes",
+    "username": "bretzel-trajes",
+    "password": "U7he6GK2",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_062",
+    "nome": "CAMISARIA MILANI LTDA",
+    "slug": "camisaria-milani",
+    "username": "camisaria-milani",
+    "password": "YDTJahv1",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_063",
+    "nome": "CH3 LTDA.",
+    "slug": "ch3",
+    "username": "ch3",
+    "password": "41SrYVN8",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_064",
+    "nome": "CHAUBERT COMERCIO DE VESTUARIO LTDA",
+    "slug": "chaubert-vestuario",
+    "username": "chaubert-vestuario",
+    "password": "aRsYqDLr",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_065",
+    "nome": "CIA HERING - FILIAL ITORORO",
+    "slug": "hering-filial",
+    "username": "hering-filial",
+    "password": "sDvnjaqi",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_066",
+    "nome": "COMASK INDUSTRIA E COMERCIO LTDA",
+    "slug": "comask",
+    "username": "comask",
+    "password": "C4RNgpvo",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_067",
+    "nome": "CONFECCOES ACONCHEGO DO BEBE LTDA.",
+    "slug": "confeccoes-aconchego",
+    "username": "confeccoes-aconchego",
+    "password": "WTZyUsJ6",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_068",
+    "nome": "CONFECCOES LEZI LTDA.",
+    "slug": "confeccoes-lezi",
+    "username": "confeccoes-lezi",
+    "password": "xYj2stK7",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_069",
+    "nome": "CONFECCOES RAFREE LTDA.",
+    "slug": "confeccoes-rafree",
+    "username": "confeccoes-rafree",
+    "password": "fMA0uxq0",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_070",
+    "nome": "CONFECCOES ROLLU OUCC1 EM RECUPERACAO JUDICIAL EM RECUPERACA",
+    "slug": "confeccoes-rollu",
+    "username": "confeccoes-rollu",
+    "password": "MuJjPlxV",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_071",
+    "nome": "CONFECCOES SIMON BRAUN LTDA",
+    "slug": "confeccoes-simon",
+    "username": "confeccoes-simon",
+    "password": "1me2XLJg",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_072",
+    "nome": "DE FIL S CONFECCOES LTDA -ME",
+    "slug": "fil-confeccoes",
+    "username": "fil-confeccoes",
+    "password": "JPw3lJzI",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_073",
+    "nome": "DELIZ INDUSTRIA DO VESTUARIO LTDA.",
+    "slug": "deliz-vestuario",
+    "username": "deliz-vestuario",
+    "password": "OkrNiuAr",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_074",
+    "nome": "DELLOSC TEXTIL LTDA.",
+    "slug": "dellosc-textil",
+    "username": "dellosc-textil",
+    "password": "ac7tByla",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_075",
+    "nome": "DELUXE NEGOCIOS DO VESTUARIO LTDA",
+    "slug": "deluxe-negocios",
+    "username": "deluxe-negocios",
+    "password": "b5XiHq14",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_076",
+    "nome": "DITONGO CONFECCOES LTDA EPP",
+    "slug": "ditongo-confeccoes",
+    "username": "ditongo-confeccoes",
+    "password": "crmsZFtK",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_077",
+    "nome": "DK INDUSTRIA DE MATERIAIS PARA CONSTRUCAO LTDA",
+    "slug": "dk-materiais",
+    "username": "dk-materiais",
+    "password": "VzzQAaC3",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_078",
+    "nome": "DRC COM. DE ART. DE ARMARINHO LTDA.",
+    "slug": "drc-com",
+    "username": "drc-com",
+    "password": "RZGAr3Zx",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_079",
+    "nome": "EDEX INDUSTRIA DE JEANS WEAR EIRELI -EPP",
+    "slug": "edex-jeans",
+    "username": "edex-jeans",
+    "password": "EBDxWk3P",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_080",
+    "nome": "ELIAN INDUSTRIA TEXTIL LTDA.",
+    "slug": "elian-textil",
+    "username": "elian-textil",
+    "password": "flnoO2A3",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_081",
+    "nome": "F.M. MAGALHAES E CIA LTDA. - ME",
+    "slug": "f-m",
+    "username": "f-m",
+    "password": "k9SmY6zy",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_082",
+    "nome": "FAN PRUST JEANS LTDA",
+    "slug": "fan-prust",
+    "username": "fan-prust",
+    "password": "mLf2YiiL",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_083",
+    "nome": "FBR CONFECCOES LTDA.",
+    "slug": "fbr-confeccoes",
+    "username": "fbr-confeccoes",
+    "password": "mOK8NAPb",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_084",
+    "nome": "FILO SA",
+    "slug": "filo",
+    "username": "filo",
+    "password": "tS4dekis",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_085",
+    "nome": "FLUEEM BRASIL LTDA",
+    "slug": "flueem-brasil",
+    "username": "flueem-brasil",
+    "password": "D3NtfBpS",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_086",
+    "nome": "G M D INDUSTRIA TEXTIL EIRELI",
+    "slug": "g-m",
+    "username": "g-m",
+    "password": "cPziPkin",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_087",
+    "nome": "GAMBINO INDUSTRIA E COMERCIO LTDA",
+    "slug": "gambino",
+    "username": "gambino",
+    "password": "yWf1xA6r",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_088",
+    "nome": "GATTOS CONFECCOES LTDA.",
+    "slug": "gattos-confeccoes",
+    "username": "gattos-confeccoes",
+    "password": "FHKCcTEw",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_089",
+    "nome": "GMLT4 INDUSTRIA E COMERCIO DE ARTIGO DO VESTUARIO LTDA",
+    "slug": "gmlt4-artigo",
+    "username": "gmlt4-artigo",
+    "password": "WVoDfCne",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_090",
+    "nome": "GREAT NEWS CONFECCOES LTDA.",
+    "slug": "great-news",
+    "username": "great-news",
+    "password": "lQhhZjWp",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_091",
+    "nome": "GS2 IND_STRIA E COM. DE CONF. LTDA",
+    "slug": "gs2-ind",
+    "username": "gs2-ind",
+    "password": "dIxF1GJy",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_092",
+    "nome": "GUSTAVO MIGUEL SCAGLIA ROBAINA",
+    "slug": "gustavo-miguel",
+    "username": "gustavo-miguel",
+    "password": "rtS3F5cE",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_093",
+    "nome": "IAEL - COMERCIO DE AVIAMENTOS LTDA",
+    "slug": "iael-aviamentos",
+    "username": "iael-aviamentos",
+    "password": "1vzh7LJS",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_094",
+    "nome": "IB COMERCIO E INDUSTRIA LTDA.",
+    "slug": "ib",
+    "username": "ib",
+    "password": "N6FvC5oV",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_095",
+    "nome": "IND DE MALHAS FINAS HIGHSTIL LT",
+    "slug": "ind-malhas",
+    "username": "ind-malhas",
+    "password": "FcESfx1w",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_096",
+    "nome": "IND E COM DE CONF DI MIRMAY LTDA",
+    "slug": "ind-com",
+    "username": "ind-com",
+    "password": "zHifYZth",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_097",
+    "nome": "INDORF TEXTIL LTDA",
+    "slug": "indorf-textil",
+    "username": "indorf-textil",
+    "password": "cKvqvZUw",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_098",
+    "nome": "J. VANDERLEI DA SILVA - CONFECCOES LTDA",
+    "slug": "j-vanderlei",
+    "username": "j-vanderlei",
+    "password": "f3pmmSLx",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_099",
+    "nome": "JOMAR INDUSTRIA E COMERCIO LTDA",
+    "slug": "jomar",
+    "username": "jomar",
+    "password": "wXjSRQS8",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_100",
+    "nome": "JORGEMAR CARDOSO VIEIRA",
+    "slug": "jorgemar-cardoso",
+    "username": "jorgemar-cardoso",
+    "password": "7HUCvbSD",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_101",
+    "nome": "KAESSE - BANA BANA CONFECCOES LTDA",
+    "slug": "kaesse-bana",
+    "username": "kaesse-bana",
+    "password": "Kwlj88Iw",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_102",
+    "nome": "KAIANI MALHAS LTDA.",
+    "slug": "kaiani-malhas",
+    "username": "kaiani-malhas",
+    "password": "cp42k6GM",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_103",
+    "nome": "KRINDGES INDUSTRIAL S/A",
+    "slug": "krindges",
+    "username": "krindges",
+    "password": "B37ictIG",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_104",
+    "nome": "KYLY INDUSTRIA TEXTIL LTDA.",
+    "slug": "kyly-textil",
+    "username": "kyly-textil",
+    "password": "DJj2efh8",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_105",
+    "nome": "LECIMAR CONFECCOES LTDA",
+    "slug": "lecimar-confeccoes",
+    "username": "lecimar-confeccoes",
+    "password": "fhhlzigC",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_106",
+    "nome": "LUANDRI MALHAS LTDA.",
+    "slug": "luandri-malhas",
+    "username": "luandri-malhas",
+    "password": "Y3lFxWmM",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_107",
+    "nome": "LUNELLI INDUSTRIA DO VESTUARIO LTDA.",
+    "slug": "lunelli-vestuario",
+    "username": "lunelli-vestuario",
+    "password": "7Cad4ypG",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_108",
+    "nome": "M.J. MIRANDA CONFECCOES LTDA.",
+    "slug": "m-j",
+    "username": "m-j",
+    "password": "6xqwNC3J",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_109",
+    "nome": "MALHARIA CRISTINA LTDA.",
+    "slug": "malharia-cristina",
+    "username": "malharia-cristina",
+    "password": "iWY7QFl7",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_110",
+    "nome": "MALHAS RICO LTDA.",
+    "slug": "malhas-rico",
+    "username": "malhas-rico",
+    "password": "QSSJt5S2",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_111",
+    "nome": "MARCYN CONFECCOES LTDA",
+    "slug": "marcyn-confeccoes",
+    "username": "marcyn-confeccoes",
+    "password": "WVVAPWrf",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_112",
+    "nome": "MARISOL VESTUARIO SA",
+    "slug": "marisol-vestuario",
+    "username": "marisol-vestuario",
+    "password": "dhUs8Rv3",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_113",
+    "nome": "MARP INDUSTRIA TEXTIL LTDA.",
+    "slug": "marp-textil",
+    "username": "marp-textil",
+    "password": "TS3yF3Cf",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_114",
+    "nome": "MARPA IND E COM DE CONFECCOES LTDA",
+    "slug": "marpa-ind",
+    "username": "marpa-ind",
+    "password": "tXV8qf2f",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_115",
+    "nome": "MILA LTDA",
+    "slug": "mila",
+    "username": "mila",
+    "password": "K1ssf7U9",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_116",
+    "nome": "MINIMAL CLUB LTDA",
+    "slug": "minimal-club",
+    "username": "minimal-club",
+    "password": "r9p0dDIY",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_117",
+    "nome": "MPL INDUSTRIA E COMERCIO DE ROUPAS LTDA",
+    "slug": "mpl-roupas",
+    "username": "mpl-roupas",
+    "password": "uymvkcIf",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_118",
+    "nome": "MUNDI TEXTIL LTDA",
+    "slug": "mundi-textil",
+    "username": "mundi-textil",
+    "password": "jlinv7x5",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_119",
+    "nome": "OKTEX TEXTIL LTDA",
+    "slug": "oktex-textil",
+    "username": "oktex-textil",
+    "password": "Nqq1YEeH",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_120",
+    "nome": "ORACON COM. E IND. DE CONF. LTDA",
+    "slug": "oracon-com",
+    "username": "oracon-com",
+    "password": "sPGAZVCs",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_121",
+    "nome": "P E C CONFECCOES LTDA.",
+    "slug": "p-c",
+    "username": "p-c",
+    "password": "BvcUI4Ec",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_122",
+    "nome": "PASQUINI & PASQUINI CONFECCOES LTDA.",
+    "slug": "pasquini-pasquini",
+    "username": "pasquini-pasquini",
+    "password": "U2OCJ5Dm",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_123",
+    "nome": "PAULINO E BERNARDINO",
+    "slug": "paulino-bernardino",
+    "username": "paulino-bernardino",
+    "password": "yUlPGMie",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_124",
+    "nome": "PEREIRA FABRICA DE CONFECCOES LTDA",
+    "slug": "pereira-fabrica",
+    "username": "pereira-fabrica",
+    "password": "IIJhV7Ju",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_125",
+    "nome": "PS INDUSTRIA E CONFECCAO LTDA",
+    "slug": "ps-confeccao",
+    "username": "ps-confeccao",
+    "password": "JebMmnPH",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_126",
+    "nome": "PZAMA CONFECCOES LTDA",
+    "slug": "pzama-confeccoes",
+    "username": "pzama-confeccoes",
+    "password": "E861z2Le",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_127",
+    "nome": "RAZAO",
+    "slug": "razao",
+    "username": "razao",
+    "password": "AZRwsQOk",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_128",
+    "nome": "RICCIERI CONFECCOES LTDA",
+    "slug": "riccieri-confeccoes",
+    "username": "riccieri-confeccoes",
+    "password": "Ub2sxKl2",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_129",
+    "nome": "RIZLLEP INDUSTRIA DE CONFECCOES LTDA",
+    "slug": "rizllep-confeccoes",
+    "username": "rizllep-confeccoes",
+    "password": "Be0KET4m",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_130",
+    "nome": "ROMITEX MALHAS LTDA",
+    "slug": "romitex-malhas",
+    "username": "romitex-malhas",
+    "password": "CpxmnZN0",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_131",
+    "nome": "ROVITEX IND. E COM. DE MALHAS LTDA.",
+    "slug": "rovitex-ind",
+    "username": "rovitex-ind",
+    "password": "eIpVDDAL",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_132",
+    "nome": "RQ INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+    "slug": "rq-confeccoes",
+    "username": "rq-confeccoes",
+    "password": "gsC0GVGS",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_133",
+    "nome": "SALLO CONFECCAO E COMERCIO DE ROUPAS LTDA.",
+    "slug": "sallo-confeccao",
+    "username": "sallo-confeccao",
+    "password": "PMs53gZW",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_134",
+    "nome": "SANCHES BABY COMPANY LTDA",
+    "slug": "sanches-baby",
+    "username": "sanches-baby",
+    "password": "LRprMKMZ",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_135",
+    "nome": "SIGOSTA TEXTIL LTDA.",
+    "slug": "sigosta-textil",
+    "username": "sigosta-textil",
+    "password": "EWPF7n14",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_136",
+    "nome": "SUED TEXTIL LTDA.",
+    "slug": "sued-textil",
+    "username": "sued-textil",
+    "password": "yDlcQMQO",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_137",
+    "nome": "TEMPO DE CRIANCA MODA INFANTIL LTDA",
+    "slug": "tempo-crianca",
+    "username": "tempo-crianca",
+    "password": "2x4Nkuby",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_138",
+    "nome": "TEX COTTON IND. DE CONFECCOES LTDA.",
+    "slug": "tex-cotton",
+    "username": "tex-cotton",
+    "password": "JEc99wDs",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_139",
+    "nome": "TEXDRINI INDUSTRIA TEXTIL LTDA.",
+    "slug": "texdrini-textil",
+    "username": "texdrini-textil",
+    "password": "HuuPtzdZ",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_140",
+    "nome": "TEXPA LTDA.",
+    "slug": "texpa",
+    "username": "texpa",
+    "password": "GNvLNSXm",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_141",
+    "nome": "TNG COMERCIO E INDUSTRIA DE ROUPAS LTDA",
+    "slug": "tng-roupas",
+    "username": "tng-roupas",
+    "password": "307OrRQf",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_142",
+    "nome": "UNVP CONFECCOES LTDA",
+    "slug": "unvp-confeccoes",
+    "username": "unvp-confeccoes",
+    "password": "l6HBb2Qz",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_143",
+    "nome": "V2 INDUSTRIA E COMERCIO TEXTIL",
+    "slug": "v2-textil",
+    "username": "v2-textil",
+    "password": "zGpJzRcn",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_144",
+    "nome": "VALISERE INDUSTRIA E COMERCIO LTDA",
+    "slug": "valisere",
+    "username": "valisere",
+    "password": "XeKOrkdG",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_145",
+    "nome": "VESTE S.A.ESTILO",
+    "slug": "veste-estilo",
+    "username": "veste-estilo",
+    "password": "l0N7AOhV",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_146",
+    "nome": "VIZOO BRASIL MODAS LTDA",
+    "slug": "vizoo-brasil",
+    "username": "vizoo-brasil",
+    "password": "Uw4CrDJN",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_147",
+    "nome": "ZAFIRELE - ZFRL - EIRELLI",
+    "slug": "zafirele-zfrl",
+    "username": "zafirele-zfrl",
+    "password": "fjOiR2K0",
+    "tipo": "clientes",
+    "ativo": true
+  }
+]

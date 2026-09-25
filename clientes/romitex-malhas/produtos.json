@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_119",
+  "entidade_nome": "Romitex Malhas",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "101360007",
+      "modelo": "10136",
+      "tamanho": "20",
+      "cor_codigo": "C1000",
+      "tingimento": null,
+      "cor_nome": "FUME",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10136 2F TAM 20 COR C1000 FOSCO PER TING PERS. REIREX P.0599/TING. 027 FUME/ 20100078.023.1000",
+      "qtd_saldo": 30,
+      "unidade": "GR",
+      "cliente": "Romitex Malhas",
+      "representante": "Marvic Têxtil Representações",
+      "foto": null
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "entidade_id": "user_121",
+  "entidade_nome": "P E C CONFECCOES LTDA.",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "102230001",
+      "modelo": "10223",
+      "tamanho": "18",
+      "cor_codigo": "C100",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "PE",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10223 PE TAM 18 COR C100  BRILHO PERS",
+      "qtd_saldo": 8,
+      "unidade": "GR",
+      "cliente": "P E C CONFECCOES LTDA.",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

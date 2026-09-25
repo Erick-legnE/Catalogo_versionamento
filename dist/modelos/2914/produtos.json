@@ -1,0 +1,27 @@
+{
+  "entidade_id": "2914",
+  "entidade_nome": "2914",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "29140001",
+      "modelo": "2914",
+      "tamanho": "18",
+      "cor_codigo": "C140",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 2914 4F TAM 18 COR C140  BRILHO PERS ",
+      "qtd_saldo": 29,
+      "unidade": "GR",
+      "cliente": "KYLY INDUSTRIA TEXTIL LTDA.",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

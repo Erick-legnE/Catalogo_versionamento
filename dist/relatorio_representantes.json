@@ -1,0 +1,1453 @@
+{
+  "resumo": {
+    "total_linhas": 1997,
+    "linhas_sem_representante": 1707,
+    "total_nomes_brutos": 131,
+    "total_representantes_unificados": 131
+  },
+  "nomes_brutos": [
+    {
+      "nome_planilha": "ACREDITE NA FORÇA DO BRASIL",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "ACT",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "ALAKAZOO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "ALECRIM",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "ALENICE",
+      "qtd_produtos": 4
+    },
+    {
+      "nome_planilha": "ALNC",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "ANIS ESTRELADO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "BANA BANA",
+      "qtd_produtos": 5
+    },
+    {
+      "nome_planilha": "BAUMGARTEN",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "BEAGLE",
+      "qtd_produtos": 5
+    },
+    {
+      "nome_planilha": "BIOGAS",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "BOM BOM",
+      "qtd_produtos": 3
+    },
+    {
+      "nome_planilha": "BORBOLETA",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "BRAGLE",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "BRETZEL",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "C/ STRASS",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "CAPIM AÇU",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "CHARPEY",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "CIA GOTA",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "CL",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "CO2",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "COLCCI",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "COLORITA",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "COLORITTA",
+      "qtd_produtos": 11
+    },
+    {
+      "nome_planilha": "COLORITTÁ",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "CORAÇAO",
+      "qtd_produtos": 3
+    },
+    {
+      "nome_planilha": "CTV BRAND",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "D&O",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "DELIZ",
+      "qtd_produtos": 3
+    },
+    {
+      "nome_planilha": "DIMY",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "DING DANG",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "DITONGO",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "DLZ",
+      "qtd_produtos": 5
+    },
+    {
+      "nome_planilha": "DUDALINA",
+      "qtd_produtos": 7
+    },
+    {
+      "nome_planilha": "DWAY FASHION BRAND",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "EDEX",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "ELIAN",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "FABULA",
+      "qtd_produtos": 4
+    },
+    {
+      "nome_planilha": "FLOR",
+      "qtd_produtos": 5
+    },
+    {
+      "nome_planilha": "FLOR DE LIS",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "FLOR DE LIS 2X",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "FLUEEM",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "FORUM",
+      "qtd_produtos": 5
+    },
+    {
+      "nome_planilha": "FUN JEANS",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "GANGSTER",
+      "qtd_produtos": 8
+    },
+    {
+      "nome_planilha": "GANSTER",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "GATA BAKANA",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "GATABAKANA",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "GATO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "GATTOS",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "GATTOS E ATOS",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "GREAT NEWS",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "HANGAR",
+      "qtd_produtos": 3
+    },
+    {
+      "nome_planilha": "HAU.CO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "HAVE FUN",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "HIGHSTIL",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "HIPSTER",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "HITS",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "IMITAÇAO COCO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "INDIVIDUAL",
+      "qtd_produtos": 31
+    },
+    {
+      "nome_planilha": "JOHN JOHN",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "JOHNNY FOX",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "KACTOOS",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "LACOSTE",
+      "qtd_produtos": 3
+    },
+    {
+      "nome_planilha": "LEE JEANS",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "LEGENDARIOS",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "LETRA 0",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "LETRA E",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "LETRA M",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "LEVIS",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "LILICA",
+      "qtd_produtos": 5
+    },
+    {
+      "nome_planilha": "LOGO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "LOV",
+      "qtd_produtos": 12
+    },
+    {
+      "nome_planilha": "LUC BOO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "M",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "M.POLLO",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "MAHALO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "MARANDS",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "MARISOL",
+      "qtd_produtos": 3
+    },
+    {
+      "nome_planilha": "MAX DENIM",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "MERO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "MILANI",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "MILON",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "MUNDI",
+      "qtd_produtos": 9
+    },
+    {
+      "nome_planilha": "NO STRESS",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "NUMERO 1",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "NUMERO 2",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "NUMERO 4",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "OGOCHI",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "OH BOY",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "OLIVER",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "PACO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "PALESTRA",
+      "qtd_produtos": 3
+    },
+    {
+      "nome_planilha": "PAULA RAIA",
+      "qtd_produtos": 5
+    },
+    {
+      "nome_planilha": "PITT",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "PRINCIPESSA",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "PZAMA",
+      "qtd_produtos": 3
+    },
+    {
+      "nome_planilha": "PÉ",
+      "qtd_produtos": 3
+    },
+    {
+      "nome_planilha": "QUINTESS",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "RAZZO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "REIREX",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "REZZATO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "RICCIERI",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "ROLLU",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "ROLLU 2X",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "RVTX KIDS",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "RVXT",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "S/ STRASS",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "SACADA",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "SANCHES BABY",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "SEM JUIZO",
+      "qtd_produtos": 4
+    },
+    {
+      "nome_planilha": "SIGOSTA",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "SILK SPORT",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "SOUL",
+      "qtd_produtos": 5
+    },
+    {
+      "nome_planilha": "TIGOR",
+      "qtd_produtos": 3
+    },
+    {
+      "nome_planilha": "TIN MAHALO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "TINY JOY",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "TNG",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "TRICK NICK",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "TURMA BACANA",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "UNIVIP",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "UP BABY",
+      "qtd_produtos": 5
+    },
+    {
+      "nome_planilha": "URSO",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "US POLO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "VALISERE",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "VELLUTO",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "VIZOO",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "WE ARE FBR",
+      "qtd_produtos": 2
+    },
+    {
+      "nome_planilha": "YACHT MASTER",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "YOUCCIE",
+      "qtd_produtos": 1
+    },
+    {
+      "nome_planilha": "ZRLF",
+      "qtd_produtos": 1
+    }
+  ],
+  "agrupamento_unificado": [
+    {
+      "representante_unificado": "ACREDITE NA FORÇA DO BRASIL",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "ACREDITE NA FORÇA DO BRASIL"
+      ]
+    },
+    {
+      "representante_unificado": "ACT",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "ACT"
+      ]
+    },
+    {
+      "representante_unificado": "ALAKAZOO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "ALAKAZOO"
+      ]
+    },
+    {
+      "representante_unificado": "ALECRIM",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "ALECRIM"
+      ]
+    },
+    {
+      "representante_unificado": "ALENICE",
+      "qtd_produtos": 4,
+      "variacoes_encontradas": [
+        "ALENICE"
+      ]
+    },
+    {
+      "representante_unificado": "ALNC",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "ALNC"
+      ]
+    },
+    {
+      "representante_unificado": "ANIS ESTRELADO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "ANIS ESTRELADO"
+      ]
+    },
+    {
+      "representante_unificado": "BANA BANA",
+      "qtd_produtos": 5,
+      "variacoes_encontradas": [
+        "BANA BANA"
+      ]
+    },
+    {
+      "representante_unificado": "BAUMGARTEN",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "BAUMGARTEN"
+      ]
+    },
+    {
+      "representante_unificado": "BEAGLE",
+      "qtd_produtos": 5,
+      "variacoes_encontradas": [
+        "BEAGLE"
+      ]
+    },
+    {
+      "representante_unificado": "BIOGAS",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "BIOGAS"
+      ]
+    },
+    {
+      "representante_unificado": "BOM BOM",
+      "qtd_produtos": 3,
+      "variacoes_encontradas": [
+        "BOM BOM"
+      ]
+    },
+    {
+      "representante_unificado": "BORBOLETA",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "BORBOLETA"
+      ]
+    },
+    {
+      "representante_unificado": "BRAGLE",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "BRAGLE"
+      ]
+    },
+    {
+      "representante_unificado": "BRETZEL",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "BRETZEL"
+      ]
+    },
+    {
+      "representante_unificado": "C/ STRASS",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "C/ STRASS"
+      ]
+    },
+    {
+      "representante_unificado": "CAPIM AÇU",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "CAPIM AÇU"
+      ]
+    },
+    {
+      "representante_unificado": "CHARPEY",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "CHARPEY"
+      ]
+    },
+    {
+      "representante_unificado": "CIA GOTA",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "CIA GOTA"
+      ]
+    },
+    {
+      "representante_unificado": "CL",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "CL"
+      ]
+    },
+    {
+      "representante_unificado": "CO2",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "CO2"
+      ]
+    },
+    {
+      "representante_unificado": "COLCCI",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "COLCCI"
+      ]
+    },
+    {
+      "representante_unificado": "COLORITA",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "COLORITA"
+      ]
+    },
+    {
+      "representante_unificado": "COLORITTA",
+      "qtd_produtos": 11,
+      "variacoes_encontradas": [
+        "COLORITTA"
+      ]
+    },
+    {
+      "representante_unificado": "COLORITTÁ",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "COLORITTÁ"
+      ]
+    },
+    {
+      "representante_unificado": "CORAÇAO",
+      "qtd_produtos": 3,
+      "variacoes_encontradas": [
+        "CORAÇAO"
+      ]
+    },
+    {
+      "representante_unificado": "CTV BRAND",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "CTV BRAND"
+      ]
+    },
+    {
+      "representante_unificado": "D&O",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "D&O"
+      ]
+    },
+    {
+      "representante_unificado": "DELIZ",
+      "qtd_produtos": 3,
+      "variacoes_encontradas": [
+        "DELIZ"
+      ]
+    },
+    {
+      "representante_unificado": "DIMY",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "DIMY"
+      ]
+    },
+    {
+      "representante_unificado": "DING DANG",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "DING DANG"
+      ]
+    },
+    {
+      "representante_unificado": "DITONGO",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "DITONGO"
+      ]
+    },
+    {
+      "representante_unificado": "DLZ",
+      "qtd_produtos": 5,
+      "variacoes_encontradas": [
+        "DLZ"
+      ]
+    },
+    {
+      "representante_unificado": "DUDALINA",
+      "qtd_produtos": 7,
+      "variacoes_encontradas": [
+        "DUDALINA"
+      ]
+    },
+    {
+      "representante_unificado": "DWAY FASHION BRAND",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "DWAY FASHION BRAND"
+      ]
+    },
+    {
+      "representante_unificado": "EDEX",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "EDEX"
+      ]
+    },
+    {
+      "representante_unificado": "ELIAN",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "ELIAN"
+      ]
+    },
+    {
+      "representante_unificado": "FABULA",
+      "qtd_produtos": 4,
+      "variacoes_encontradas": [
+        "FABULA"
+      ]
+    },
+    {
+      "representante_unificado": "FLOR",
+      "qtd_produtos": 5,
+      "variacoes_encontradas": [
+        "FLOR"
+      ]
+    },
+    {
+      "representante_unificado": "FLOR DE LIS",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "FLOR DE LIS"
+      ]
+    },
+    {
+      "representante_unificado": "FLOR DE LIS 2X",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "FLOR DE LIS 2X"
+      ]
+    },
+    {
+      "representante_unificado": "FLUEEM",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "FLUEEM"
+      ]
+    },
+    {
+      "representante_unificado": "FORUM",
+      "qtd_produtos": 5,
+      "variacoes_encontradas": [
+        "FORUM"
+      ]
+    },
+    {
+      "representante_unificado": "FUN JEANS",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "FUN JEANS"
+      ]
+    },
+    {
+      "representante_unificado": "GANGSTER",
+      "qtd_produtos": 8,
+      "variacoes_encontradas": [
+        "GANGSTER"
+      ]
+    },
+    {
+      "representante_unificado": "GANSTER",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "GANSTER"
+      ]
+    },
+    {
+      "representante_unificado": "GATA BAKANA",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "GATA BAKANA"
+      ]
+    },
+    {
+      "representante_unificado": "GATABAKANA",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "GATABAKANA"
+      ]
+    },
+    {
+      "representante_unificado": "GATO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "GATO"
+      ]
+    },
+    {
+      "representante_unificado": "GATTOS",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "GATTOS"
+      ]
+    },
+    {
+      "representante_unificado": "GATTOS E ATOS",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "GATTOS E ATOS"
+      ]
+    },
+    {
+      "representante_unificado": "GREAT NEWS",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "GREAT NEWS"
+      ]
+    },
+    {
+      "representante_unificado": "HANGAR",
+      "qtd_produtos": 3,
+      "variacoes_encontradas": [
+        "HANGAR"
+      ]
+    },
+    {
+      "representante_unificado": "HAU.CO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "HAU.CO"
+      ]
+    },
+    {
+      "representante_unificado": "HAVE FUN",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "HAVE FUN"
+      ]
+    },
+    {
+      "representante_unificado": "HIGHSTIL",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "HIGHSTIL"
+      ]
+    },
+    {
+      "representante_unificado": "HIPSTER",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "HIPSTER"
+      ]
+    },
+    {
+      "representante_unificado": "HITS",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "HITS"
+      ]
+    },
+    {
+      "representante_unificado": "IMITAÇAO COCO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "IMITAÇAO COCO"
+      ]
+    },
+    {
+      "representante_unificado": "INDIVIDUAL",
+      "qtd_produtos": 31,
+      "variacoes_encontradas": [
+        "INDIVIDUAL"
+      ]
+    },
+    {
+      "representante_unificado": "JOHN JOHN",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "JOHN JOHN"
+      ]
+    },
+    {
+      "representante_unificado": "JOHNNY FOX",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "JOHNNY FOX"
+      ]
+    },
+    {
+      "representante_unificado": "KACTOOS",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "KACTOOS"
+      ]
+    },
+    {
+      "representante_unificado": "LACOSTE",
+      "qtd_produtos": 3,
+      "variacoes_encontradas": [
+        "LACOSTE"
+      ]
+    },
+    {
+      "representante_unificado": "LEE JEANS",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "LEE JEANS"
+      ]
+    },
+    {
+      "representante_unificado": "LEGENDARIOS",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "LEGENDARIOS"
+      ]
+    },
+    {
+      "representante_unificado": "LETRA 0",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "LETRA 0"
+      ]
+    },
+    {
+      "representante_unificado": "LETRA E",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "LETRA E"
+      ]
+    },
+    {
+      "representante_unificado": "LETRA M",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "LETRA M"
+      ]
+    },
+    {
+      "representante_unificado": "LEVIS",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "LEVIS"
+      ]
+    },
+    {
+      "representante_unificado": "LILICA",
+      "qtd_produtos": 5,
+      "variacoes_encontradas": [
+        "LILICA"
+      ]
+    },
+    {
+      "representante_unificado": "LOGO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "LOGO"
+      ]
+    },
+    {
+      "representante_unificado": "LOV",
+      "qtd_produtos": 12,
+      "variacoes_encontradas": [
+        "LOV"
+      ]
+    },
+    {
+      "representante_unificado": "LUC BOO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "LUC BOO"
+      ]
+    },
+    {
+      "representante_unificado": "M",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "M"
+      ]
+    },
+    {
+      "representante_unificado": "M.POLLO",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "M.POLLO"
+      ]
+    },
+    {
+      "representante_unificado": "MAHALO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "MAHALO"
+      ]
+    },
+    {
+      "representante_unificado": "MARANDS",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "MARANDS"
+      ]
+    },
+    {
+      "representante_unificado": "MARISOL",
+      "qtd_produtos": 3,
+      "variacoes_encontradas": [
+        "MARISOL"
+      ]
+    },
+    {
+      "representante_unificado": "MAX DENIM",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "MAX DENIM"
+      ]
+    },
+    {
+      "representante_unificado": "MERO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "MERO"
+      ]
+    },
+    {
+      "representante_unificado": "MILANI",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "MILANI"
+      ]
+    },
+    {
+      "representante_unificado": "MILON",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "MILON"
+      ]
+    },
+    {
+      "representante_unificado": "MUNDI",
+      "qtd_produtos": 9,
+      "variacoes_encontradas": [
+        "MUNDI"
+      ]
+    },
+    {
+      "representante_unificado": "NO STRESS",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "NO STRESS"
+      ]
+    },
+    {
+      "representante_unificado": "NUMERO 1",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "NUMERO 1"
+      ]
+    },
+    {
+      "representante_unificado": "NUMERO 2",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "NUMERO 2"
+      ]
+    },
+    {
+      "representante_unificado": "NUMERO 4",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "NUMERO 4"
+      ]
+    },
+    {
+      "representante_unificado": "OGOCHI",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "OGOCHI"
+      ]
+    },
+    {
+      "representante_unificado": "OH BOY",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "OH BOY"
+      ]
+    },
+    {
+      "representante_unificado": "OLIVER",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "OLIVER"
+      ]
+    },
+    {
+      "representante_unificado": "PACO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "PACO"
+      ]
+    },
+    {
+      "representante_unificado": "PALESTRA",
+      "qtd_produtos": 3,
+      "variacoes_encontradas": [
+        "PALESTRA"
+      ]
+    },
+    {
+      "representante_unificado": "PAULA RAIA",
+      "qtd_produtos": 5,
+      "variacoes_encontradas": [
+        "PAULA RAIA"
+      ]
+    },
+    {
+      "representante_unificado": "PITT",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "PITT"
+      ]
+    },
+    {
+      "representante_unificado": "PRINCIPESSA",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "PRINCIPESSA"
+      ]
+    },
+    {
+      "representante_unificado": "PZAMA",
+      "qtd_produtos": 3,
+      "variacoes_encontradas": [
+        "PZAMA"
+      ]
+    },
+    {
+      "representante_unificado": "PÉ",
+      "qtd_produtos": 3,
+      "variacoes_encontradas": [
+        "PÉ"
+      ]
+    },
+    {
+      "representante_unificado": "QUINTESS",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "QUINTESS"
+      ]
+    },
+    {
+      "representante_unificado": "RAZZO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "RAZZO"
+      ]
+    },
+    {
+      "representante_unificado": "REIREX",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "REIREX"
+      ]
+    },
+    {
+      "representante_unificado": "REZZATO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "REZZATO"
+      ]
+    },
+    {
+      "representante_unificado": "RICCIERI",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "RICCIERI"
+      ]
+    },
+    {
+      "representante_unificado": "ROLLU",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "ROLLU"
+      ]
+    },
+    {
+      "representante_unificado": "ROLLU 2X",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "ROLLU 2X"
+      ]
+    },
+    {
+      "representante_unificado": "RVTX KIDS",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "RVTX KIDS"
+      ]
+    },
+    {
+      "representante_unificado": "RVXT",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "RVXT"
+      ]
+    },
+    {
+      "representante_unificado": "S/ STRASS",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "S/ STRASS"
+      ]
+    },
+    {
+      "representante_unificado": "SACADA",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "SACADA"
+      ]
+    },
+    {
+      "representante_unificado": "SANCHES BABY",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "SANCHES BABY"
+      ]
+    },
+    {
+      "representante_unificado": "SEM JUIZO",
+      "qtd_produtos": 4,
+      "variacoes_encontradas": [
+        "SEM JUIZO"
+      ]
+    },
+    {
+      "representante_unificado": "SIGOSTA",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "SIGOSTA"
+      ]
+    },
+    {
+      "representante_unificado": "SILK SPORT",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "SILK SPORT"
+      ]
+    },
+    {
+      "representante_unificado": "SOUL",
+      "qtd_produtos": 5,
+      "variacoes_encontradas": [
+        "SOUL"
+      ]
+    },
+    {
+      "representante_unificado": "TIGOR",
+      "qtd_produtos": 3,
+      "variacoes_encontradas": [
+        "TIGOR"
+      ]
+    },
+    {
+      "representante_unificado": "TIN MAHALO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "TIN MAHALO"
+      ]
+    },
+    {
+      "representante_unificado": "TINY JOY",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "TINY JOY"
+      ]
+    },
+    {
+      "representante_unificado": "TNG",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "TNG"
+      ]
+    },
+    {
+      "representante_unificado": "TRICK NICK",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "TRICK NICK"
+      ]
+    },
+    {
+      "representante_unificado": "TURMA BACANA",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "TURMA BACANA"
+      ]
+    },
+    {
+      "representante_unificado": "UNIVIP",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "UNIVIP"
+      ]
+    },
+    {
+      "representante_unificado": "UP BABY",
+      "qtd_produtos": 5,
+      "variacoes_encontradas": [
+        "UP BABY"
+      ]
+    },
+    {
+      "representante_unificado": "URSO",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "URSO"
+      ]
+    },
+    {
+      "representante_unificado": "US POLO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "US POLO"
+      ]
+    },
+    {
+      "representante_unificado": "VALISERE",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "VALISERE"
+      ]
+    },
+    {
+      "representante_unificado": "VELLUTO",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "VELLUTO"
+      ]
+    },
+    {
+      "representante_unificado": "VIZOO",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "VIZOO"
+      ]
+    },
+    {
+      "representante_unificado": "WE ARE FBR",
+      "qtd_produtos": 2,
+      "variacoes_encontradas": [
+        "WE ARE FBR"
+      ]
+    },
+    {
+      "representante_unificado": "YACHT MASTER",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "YACHT MASTER"
+      ]
+    },
+    {
+      "representante_unificado": "YOUCCIE",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "YOUCCIE"
+      ]
+    },
+    {
+      "representante_unificado": "ZRLF",
+      "qtd_produtos": 1,
+      "variacoes_encontradas": [
+        "ZRLF"
+      ]
+    }
+  ]
+}

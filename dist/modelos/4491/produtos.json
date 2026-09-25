@@ -1,0 +1,46 @@
+{
+  "entidade_id": "4491",
+  "entidade_nome": "4491",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "44910029",
+      "modelo": "4491",
+      "tamanho": "18",
+      "cor_codigo": "C514",
+      "tingimento": null,
+      "cor_nome": "MARFIM",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "MADEIRA",
+      "descricao": "BOTAO MDR 4491 4F TAM 18 COR C514  FOSCO PERS ",
+      "qtd_saldo": 2,
+      "unidade": "GR",
+      "cliente": "IAEL - COMERCIO DE AVIAMENTOS LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    },
+    {
+      "cod_red": "44910029",
+      "modelo": "4491",
+      "tamanho": "18",
+      "cor_codigo": "C514",
+      "tingimento": "X",
+      "cor_nome": "PRETO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "MADEIRA",
+      "descricao": "BOTAO MDR 4491 4F TAM 18 COR C514  FOSCO PERS ",
+      "qtd_saldo": 3,
+      "unidade": "GR",
+      "cliente": "IAEL - COMERCIO DE AVIAMENTOS LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entidade_id": "11796",
+  "entidade_nome": "11796",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "117960001",
+      "modelo": "11796",
+      "tamanho": "18",
+      "cor_codigo": "C1372",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 11796 4F TAM 18 COR C1372 FOSCO PERS",
+      "qtd_saldo": 34,
+      "unidade": "GR",
+      "cliente": "Blutextil",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

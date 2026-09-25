@@ -1,0 +1,27 @@
+{
+  "entidade_id": "2917",
+  "entidade_nome": "2917",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "29170007",
+      "modelo": "2917",
+      "tamanho": "47",
+      "cor_codigo": "C002",
+      "tingimento": null,
+      "cor_nome": "OURO VELHO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "PLAQUINHA POL 2917 2F TAM 47 COR C002 FOSCO PERS TING EST",
+      "qtd_saldo": 10,
+      "unidade": "GR",
+      "cliente": "Veste S.a.estilo",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entidade_id": "2362",
+  "entidade_nome": "2362",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "23620002",
+      "modelo": "2362",
+      "tamanho": "40",
+      "cor_codigo": "C243",
+      "tingimento": "X",
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "PERS",
+      "material": "POLIESTER",
+      "descricao": "PLAQUINHA POL 02362 2F TAM 40 COR  C243 F PERS TING ",
+      "qtd_saldo": 5,
+      "unidade": "GR",
+      "cliente": "KYLY INDUSTRIA TEXTIL LTDA.",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

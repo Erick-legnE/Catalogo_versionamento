@@ -1,0 +1,45 @@
+{
+  "entidade_id": "user_134",
+  "entidade_nome": "SANCHES BABY COMPANY LTDA",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "111910005",
+      "modelo": "11191",
+      "tamanho": "28",
+      "cor_codigo": "C1042",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 11191 2F TAM 28 COR C1042 FOSCO PERS      ",
+      "qtd_saldo": 10,
+      "unidade": "GR",
+      "cliente": "SANCHES BABY COMPANY LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    },
+    {
+      "cod_red": "102450122",
+      "modelo": "10245",
+      "tamanho": "28",
+      "cor_codigo": "C001",
+      "tingimento": null,
+      "cor_nome": "BRANCO",
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10245 2F TAM 28 COR C001 BRILH PERS (GS)",
+      "qtd_saldo": 12,
+      "unidade": "GR",
+      "cliente": "SANCHES BABY COMPANY LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

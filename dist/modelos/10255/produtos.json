@@ -1,0 +1,46 @@
+{
+  "entidade_id": "10255",
+  "entidade_nome": "10255",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "102550006",
+      "modelo": "10255",
+      "tamanho": "26",
+      "cor_codigo": "C189",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10255 4F TAM 26 COR C189 FOSCO PERS      ",
+      "qtd_saldo": 35,
+      "unidade": "GR",
+      "cliente": "CIA. HERING",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    },
+    {
+      "cod_red": "102550001",
+      "modelo": "10255",
+      "tamanho": "18",
+      "cor_codigo": "C189",
+      "tingimento": null,
+      "cor_nome": "MARRON RAJADO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "OTAO POL 10255 4F TAM 18 COR C189 FOSCO PERS",
+      "qtd_saldo": 71,
+      "unidade": "GR",
+      "cliente": "VESTE S.A.ESTILO",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

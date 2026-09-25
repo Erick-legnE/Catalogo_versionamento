@@ -1,0 +1,46 @@
+{
+  "entidade_id": "10254",
+  "entidade_nome": "10254",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "102540013",
+      "modelo": "10254",
+      "tamanho": "14",
+      "cor_codigo": "C132",
+      "tingimento": null,
+      "cor_nome": "MARROM RAJADO ",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10254 4F TAM 14 COR C132  FOSCO PERS ",
+      "qtd_saldo": 74,
+      "unidade": "GR",
+      "cliente": "VESTE S.A.ESTILO",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    },
+    {
+      "cod_red": "102540001",
+      "modelo": "10254",
+      "tamanho": "18",
+      "cor_codigo": "C132",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10254 4F TAM 18 COR C132 FOSCO PERS",
+      "qtd_saldo": 95,
+      "unidade": "GR",
+      "cliente": "VESTE S.A.ESTILO",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

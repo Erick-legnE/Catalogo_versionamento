@@ -1,0 +1,26 @@
+{
+  "entidade_id": "user_075",
+  "entidade_nome": "DELUXE NEGOCIOS DO VESTUARIO LTDA",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "102110009",
+      "modelo": "10211",
+      "tamanho": "14",
+      "cor_codigo": "C100",
+      "tingimento": "X",
+      "cor_nome": "PARA PRETO",
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10211 4F TAM 14 COR C100 BRILHO PERS      ",
+      "qtd_saldo": 9,
+      "unidade": "GR",
+      "cliente": "DELUXE NEGOCIOS DO VESTUARIO LTDA",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

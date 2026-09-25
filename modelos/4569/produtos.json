@@ -1,0 +1,27 @@
+{
+  "entidade_id": "4569",
+  "entidade_nome": "4569",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "45690003",
+      "modelo": "4569",
+      "tamanho": "33",
+      "cor_codigo": "C060",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "PLAQUINHA POL 4569 2F TAM 33 COR  C060 FOSCO PERS",
+      "qtd_saldo": 11,
+      "unidade": "GR",
+      "cliente": "Vizoo Brasil Modas",
+      "representante": "Suzana M. Faingold",
+      "foto": null
+    }
+  ]
+}

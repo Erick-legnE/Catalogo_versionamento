@@ -1,0 +1,21 @@
+# Temporary Excel files
+~$*.xlsm
+~$*.xlsx
+
+# Python cache & env
+__pycache__/
+*.py[cod]
+.venv/
+env/
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+dir_to_ignore/data
+dir_to_ignore/dist/imagens
+dir_to_ignore/dist/modelos
+# Optional: If dist/ is your build target and only root is published, 
+# or vice-versa, exclude redundant build outputs if needed.

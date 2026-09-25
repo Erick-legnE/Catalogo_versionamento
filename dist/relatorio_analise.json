@@ -1,0 +1,991 @@
+{
+  "resumo": {
+    "total_linhas_com_dados": 459,
+    "total_representantes_distintos": 131,
+    "total_clientes_distintos": 114
+  },
+  "representantes_encontrados": [
+    {
+      "nome": "INDIVIDUAL",
+      "ocorrencias": 31
+    },
+    {
+      "nome": "LOV",
+      "ocorrencias": 12
+    },
+    {
+      "nome": "COLORITTA",
+      "ocorrencias": 11
+    },
+    {
+      "nome": "MUNDI",
+      "ocorrencias": 9
+    },
+    {
+      "nome": "GANGSTER",
+      "ocorrencias": 8
+    },
+    {
+      "nome": "DUDALINA",
+      "ocorrencias": 7
+    },
+    {
+      "nome": "FLOR",
+      "ocorrencias": 5
+    },
+    {
+      "nome": "UP BABY",
+      "ocorrencias": 5
+    },
+    {
+      "nome": "BEAGLE",
+      "ocorrencias": 5
+    },
+    {
+      "nome": "PAULA RAIA",
+      "ocorrencias": 5
+    },
+    {
+      "nome": "LILICA",
+      "ocorrencias": 5
+    },
+    {
+      "nome": "SOUL",
+      "ocorrencias": 5
+    },
+    {
+      "nome": "FORUM",
+      "ocorrencias": 5
+    },
+    {
+      "nome": "BANA BANA",
+      "ocorrencias": 5
+    },
+    {
+      "nome": "DLZ",
+      "ocorrencias": 5
+    },
+    {
+      "nome": "ALENICE",
+      "ocorrencias": 4
+    },
+    {
+      "nome": "FABULA",
+      "ocorrencias": 4
+    },
+    {
+      "nome": "SEM JUIZO",
+      "ocorrencias": 4
+    },
+    {
+      "nome": "CORAÇAO",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "HANGAR",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "PÉ",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "BOM BOM",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "LACOSTE",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "PALESTRA",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "MARISOL",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "PZAMA",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "TIGOR",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "DELIZ",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "SILK SPORT",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "HAVE FUN",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "TNG",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "JOHN JOHN",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "DITONGO",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "VALISERE",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "BIOGAS",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "ALNC",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "CHARPEY",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "ELIAN",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "TINY JOY",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "VIZOO",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "URSO",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "CAPIM AÇU",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "NO STRESS",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "MARANDS",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "M.POLLO",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "QUINTESS",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "WE ARE FBR",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "FLOR DE LIS",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "ROLLU 2X",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "LEE JEANS",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "LETRA M",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "M",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "S/ STRASS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GATO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "C/ STRASS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "IMITAÇAO COCO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "HITS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MAX DENIM",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "BORBOLETA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "HIPSTER",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "OH BOY",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "YACHT MASTER",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "US POLO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "BRAGLE",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "FLUEEM",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "CL",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MILON",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "JOHNNY FOX",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "FUN JEANS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "OGOCHI",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "PITT",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "RAZZO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GREAT NEWS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ZRLF",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "HAU.CO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "PRINCIPESSA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "CO2",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "KACTOOS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "VELLUTO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ACT",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "D&O",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "LEGENDARIOS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "YOUCCIE",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "SACADA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "TURMA BACANA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "DING DANG",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "REZZATO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GATA BAKANA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GATABAKANA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "BRETZEL",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "COLORITA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "SIGOSTA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ALAKAZOO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "LOGO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "TRICK NICK",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "LUC BOO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "TIN MAHALO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GATTOS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MAHALO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "DIMY",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "LEVIS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "RVXT",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ROLLU",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "CIA GOTA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "REIREX",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "RVTX KIDS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "OLIVER",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GATTOS E ATOS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GANSTER",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "EDEX",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MERO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "HIGHSTIL",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "SANCHES BABY",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ANIS ESTRELADO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "RICCIERI",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "UNIVIP",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "BAUMGARTEN",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ALECRIM",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MILANI",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "COLCCI",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "PACO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "LETRA E",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "LETRA 0",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "NUMERO 4",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "NUMERO 1",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "NUMERO 2",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ACREDITE NA FORÇA DO BRASIL",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "COLORITTÁ",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "FLOR DE LIS 2X",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "DWAY FASHION BRAND",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "CTV BRAND",
+      "ocorrencias": 1
+    }
+  ],
+  "clientes_encontrados": [
+    {
+      "nome": "KYLY",
+      "ocorrencias": 51
+    },
+    {
+      "nome": "HERING",
+      "ocorrencias": 45
+    },
+    {
+      "nome": "BRANDILI",
+      "ocorrencias": 41
+    },
+    {
+      "nome": "LUNELLI",
+      "ocorrencias": 24
+    },
+    {
+      "nome": "VESTE",
+      "ocorrencias": 22
+    },
+    {
+      "nome": "ELIAN",
+      "ocorrencias": 22
+    },
+    {
+      "nome": "MARVIC",
+      "ocorrencias": 12
+    },
+    {
+      "nome": "MARISOL",
+      "ocorrencias": 11
+    },
+    {
+      "nome": "VISON",
+      "ocorrencias": 11
+    },
+    {
+      "nome": "ALENICE",
+      "ocorrencias": 10
+    },
+    {
+      "nome": "IAEL",
+      "ocorrencias": 9
+    },
+    {
+      "nome": "MAR QUENTE",
+      "ocorrencias": 9
+    },
+    {
+      "nome": "DELIZ",
+      "ocorrencias": 7
+    },
+    {
+      "nome": "K2",
+      "ocorrencias": 6
+    },
+    {
+      "nome": "CVI",
+      "ocorrencias": 6
+    },
+    {
+      "nome": "AMC",
+      "ocorrencias": 5
+    },
+    {
+      "nome": "KAESSE",
+      "ocorrencias": 5
+    },
+    {
+      "nome": "CRISTINA",
+      "ocorrencias": 4
+    },
+    {
+      "nome": "VALISERE",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "MILA SPECIAL CUT",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "COMASK",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "TNG",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "MJ MIRANDA",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "PZAMA",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "ROVITEX",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "BAMBOO",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "RICO",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "INDORF",
+      "ocorrencias": 3
+    },
+    {
+      "nome": "PARA PRETO HERING",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "PLURAL",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "GMD",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "MARPA",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "PASQUINI",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "TEXPA",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "V2 IND",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "GATOS E ATOS",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "KAIANI",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "VIZOO",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "LECIMAR",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "JOMAR",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "PS IND.",
+      "ocorrencias": 2
+    },
+    {
+      "nome": "PARA PRETO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MUNDI",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "1 PC COM 6 GR E 1 PC COM 23 GR",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "LOV",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "SANCHES",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "LUANDRI",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "OGOCHI",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "YONG CLASS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "BASICO&CO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MINIMAL CLUB",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "CONF. LEZI",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "FAN PRUST",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "AD-FASHION",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "CH3 LTDA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "DK INDUSTRIA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "UP BABY",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "SALLO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "J. VANDERLEI",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ACTUM",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ORACON",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "BANA BANA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "FLUEEM",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "FM MAGALHAES",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "APPLICATO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "RQ IND",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "SIMON BRAUN",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GAMBINO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GREAT NEWS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ZAFIRELE",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "RAFREE",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "DITONGO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "CHAUBERT",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "PRINCIPESSA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GS2",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "DEFILS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MARCYN",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "DELLOSC",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "LEGENDARIOS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "TEC COTTON",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "IB COMERCIO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "PAULINO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "PEC CONF.",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "BRETZEL",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "KRINDGES",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MARISON",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "SIGOSTA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "PEREIRA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GATTOS E ATOS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "OKTEX",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MIRMAY",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "LEVIS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ACONCHEGO",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "RIZLLEP",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ROLLU",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "1 PC COM 19 E 1 PC COM 11",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "UM PACOTE COM 49 E UM PACOTE COM 20",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "PACOTE COM 47 E UM PACOTE COM 19",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "BLUTEXTIL",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "1 PCT COM 82 E 1 PCT COM 27",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "1 PC COM 18 GR E 1 PC COM 30 GR",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MARP",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ROMITEX",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "TEMPO DE CRIANÇA",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "GATTOS",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "EDEX",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "ALEXANDRE",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "TEXDRINI IND",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "1 PC COM 8 E 1 PC COM 12",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "JORGEMAR",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "OS IND",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "1 PC COM 8GR E 1 PC COM 10 GR",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "MPL",
+      "ocorrencias": 1
+    },
+    {
+      "nome": "YOUNG STYLE",
+      "ocorrencias": 1
+    }
+  ]
+}

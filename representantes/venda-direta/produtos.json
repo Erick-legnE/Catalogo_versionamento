@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_034",
+  "entidade_nome": "Venda Direta",
+  "tipo": "representantes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "3980007",
+      "modelo": "398",
+      "tamanho": "18",
+      "cor_codigo": "C149",
+      "tingimento": null,
+      "cor_nome": "PEROLADO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 398 4F TAM 18 COR C149 BRILHO PERS",
+      "qtd_saldo": 4,
+      "unidade": "GR",
+      "cliente": "Filo",
+      "representante": "Venda Direta",
+      "foto": null
+    }
+  ]
+}

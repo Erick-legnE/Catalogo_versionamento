@@ -1,0 +1,27 @@
+{
+  "entidade_id": "2556",
+  "entidade_nome": "2556",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "25560004",
+      "modelo": "2556",
+      "tamanho": "36",
+      "cor_codigo": "C005",
+      "tingimento": "139",
+      "cor_nome": "CINZA ESCURO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERSONALIZADO TINGIDO E GRAFITE",
+      "material": "POLIESTER",
+      "descricao": "PLAQUINHA POL 2556 2F TAM 36 COR C005 FOSCO PER TIN E EST",
+      "qtd_saldo": 5,
+      "unidade": "GR",
+      "cliente": "Sued Têxtil",
+      "representante": "",
+      "foto": null
+    }
+  ]
+}

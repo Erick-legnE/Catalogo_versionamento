@@ -1,0 +1,27 @@
+{
+  "entidade_id": "10192",
+  "entidade_nome": "10192",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "101920016",
+      "modelo": "10192",
+      "tamanho": "28",
+      "cor_codigo": "C094",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10192 4F TAM 28 COR C094  FOSCO PERS TING      ",
+      "qtd_saldo": 4,
+      "unidade": "GR",
+      "cliente": "TNG Comercio e Industria de Roupas",
+      "representante": "CVI",
+      "foto": null
+    }
+  ]
+}

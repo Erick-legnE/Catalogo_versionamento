@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_076",
+  "entidade_nome": "Gambino",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "16510004",
+      "modelo": "1651",
+      "tamanho": "18",
+      "cor_codigo": "C100",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "1F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL PE 1651 1F TAM 18 COR C10 0 BRILHO PERS      ",
+      "qtd_saldo": 13,
+      "unidade": "GR",
+      "cliente": "Gambino",
+      "representante": "Rona Representações",
+      "foto": null
+    }
+  ]
+}

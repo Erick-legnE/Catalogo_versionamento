@@ -1,0 +1,27 @@
+{
+  "entidade_id": "13424",
+  "entidade_nome": "13424",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "134240001",
+      "modelo": "13424",
+      "tamanho": "18",
+      "cor_codigo": "C1993",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 13424 4F TAM 18 COR C1993 FOSCO PERS",
+      "qtd_saldo": 24,
+      "unidade": "GR",
+      "cliente": "CIA. HERING",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

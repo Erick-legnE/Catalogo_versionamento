@@ -1,0 +1,46 @@
+{
+  "entidade_id": "612",
+  "entidade_nome": "612",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "6120010",
+      "modelo": "612",
+      "tamanho": "22",
+      "cor_codigo": "C100",
+      "tingimento": null,
+      "cor_nome": "PEROLADO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "BRILHO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 612 2F TAM 22 COR C100 BRILHO LISO",
+      "qtd_saldo": 37,
+      "unidade": "GR",
+      "cliente": "Elian Industria Têxtil",
+      "representante": "",
+      "foto": null
+    },
+    {
+      "cod_red": "6120011",
+      "modelo": "612",
+      "tamanho": "22",
+      "cor_codigo": "C100",
+      "tingimento": "6751",
+      "cor_nome": "MARINHO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "BRILHO LISO TINGIDO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 612 2F TAM 22 COR C100 BRILHO LISO TING",
+      "qtd_saldo": 2,
+      "unidade": "GR",
+      "cliente": "Elian Industria Têxtil",
+      "representante": "",
+      "foto": null
+    }
+  ]
+}

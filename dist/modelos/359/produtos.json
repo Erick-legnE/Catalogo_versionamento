@@ -1,0 +1,46 @@
+{
+  "entidade_id": "359",
+  "entidade_nome": "359",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "3590013",
+      "modelo": "359",
+      "tamanho": "16",
+      "cor_codigo": "C076",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 359 4F TAM 16 COR C076  BRILHO PERS TING ",
+      "qtd_saldo": 8,
+      "unidade": "GR",
+      "cliente": "CIA. HERING",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    },
+    {
+      "cod_red": "3590014",
+      "modelo": "359",
+      "tamanho": "18",
+      "cor_codigo": "C076",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 359 4F TAM 18 COR C076  BRILHO PERS ",
+      "qtd_saldo": 0,
+      "unidade": "GR",
+      "cliente": "CIA. HERING",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

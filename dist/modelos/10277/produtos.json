@@ -1,0 +1,46 @@
+{
+  "entidade_id": "10277",
+  "entidade_nome": "10277",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "102770001",
+      "modelo": "10277",
+      "tamanho": "18",
+      "cor_codigo": "C225",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10277 4F TAM 18 COR C225  BRILHO PERS ",
+      "qtd_saldo": 116,
+      "unidade": "GR",
+      "cliente": "APPLICATO CONFECCOES LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    },
+    {
+      "cod_red": "102770031",
+      "modelo": "10277",
+      "tamanho": "18",
+      "cor_codigo": "C1000",
+      "tingimento": null,
+      "cor_nome": "TRANSPARENTE",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10277 4F TAM 18 COR C1000 BRILHO LISO",
+      "qtd_saldo": 104,
+      "unidade": "GR",
+      "cliente": "KYLY INDUSTRIA TEXTIL LTDA.",
+      "representante": "",
+      "foto": null
+    }
+  ]
+}

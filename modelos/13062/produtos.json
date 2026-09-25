@@ -1,0 +1,46 @@
+{
+  "entidade_id": "13062",
+  "entidade_nome": "13062",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "130620001",
+      "modelo": "13062",
+      "tamanho": "14",
+      "cor_codigo": "C1784",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 13062 4F TAM 14 COR C1784 BRILHO PERS",
+      "qtd_saldo": 34,
+      "unidade": "GR",
+      "cliente": "Veste S.a.estilo",
+      "representante": "Vison Representações",
+      "foto": null
+    },
+    {
+      "cod_red": "130620002",
+      "modelo": "13062",
+      "tamanho": "18",
+      "cor_codigo": "C1784",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 13062 4F TAM 18 COR C1784 BRILHO PERS",
+      "qtd_saldo": 66,
+      "unidade": "GR",
+      "cliente": "Veste S.a.estilo",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "entidade_id": "user_111",
+  "entidade_nome": "Pasquini & Pasquini Confecções",
+  "tipo": "clientes",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "13740049",
+      "modelo": "1374",
+      "tamanho": "16",
+      "cor_codigo": "C073",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 1374 4F TAM 16 COR C073 BRILHO PERS",
+      "qtd_saldo": 2,
+      "unidade": "GR",
+      "cliente": "Pasquini & Pasquini Confecções",
+      "representante": "Marvic Têxtil Representações",
+      "foto": null
+    },
+    {
+      "cod_red": "102230001",
+      "modelo": "10223",
+      "tamanho": "18",
+      "cor_codigo": "C100",
+      "tingimento": "X",
+      "cor_nome": "PRETO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "PE",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10223 PE TAM 18 COR C100  BRILHO PERS",
+      "qtd_saldo": 2,
+      "unidade": "GR",
+      "cliente": "Pasquini & Pasquini Confecções",
+      "representante": "Marvic Têxtil Representações",
+      "foto": null
+    }
+  ]
+}

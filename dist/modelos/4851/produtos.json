@@ -1,0 +1,27 @@
+{
+  "entidade_id": "4851",
+  "entidade_nome": "4851",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "48510002",
+      "modelo": "4851",
+      "tamanho": "32",
+      "cor_codigo": "C328",
+      "tingimento": "647",
+      "cor_nome": "328+647",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 4851 4F TAM 32 COR C328 FOSCO PERS TING E EST ",
+      "qtd_saldo": 10,
+      "unidade": "GR",
+      "cliente": "BAMBOO JEANS LTDA",
+      "representante": "CVI",
+      "foto": null
+    }
+  ]
+}

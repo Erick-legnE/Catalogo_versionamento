@@ -1,0 +1,26 @@
+{
+  "entidade_id": "user_081",
+  "entidade_nome": "F.M. MAGALHAES E CIA LTDA. - ME",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "121510003",
+      "modelo": "12151",
+      "tamanho": "14",
+      "cor_codigo": "C149",
+      "tingimento": null,
+      "cor_nome": "AMARELADO",
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 12151 4F TAM 14 COR C149 BRILHO PERSON",
+      "qtd_saldo": 36,
+      "unidade": "GR",
+      "cliente": "F.M. MAGALHAES E CIA LTDA. - ME",
+      "representante": "J M PEREIRA E CIA LTDA.",
+      "foto": null
+    }
+  ]
+}

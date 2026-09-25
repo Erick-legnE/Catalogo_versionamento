@@ -1,0 +1,27 @@
+{
+  "entidade_id": "12018",
+  "entidade_nome": "12018",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "120180005",
+      "modelo": "12018",
+      "tamanho": "45",
+      "cor_codigo": "C060",
+      "tingimento": "x",
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "PLAQUINHA POL 12018 2F TAM 45 COR C060 BRILHO PERS",
+      "qtd_saldo": 20,
+      "unidade": "GR",
+      "cliente": "V2 Têxtil",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

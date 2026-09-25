@@ -1,0 +1,46 @@
+{
+  "entidade_id": "10136",
+  "entidade_nome": "10136",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "101360001",
+      "modelo": "10136",
+      "tamanho": "24",
+      "cor_codigo": "C1000",
+      "tingimento": null,
+      "cor_nome": "FUME",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10136 4F TAM 24 COR  C1000 BRILH PERS TING ",
+      "qtd_saldo": 7,
+      "unidade": "GR",
+      "cliente": "ALENICE INDUSTRIA TEXTIL LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    },
+    {
+      "cod_red": "101360007",
+      "modelo": "10136",
+      "tamanho": "20",
+      "cor_codigo": "C1000",
+      "tingimento": null,
+      "cor_nome": "FUME",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10136 2F TAM 20 COR C1000 FOSCO PER TING PERS. REIREX P.0599/TING. 027 FUME/ 20100078.023.1000",
+      "qtd_saldo": 30,
+      "unidade": "GR",
+      "cliente": "ROMITEX MALHAS LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

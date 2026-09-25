@@ -1,0 +1,27 @@
+{
+  "entidade_id": "10353",
+  "entidade_nome": "10353",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "103530035",
+      "modelo": "10353",
+      "tamanho": "18",
+      "cor_codigo": "C258",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10353 4F TAM 18 COR C258 FOSCO LISO",
+      "qtd_saldo": 14,
+      "unidade": "GR",
+      "cliente": "Lunelli Industria",
+      "representante": "Marvic Têxtil Representações",
+      "foto": null
+    }
+  ]
+}

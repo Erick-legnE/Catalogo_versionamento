@@ -1,0 +1,27 @@
+{
+  "entidade_id": "751",
+  "entidade_nome": "751",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "7510036",
+      "modelo": "751",
+      "tamanho": "18",
+      "cor_codigo": "C001",
+      "tingimento": "PRETO",
+      "cor_nome": "PRETO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 751 2F TAM 18 COR C001 FOSCO PERS TING",
+      "qtd_saldo": 10,
+      "unidade": "GR",
+      "cliente": "Basico&co S.a",
+      "representante": "CVI",
+      "foto": null
+    }
+  ]
+}

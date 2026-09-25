@@ -1,0 +1,46 @@
+{
+  "entidade_id": "10140",
+  "entidade_nome": "10140",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "101400006",
+      "modelo": "10140",
+      "tamanho": "20",
+      "cor_codigo": "C001",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10140 4F TAM 20 COR C001  FOSCO PERSON      ",
+      "qtd_saldo": 30,
+      "unidade": "GR",
+      "cliente": "MARISOL VESTUARIO SA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    },
+    {
+      "cod_red": "101400044",
+      "modelo": "10140",
+      "tamanho": "18",
+      "cor_codigo": "C001",
+      "tingimento": null,
+      "cor_nome": "BRANCO",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERSONALIZADO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10140 4F TAM 18 COR C001 FOSCO PERS",
+      "qtd_saldo": 68,
+      "unidade": "GR",
+      "cliente": "FBR CONFECCOES LTDA.",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

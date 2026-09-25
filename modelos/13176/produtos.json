@@ -1,0 +1,27 @@
+{
+  "entidade_id": "13176",
+  "entidade_nome": "13176",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "131760001",
+      "modelo": "13176",
+      "tamanho": "40",
+      "cor_codigo": "C2343",
+      "tingimento": "X",
+      "cor_nome": "BEGE",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "PERSONALIZADO TINGIDO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 13176 4F TAM 40 COR C2343 FOSCO PERS TING E EST",
+      "qtd_saldo": 11,
+      "unidade": "GR",
+      "cliente": "Deliz Industria",
+      "representante": "",
+      "foto": null
+    }
+  ]
+}

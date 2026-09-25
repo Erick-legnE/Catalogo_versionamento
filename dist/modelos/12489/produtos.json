@@ -1,0 +1,27 @@
+{
+  "entidade_id": "12489",
+  "entidade_nome": "12489",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "124890001",
+      "modelo": "12489",
+      "tamanho": "26",
+      "cor_codigo": "C100",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "PLAQUINHA POL 12489 2F TAM 26 COR C100 BRI PERS",
+      "qtd_saldo": 29,
+      "unidade": "GR",
+      "cliente": "BRANDILI TEXTIL LTDA.",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

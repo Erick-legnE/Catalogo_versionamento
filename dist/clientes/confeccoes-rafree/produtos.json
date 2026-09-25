@@ -1,0 +1,26 @@
+{
+  "entidade_id": "user_069",
+  "entidade_nome": "CONFECCOES RAFREE LTDA.",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "119240006",
+      "modelo": "11924",
+      "tamanho": "24",
+      "cor_codigo": "C1325",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 11924 4F TAM 24 COR  C1325 FOSCO PERS ",
+      "qtd_saldo": 5,
+      "unidade": "GR",
+      "cliente": "CONFECCOES RAFREE LTDA.",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entidade_id": "11981",
+  "entidade_nome": "11981",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "119810001",
+      "modelo": "11981",
+      "tamanho": "22",
+      "cor_codigo": "C100",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "BRILHO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL DIF 11981 2F TAM 22 COR C100 BRILHO LISO",
+      "qtd_saldo": 2406,
+      "unidade": "PC",
+      "cliente": "LECIMAR CONFECCOES LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

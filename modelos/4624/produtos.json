@@ -1,0 +1,27 @@
+{
+  "entidade_id": "4624",
+  "entidade_nome": "4624",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "46240001",
+      "modelo": "4624",
+      "tamanho": "28",
+      "cor_codigo": "C001",
+      "tingimento": "X",
+      "cor_nome": "11606+3267",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 4624 2F TAM 28 COR C100  FOSCO PERS TING ",
+      "qtd_saldo": 25,
+      "unidade": "GR",
+      "cliente": "Veste S.a.estilo",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

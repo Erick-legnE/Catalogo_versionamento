@@ -1,0 +1,27 @@
+{
+  "entidade_id": "12087",
+  "entidade_nome": "12087",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "120870006",
+      "modelo": "12087",
+      "tamanho": "14",
+      "cor_codigo": "C121",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 12087 4F TAM 14 COR C121 BRILHO PERS",
+      "qtd_saldo": 94,
+      "unidade": "GR",
+      "cliente": "RQ INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+      "representante": "GRANDES CONTAS",
+      "foto": null
+    }
+  ]
+}

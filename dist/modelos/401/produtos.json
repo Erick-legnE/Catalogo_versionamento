@@ -1,0 +1,46 @@
+{
+  "entidade_id": "401",
+  "entidade_nome": "401",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "4010023",
+      "modelo": "401",
+      "tamanho": "24",
+      "cor_codigo": "C001",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 401 4F TAM 24 COR C001 BRILHO PERS",
+      "qtd_saldo": 3,
+      "unidade": "GR",
+      "cliente": "GATTOS CONFECCOES LTDA.",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    },
+    {
+      "cod_red": "4010018",
+      "modelo": "401",
+      "tamanho": "40",
+      "cor_codigo": "C001",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 401 4F TAM 40 COR C001 BRILHO PERSON",
+      "qtd_saldo": 8,
+      "unidade": "GR",
+      "cliente": "GATTOS CONFECCOES LTDA.",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

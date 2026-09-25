@@ -1,0 +1,27 @@
+{
+  "entidade_id": "10427",
+  "entidade_nome": "10427",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "104270001",
+      "modelo": "10427",
+      "tamanho": "18",
+      "cor_codigo": "C002",
+      "tingimento": null,
+      "cor_nome": "MARROM",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERSONALIZADO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10427 4F TAM 18 COR C002 FOSCO PERS",
+      "qtd_saldo": 16,
+      "unidade": "GR",
+      "cliente": "DRC COM. DE ART. DE ARMARINHO LTDA.",
+      "representante": "SUZANA M. FAINGOLD",
+      "foto": null
+    }
+  ]
+}

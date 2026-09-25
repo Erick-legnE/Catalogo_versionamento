@@ -1,0 +1,27 @@
+{
+  "entidade_id": "11624",
+  "entidade_nome": "11624",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "116240001",
+      "modelo": "11624",
+      "tamanho": "22",
+      "cor_codigo": "C100",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2f",
+      "acabamento": "BRILHO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL DIF 11624 2F TAM 22 COR C100 BRILHO PERS",
+      "qtd_saldo": 25,
+      "unidade": "GR",
+      "cliente": "LECIMAR CONFECCOES LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

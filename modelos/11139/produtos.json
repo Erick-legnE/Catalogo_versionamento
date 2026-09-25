@@ -1,0 +1,27 @@
+{
+  "entidade_id": "11139",
+  "entidade_nome": "11139",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "111390001",
+      "modelo": "11139",
+      "tamanho": "18",
+      "cor_codigo": "C100",
+      "tingimento": "X",
+      "cor_nome": 36,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 11139 4F TAM 18 COR C100  BRI PERS TING ",
+      "qtd_saldo": 29,
+      "unidade": "GR",
+      "cliente": "V2 Têxtil",
+      "representante": "Vison Representações",
+      "foto": null
+    }
+  ]
+}

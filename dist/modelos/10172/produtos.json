@@ -1,0 +1,27 @@
+{
+  "entidade_id": "10172",
+  "entidade_nome": "10172",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "101720001",
+      "modelo": "10172",
+      "tamanho": "18",
+      "cor_codigo": "C203",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10172 4F TAM 18 COR C203  FOSCO PERS ",
+      "qtd_saldo": 17,
+      "unidade": "GR",
+      "cliente": "KYLY INDUSTRIA TEXTIL LTDA.",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

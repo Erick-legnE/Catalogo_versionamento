@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_053",
+  "entidade_nome": "Chaubert Comercio de Vestuario",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "3540019",
+      "modelo": "354",
+      "tamanho": "16",
+      "cor_codigo": "C001",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 354 4F TAM 16 COR C001  FOSCO PERS ",
+      "qtd_saldo": 3,
+      "unidade": "GR",
+      "cliente": "Chaubert Comercio de Vestuario",
+      "representante": "Marvic Têxtil Representações",
+      "foto": null
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "entidade_id": "13177",
+  "entidade_nome": "13177",
+  "tipo": "modelos",
+  "total_produtos": 2,
+  "produtos": [
+    {
+      "cod_red": "131770003",
+      "modelo": "13177",
+      "tamanho": "28",
+      "cor_codigo": "C2344",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 13177 2F TAM 28 COR C2344 FOSCO LISO",
+      "qtd_saldo": 5,
+      "unidade": "GR",
+      "cliente": "Elian Industria Têxtil",
+      "representante": "Marvic Têxtil Representações",
+      "foto": null
+    },
+    {
+      "cod_red": "131770001",
+      "modelo": "13177",
+      "tamanho": "24",
+      "cor_codigo": "C2344",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 13177 2F TAM 24 COR C2344 FOSCO LISO",
+      "qtd_saldo": 8,
+      "unidade": "GR",
+      "cliente": "Elian Industria Têxtil",
+      "representante": "Marvic Têxtil Representações",
+      "foto": null
+    }
+  ]
+}

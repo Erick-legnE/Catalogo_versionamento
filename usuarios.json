@@ -1,0 +1,1226 @@
+[
+  {
+    "id": "user_001",
+    "nome": "COLORITTA",
+    "slug": "coloritta",
+    "username": "coloritta",
+    "password": "I5Tgb59p",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_002",
+    "nome": "DUDALINA",
+    "slug": "dudalina",
+    "username": "dudalina",
+    "password": "Kkjt7XBM",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_003",
+    "nome": "GANGSTER",
+    "slug": "gangster",
+    "username": "gangster",
+    "password": "OTBokb3F",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_004",
+    "nome": "INDIVIDUAL",
+    "slug": "individual",
+    "username": "individual",
+    "password": "l1ZPEOsV",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_005",
+    "nome": "LOV",
+    "slug": "lov",
+    "username": "lov",
+    "password": "4RyAa1eO",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_006",
+    "nome": "MUNDI",
+    "slug": "mundi",
+    "username": "mundi",
+    "password": "8R2VtpcN",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_007",
+    "nome": "ALENICE",
+    "slug": "alenice",
+    "username": "alenice",
+    "password": "93tH5jaw",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_008",
+    "nome": "BRANDILI",
+    "slug": "brandili",
+    "username": "brandili",
+    "password": "bwPDdnMd",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_009",
+    "nome": "CVI",
+    "slug": "cvi",
+    "username": "cvi",
+    "password": "h5abhUty",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_010",
+    "nome": "DELIZ",
+    "slug": "deliz",
+    "username": "deliz",
+    "password": "pZ1NxmiS",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_011",
+    "nome": "ELIAN",
+    "slug": "elian",
+    "username": "elian",
+    "password": "fuO6BagM",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_012",
+    "nome": "Cia.. Hering",
+    "slug": "hering",
+    "username": "hering",
+    "password": "t25a6PbP",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_013",
+    "nome": "IAEL",
+    "slug": "iael",
+    "username": "iael",
+    "password": "XAflnkdz",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_014",
+    "nome": "K2 Comercio e Industria",
+    "slug": "k2",
+    "username": "k2",
+    "password": "ni9L4nH5",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_015",
+    "nome": "KYLY",
+    "slug": "kyly",
+    "username": "kyly",
+    "password": "osuY0KUd",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_016",
+    "nome": "LUNELLI",
+    "slug": "lunelli",
+    "username": "lunelli",
+    "password": "DJYg7Mab",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_017",
+    "nome": "Mar - Quente Confecções",
+    "slug": "mar-quente",
+    "username": "mar-quente",
+    "password": "bZBxakZi",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_018",
+    "nome": "MARISOL",
+    "slug": "marisol",
+    "username": "marisol",
+    "password": "xm9yHYNo",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_019",
+    "nome": "MARVIC",
+    "slug": "marvic",
+    "username": "marvic",
+    "password": "reapGqej",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_020",
+    "nome": "VESTE",
+    "slug": "veste",
+    "username": "veste",
+    "password": "YYUVLjCL",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_021",
+    "nome": "Vison Representações",
+    "slug": "vison",
+    "username": "vison",
+    "password": "tO05PCQl",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_022",
+    "nome": "A H de Oliveira Representações",
+    "slug": "h-oliveira",
+    "username": "h-oliveira",
+    "password": "A9Zuttt3",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_023",
+    "nome": "E.p. Representações",
+    "slug": "p",
+    "username": "p",
+    "password": "1y1FReQ2",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_024",
+    "nome": "Gabriel e Papini Representações",
+    "slug": "gabriel-papini",
+    "username": "gabriel-papini",
+    "password": "LWVYzfDL",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_025",
+    "nome": "Grandes Contas",
+    "slug": "grandes-contas",
+    "username": "grandes-contas",
+    "password": "hliNdf8u",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_026",
+    "nome": "J M Pereira e Cia.",
+    "slug": "j-m",
+    "username": "j-m",
+    "password": "TS9tIFuH",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_027",
+    "nome": "Jean Pierre",
+    "slug": "jean-pierre",
+    "username": "jean-pierre",
+    "password": "oued7UqG",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_028",
+    "nome": "Marvic Têxtil Representações",
+    "slug": "marvic-textil",
+    "username": "marvic-textil",
+    "password": "haJPGNvT",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_029",
+    "nome": "Marvic Têxtil Representaçoes",
+    "slug": "marvic-textil-2",
+    "username": "marvic-textil-2",
+    "password": "yfGSMy8I",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_030",
+    "nome": "Rona Representações",
+    "slug": "rona",
+    "username": "rona",
+    "password": "h74D0cUt",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_031",
+    "nome": "Studio New Representações",
+    "slug": "studio-new",
+    "username": "studio-new",
+    "password": "JZnK09ns",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_032",
+    "nome": "Suzana M. Faingold",
+    "slug": "suzana-m",
+    "username": "suzana-m",
+    "password": "vtHw7WxU",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_033",
+    "nome": "Vanessa Danielle Medeiros Cintra - de Artigos do Vest",
+    "slug": "vanessa-danielle",
+    "username": "vanessa-danielle",
+    "password": "WL59ewx6",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_034",
+    "nome": "Venda Direta",
+    "slug": "venda-direta",
+    "username": "venda-direta",
+    "password": "INmoG71x",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_035",
+    "nome": "Vison Representaçoes",
+    "slug": "vison-2",
+    "username": "vison-2",
+    "password": "hL0PeSnA",
+    "tipo": "representantes",
+    "ativo": true
+  },
+  {
+    "id": "user_036",
+    "nome": "A.M.C. Têxtil",
+    "slug": "m-c",
+    "username": "m-c",
+    "password": "MNP4j0y0",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_037",
+    "nome": "Abrange",
+    "slug": "abrange-confeccoes",
+    "username": "abrange-confeccoes",
+    "password": "nWniN7Um",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_038",
+    "nome": "Actum",
+    "slug": "actum",
+    "username": "actum",
+    "password": "wpXUyPRg",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_039",
+    "nome": "Ad-fashion Comercio de Roupas",
+    "slug": "ad-fashion",
+    "username": "ad-fashion",
+    "password": "mXYdjvxE",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_040",
+    "nome": "Alenice Industria Têxtil",
+    "slug": "alenice-textil",
+    "username": "alenice-textil",
+    "password": "TJDf5kvm",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_041",
+    "nome": "Alexandre Bitencourt Rosendo",
+    "slug": "alexandre-bitencourt",
+    "username": "alexandre-bitencourt",
+    "password": "zUavPnoo",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_042",
+    "nome": "Applicato Confecções",
+    "slug": "applicato-confeccoes",
+    "username": "applicato-confeccoes",
+    "password": "61A9FDgo",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_043",
+    "nome": "Avalon Têxtil",
+    "slug": "avalon-textil",
+    "username": "avalon-textil",
+    "password": "mgbPbOEI",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_044",
+    "nome": "Aviamentos Brusque",
+    "slug": "aviamentos-brusque",
+    "username": "aviamentos-brusque",
+    "password": "wgzPV2HC",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_045",
+    "nome": "Bamboo Jeans",
+    "slug": "bamboo-jeans",
+    "username": "bamboo-jeans",
+    "password": "OsgQhJoI",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_046",
+    "nome": "Basico&co S.a",
+    "slug": "basico-co",
+    "username": "basico-co",
+    "password": "pCa3UfoF",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_047",
+    "nome": "Baumgarten Industria de Confecções",
+    "slug": "baumgarten-confeccoes",
+    "username": "baumgarten-confeccoes",
+    "password": "Leo3f58l",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_048",
+    "nome": "Blutextil",
+    "slug": "blutextil",
+    "username": "blutextil",
+    "password": "6qcoVRbe",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_049",
+    "nome": "Brandili Têxtil",
+    "slug": "brandili-textil",
+    "username": "brandili-textil",
+    "password": "T0AaIX15",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_050",
+    "nome": "Bretzel Trajes Tipicos",
+    "slug": "bretzel-trajes",
+    "username": "bretzel-trajes",
+    "password": "R5Hl6O3r",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_051",
+    "nome": "Camisaria Milani",
+    "slug": "camisaria-milani",
+    "username": "camisaria-milani",
+    "password": "duAgzofv",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_052",
+    "nome": "CH3",
+    "slug": "ch3",
+    "username": "ch3",
+    "password": "vtO3BcoD",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_053",
+    "nome": "Chaubert Comercio de Vestuario",
+    "slug": "chaubert-vestuario",
+    "username": "chaubert-vestuario",
+    "password": "b92bnVAJ",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_054",
+    "nome": "Cia. Hering - Filial Itororo",
+    "slug": "hering-filial",
+    "username": "hering-filial",
+    "password": "k4d7O8Oq",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_055",
+    "nome": "Comask",
+    "slug": "comask",
+    "username": "comask",
+    "password": "XIWQbEte",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_056",
+    "nome": "Confecções Aconchego do Bebe",
+    "slug": "confeccoes-aconchego",
+    "username": "confeccoes-aconchego",
+    "password": "F4LVPhlJ",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_057",
+    "nome": "Confecções Lezi",
+    "slug": "confeccoes-lezi",
+    "username": "confeccoes-lezi",
+    "password": "bZyAfSyw",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_058",
+    "nome": "Confecções Rafree",
+    "slug": "confeccoes-rafree",
+    "username": "confeccoes-rafree",
+    "password": "64MAlopR",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_059",
+    "nome": "Confecções Rollu",
+    "slug": "confeccoes-rollu",
+    "username": "confeccoes-rollu",
+    "password": "EgZHtWDa",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_060",
+    "nome": "Confecções Simon Braun",
+    "slug": "confeccoes-simon",
+    "username": "confeccoes-simon",
+    "password": "5CjWeeEe",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_061",
+    "nome": "De Fil S Confecções",
+    "slug": "fil-confeccoes",
+    "username": "fil-confeccoes",
+    "password": "3J3cbrqX",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_062",
+    "nome": "Deliz Industria",
+    "slug": "deliz-vestuario",
+    "username": "deliz-vestuario",
+    "password": "v8jbBlGc",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_063",
+    "nome": "Dellosc Têxtil",
+    "slug": "dellosc-textil",
+    "username": "dellosc-textil",
+    "password": "9Om4UbLL",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_064",
+    "nome": "Deluxe Negocios",
+    "slug": "deluxe-negocios",
+    "username": "deluxe-negocios",
+    "password": "BZWYtu3m",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_065",
+    "nome": "Ditongo Confecções",
+    "slug": "ditongo-confeccoes",
+    "username": "ditongo-confeccoes",
+    "password": "hzA5XKmI",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_066",
+    "nome": "DK Industria de Materiais Para Construcao",
+    "slug": "dk-materiais",
+    "username": "dk-materiais",
+    "password": "SYMLI3E8",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_067",
+    "nome": "DRC . de Art. de Armarinho",
+    "slug": "drc-com",
+    "username": "drc-com",
+    "password": "5lXtsgcd",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_068",
+    "nome": "Edex Industria de Jeans Wear",
+    "slug": "edex-jeans",
+    "username": "edex-jeans",
+    "password": "9VV5yUbH",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_069",
+    "nome": "Elian Industria Têxtil",
+    "slug": "elian-textil",
+    "username": "elian-textil",
+    "password": "4Y91gCGm",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_070",
+    "nome": "F.m. Magalhaes e Cia.",
+    "slug": "f-m",
+    "username": "f-m",
+    "password": "GHzfCENh",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_071",
+    "nome": "Fan Prust Jeans",
+    "slug": "fan-prust",
+    "username": "fan-prust",
+    "password": "f9QSYRUA",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_072",
+    "nome": "Fbr Confecções",
+    "slug": "fbr-confeccoes",
+    "username": "fbr-confeccoes",
+    "password": "gTJ9yEbV",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_073",
+    "nome": "Filo",
+    "slug": "filo",
+    "username": "filo",
+    "password": "oLHjb3T3",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_074",
+    "nome": "Flueem Brasil",
+    "slug": "flueem-brasil",
+    "username": "flueem-brasil",
+    "password": "g7wzusJl",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_075",
+    "nome": "G M D Industria Têxtil",
+    "slug": "g-m",
+    "username": "g-m",
+    "password": "UoopPVqA",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_076",
+    "nome": "Gambino",
+    "slug": "gambino",
+    "username": "gambino",
+    "password": "18BgUbAn",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_077",
+    "nome": "Gattos Confecções",
+    "slug": "gattos-confeccoes",
+    "username": "gattos-confeccoes",
+    "password": "xH2LANg3",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_078",
+    "nome": "Gmlt4 de Artigo",
+    "slug": "gmlt4-artigo",
+    "username": "gmlt4-artigo",
+    "password": "cuBgbibV",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_079",
+    "nome": "Great News Confecções",
+    "slug": "great-news",
+    "username": "great-news",
+    "password": "1OoVMY27",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_080",
+    "nome": "GS2 Ind_stria e . de Conf",
+    "slug": "gs2-ind",
+    "username": "gs2-ind",
+    "password": "ufgctkht",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_081",
+    "nome": "Gustavo Miguel Scaglia Robaina",
+    "slug": "gustavo-miguel",
+    "username": "gustavo-miguel",
+    "password": "Jt3Re3Tc",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_082",
+    "nome": "Iael",
+    "slug": "iael-aviamentos",
+    "username": "iael-aviamentos",
+    "password": "NVaPj431",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_083",
+    "nome": "IB Comercio e Industria",
+    "slug": "ib",
+    "username": "ib",
+    "password": "1WyhqUsi",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_084",
+    "nome": "De Malhas Finas Highstil Lt",
+    "slug": "ind-malhas",
+    "username": "ind-malhas",
+    "password": "2EpbRdbK",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_085",
+    "nome": "De Conf Di Mirmay",
+    "slug": "ind-com",
+    "username": "ind-com",
+    "password": "o5H8XXyi",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_086",
+    "nome": "Indorf Têxtil",
+    "slug": "indorf-textil",
+    "username": "indorf-textil",
+    "password": "A6NDTfAY",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_087",
+    "nome": "J. Vanderlei da Silva - Confecções",
+    "slug": "j-vanderlei",
+    "username": "j-vanderlei",
+    "password": "gf9wuCHY",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_088",
+    "nome": "Jomar",
+    "slug": "jomar",
+    "username": "jomar",
+    "password": "dasbvOQl",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_089",
+    "nome": "Jorgemar Cardoso Vieira",
+    "slug": "jorgemar-cardoso",
+    "username": "jorgemar-cardoso",
+    "password": "9PJiW2f6",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_090",
+    "nome": "Kaesse - Bana Bana Confecções",
+    "slug": "kaesse-bana",
+    "username": "kaesse-bana",
+    "password": "3qiX8M55",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_091",
+    "nome": "Kaiani Malhas",
+    "slug": "kaiani-malhas",
+    "username": "kaiani-malhas",
+    "password": "irIKHbOn",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_092",
+    "nome": "Krindges Industrial",
+    "slug": "krindges",
+    "username": "krindges",
+    "password": "du5xo4uE",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_093",
+    "nome": "Kyly Industria Têxtil",
+    "slug": "kyly-textil",
+    "username": "kyly-textil",
+    "password": "f7zDwkHw",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_094",
+    "nome": "Lecimar Confecções",
+    "slug": "lecimar-confeccoes",
+    "username": "lecimar-confeccoes",
+    "password": "YqsZOiW2",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_095",
+    "nome": "Luandri Malhas",
+    "slug": "luandri-malhas",
+    "username": "luandri-malhas",
+    "password": "Y50SvhfZ",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_096",
+    "nome": "Lunelli Industria",
+    "slug": "lunelli-vestuario",
+    "username": "lunelli-vestuario",
+    "password": "taqv3bYF",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_097",
+    "nome": "M.j. Miranda Confecções",
+    "slug": "m-j",
+    "username": "m-j",
+    "password": "7Z5XWFpM",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_098",
+    "nome": "Malharia Cristina",
+    "slug": "malharia-cristina",
+    "username": "malharia-cristina",
+    "password": "LkeiureF",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_099",
+    "nome": "Malhas Rico",
+    "slug": "malhas-rico",
+    "username": "malhas-rico",
+    "password": "Re0oWOOm",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_100",
+    "nome": "Marcyn Confecções",
+    "slug": "marcyn-confeccoes",
+    "username": "marcyn-confeccoes",
+    "password": "mPFHgAdQ",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_101",
+    "nome": "Marisol Vestuario",
+    "slug": "marisol-vestuario",
+    "username": "marisol-vestuario",
+    "password": "NcBLsYZF",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_102",
+    "nome": "Marp Industria Têxtil",
+    "slug": "marp-textil",
+    "username": "marp-textil",
+    "password": "7QhGdSXx",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_103",
+    "nome": "Marpa de Confecções",
+    "slug": "marpa-ind",
+    "username": "marpa-ind",
+    "password": "sBuoRUoK",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_104",
+    "nome": "Mila",
+    "slug": "mila",
+    "username": "mila",
+    "password": "bTVW7klC",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_105",
+    "nome": "Minimal Club",
+    "slug": "minimal-club",
+    "username": "minimal-club",
+    "password": "IL5FikAA",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_106",
+    "nome": "MPL de Roupas",
+    "slug": "mpl-roupas",
+    "username": "mpl-roupas",
+    "password": "Mg0d7NKK",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_107",
+    "nome": "Mundi Têxtil",
+    "slug": "mundi-textil",
+    "username": "mundi-textil",
+    "password": "yVpOEh7C",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_108",
+    "nome": "Oktex Têxtil",
+    "slug": "oktex-textil",
+    "username": "oktex-textil",
+    "password": "cDAWzwhB",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_109",
+    "nome": "Oracon . e . de Conf",
+    "slug": "oracon-com",
+    "username": "oracon-com",
+    "password": "1p0OwZsP",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_110",
+    "nome": "P e C Confecções",
+    "slug": "p-c",
+    "username": "p-c",
+    "password": "TNdYnpn2",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_111",
+    "nome": "Pasquini & Pasquini Confecções",
+    "slug": "pasquini-pasquini",
+    "username": "pasquini-pasquini",
+    "password": "yoNiisqs",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_112",
+    "nome": "Paulino e Bernardino",
+    "slug": "paulino-bernardino",
+    "username": "paulino-bernardino",
+    "password": "e1iG0RiL",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_113",
+    "nome": "Pereira Fabrica de Confecções",
+    "slug": "pereira-fabrica",
+    "username": "pereira-fabrica",
+    "password": "p0o8oVkR",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_114",
+    "nome": "PS Industria e Confecção",
+    "slug": "ps-confeccao",
+    "username": "ps-confeccao",
+    "password": "Rj9hCrvF",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_115",
+    "nome": "Pzama Confecções",
+    "slug": "pzama-confeccoes",
+    "username": "pzama-confeccoes",
+    "password": "ENUynurZ",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_116",
+    "nome": "Razao",
+    "slug": "razao",
+    "username": "razao",
+    "password": "Dga6scVe",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_117",
+    "nome": "Riccieri Confecções",
+    "slug": "riccieri-confeccoes",
+    "username": "riccieri-confeccoes",
+    "password": "EecQnlft",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_118",
+    "nome": "Rizllep Industria de Confecções",
+    "slug": "rizllep-confeccoes",
+    "username": "rizllep-confeccoes",
+    "password": "tRA0qYzW",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_119",
+    "nome": "Romitex Malhas",
+    "slug": "romitex-malhas",
+    "username": "romitex-malhas",
+    "password": "iqNIndMD",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_120",
+    "nome": "Rovitex . de Malhas",
+    "slug": "rovitex-ind",
+    "username": "rovitex-ind",
+    "password": "BG9kxSpi",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_121",
+    "nome": "RQ",
+    "slug": "rq-confeccoes",
+    "username": "rq-confeccoes",
+    "password": "tUrjbNyp",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_122",
+    "nome": "Sallo Confecção e Comercio de Roupas",
+    "slug": "sallo-confeccao",
+    "username": "sallo-confeccao",
+    "password": "jHQRxQwR",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_123",
+    "nome": "Sanches Baby Company",
+    "slug": "sanches-baby",
+    "username": "sanches-baby",
+    "password": "a81XYaJG",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_124",
+    "nome": "Sigosta Têxtil",
+    "slug": "sigosta-textil",
+    "username": "sigosta-textil",
+    "password": "yXorCFmw",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_125",
+    "nome": "Sued Têxtil",
+    "slug": "sued-textil",
+    "username": "sued-textil",
+    "password": "6wlaFB59",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_126",
+    "nome": "Tempo de Crianca Moda Infantil",
+    "slug": "tempo-crianca",
+    "username": "tempo-crianca",
+    "password": "kodIJCCv",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_127",
+    "nome": "Tex Cotton . de Confecções",
+    "slug": "tex-cotton",
+    "username": "tex-cotton",
+    "password": "sWKewL9V",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_128",
+    "nome": "Texdrini Industria Têxtil",
+    "slug": "texdrini-textil",
+    "username": "texdrini-textil",
+    "password": "uPVC9yHH",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_129",
+    "nome": "Texpa",
+    "slug": "texpa",
+    "username": "texpa",
+    "password": "d9uW24KR",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_130",
+    "nome": "TNG Comercio e Industria de Roupas",
+    "slug": "tng-roupas",
+    "username": "tng-roupas",
+    "password": "EVbz7sHY",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_131",
+    "nome": "Unvp Confecções",
+    "slug": "unvp-confeccoes",
+    "username": "unvp-confeccoes",
+    "password": "4FsjQzhI",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_132",
+    "nome": "V2 Têxtil",
+    "slug": "v2-textil",
+    "username": "v2-textil",
+    "password": "pbI3Q5yH",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_133",
+    "nome": "Valisere",
+    "slug": "valisere",
+    "username": "valisere",
+    "password": "EYudsAEe",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_134",
+    "nome": "Veste S.a.estilo",
+    "slug": "veste-estilo",
+    "username": "veste-estilo",
+    "password": "pVkQTCLA",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_135",
+    "nome": "Vizoo Brasil Modas",
+    "slug": "vizoo-brasil",
+    "username": "vizoo-brasil",
+    "password": "EkKgIcol",
+    "tipo": "clientes",
+    "ativo": true
+  },
+  {
+    "id": "user_136",
+    "nome": "Zafirele - Zfrl - Eirelli",
+    "slug": "zafirele-zfrl",
+    "username": "zafirele-zfrl",
+    "password": "9gJKkpfe",
+    "tipo": "clientes",
+    "ativo": true
+  }
+]

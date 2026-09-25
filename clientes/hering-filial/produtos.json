@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_054",
+  "entidade_nome": "Cia. Hering - Filial Itororo",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "101770015",
+      "modelo": "10177",
+      "tamanho": "14",
+      "cor_codigo": "C060",
+      "tingimento": null,
+      "cor_nome": "BEGE",
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "BRILHO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10177 2F TAM 14 COR C060 BRILHO LISO",
+      "qtd_saldo": 4,
+      "unidade": "GR",
+      "cliente": "Cia. Hering - Filial Itororo",
+      "representante": "",
+      "foto": null
+    }
+  ]
+}

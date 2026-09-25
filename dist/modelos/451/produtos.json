@@ -1,0 +1,27 @@
+{
+  "entidade_id": "451",
+  "entidade_nome": "451",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "4510005",
+      "modelo": "451",
+      "tamanho": "18",
+      "cor_codigo": "C076",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 451 4F TAM 18 COR C076 BR ILHO PERS      ",
+      "qtd_saldo": 21,
+      "unidade": "GR",
+      "cliente": "VESTE S.A.ESTILO",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

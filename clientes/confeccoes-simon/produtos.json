@@ -1,0 +1,27 @@
+{
+  "entidade_id": "user_060",
+  "entidade_nome": "Confecções Simon Braun",
+  "tipo": "clientes",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "101750003",
+      "modelo": "10175",
+      "tamanho": "18",
+      "cor_codigo": "C092",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10175 4F TAM 18 COR C092  BRILHO PERS ",
+      "qtd_saldo": 53,
+      "unidade": "GR",
+      "cliente": "Confecções Simon Braun",
+      "representante": "Studio New Representações",
+      "foto": null
+    }
+  ]
+}

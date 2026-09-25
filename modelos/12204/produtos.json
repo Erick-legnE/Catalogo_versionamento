@@ -1,0 +1,27 @@
+{
+  "entidade_id": "12204",
+  "entidade_nome": "12204",
+  "tipo": "modelos",
+  "total_produtos": 1,
+  "produtos": [
+    {
+      "cod_red": "122040004",
+      "modelo": "12204",
+      "tamanho": "18",
+      "cor_codigo": "C938",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": "OUTROS",
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 12204 4F TAM 18  COR C938 FOSCO LISO",
+      "qtd_saldo": 19,
+      "unidade": "GR",
+      "cliente": "Lunelli Industria",
+      "representante": "Marvic Têxtil Representações",
+      "foto": null
+    }
+  ]
+}

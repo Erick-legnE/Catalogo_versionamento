@@ -1,0 +1,26 @@
+{
+  "entidade_id": "user_090",
+  "entidade_nome": "GREAT NEWS CONFECCOES LTDA.",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "103540029",
+      "modelo": "10354",
+      "tamanho": "26",
+      "cor_codigo": "C089",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10354 4F TAM 26 COR C089 FOSCO PERS",
+      "qtd_saldo": 12,
+      "unidade": "GR",
+      "cliente": "GREAT NEWS CONFECCOES LTDA.",
+      "representante": "J M PEREIRA E CIA LTDA.",
+      "foto": null
+    }
+  ]
+}
