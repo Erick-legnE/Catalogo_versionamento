@@ -1,0 +1,26 @@
+{
+  "entidade_id": "user_074",
+  "entidade_nome": "FLUEEM BRASIL LTDA",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "3980007",
+      "modelo": "398",
+      "tamanho": "18",
+      "cor_codigo": "C149",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 398 4F TAM 18 COR C149  BRILHO PERS ",
+      "qtd_saldo": 12,
+      "unidade": "GR",
+      "cliente": "FLUEEM BRASIL LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

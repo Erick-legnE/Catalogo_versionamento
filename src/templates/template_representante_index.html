@@ -182,7 +182,7 @@
   </div>
   <div class="header-actions">
     <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙 Escuro</button>
-    <a class="link-geral" href="https://brasilbotoes.github.io/catalogo/" target="_blank" rel="noopener">Ver catálogo geral →</a>
+    <a class="link-geral" href="/docs/catalogo_geral.html" target="_blank" rel="noopener">Ver catálogo geral →</a>
   </div>
 </header>
 
@@ -238,6 +238,67 @@
 </div>
 
 <script>
+// 1. Função Auxiliar (adicionar no topo do script)
+function obterFoto(p) {
+  return p.foto || p.foto_pastilha || '';
+}
+
+// 2. Na função renderizar()
+function renderizar() {
+  // ...
+  const filtrados = produtos.filter(p => {
+    if (filtroFamilia && p.cor_familia !== filtroFamilia) return false;
+    if (fFuracao && p.furacao !== fFuracao) return false;
+    if (fAcabamento && p.acabamento !== fAcabamento) return false;
+    if (fTamanho && p.tamanho !== fTamanho) return false;
+    if (fReferencia && p.modelo !== fReferencia) return false;
+    if (fMaterial && p.material !== fMaterial) return false;
+    if (fCorCodigo && p.cor_codigo !== fCorCodigo) return false;
+
+    // Filtro de foto com fallback inteligente
+    const img = obterFoto(p);
+    if (fFoto === 'com' && !img) return false;
+    if (fFoto === 'sem' && img) return false;
+
+    if (fCliente && p.cliente !== fCliente) return false;
+    if (termo) {
+      const alvo = [p.modelo, p.cor_codigo, p.cor_nome, p.cliente, p.descricao].filter(Boolean).join(' ').toLowerCase();
+      if (!alvo.includes(termo)) return false;
+    }
+    return true;
+  });
+
+  grid.innerHTML = '';
+  exibidos.forEach(p => {
+    const img = obterFoto(p);
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="foto" style="${img ? `background-image:url('../../${img}')` : ''}">
+        ${img ? '' : 'Sem foto'}
+      </div>
+      <div class="info">
+        <div class="modelo">${p.modelo}</div>
+        <div class="cor">${p.cor_codigo}${p.cor_nome ? ' · ' + p.cor_nome : ''}</div>
+        <div class="tags">
+          ${p.furacao ? `<span class="tag">${p.furacao}</span>` : ''}
+          ${p.tamanho ? `<span class="tag">Tam ${p.tamanho}</span>` : ''}
+          ${p.personalizacao ? `<span class="tag tag-pers">${p.personalizacao}</span>` : ''}
+        </div>
+        ${p.cliente ? `<div class="cliente">${p.cliente}</div>` : ''}
+        <div class="rodape">
+          <span class="saldo-label">Saldo</span>
+          <span class="saldo-val">${p.qtd_saldo ?? '—'}${p.unidade ? ` <span class="saldo-unid">${p.unidade}</span>` : ''}</span>
+        </div>
+      </div>
+    `;
+    card.addEventListener('click', () => abrirModal(p));
+    grid.appendChild(card);
+  });
+}
+
+// 3. Na função abrirModal(p)
+
 if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.documentElement.setAttribute('data-theme', 'dark');
   document.getElementById('theme-btn').textContent = '☀️ Claro';
@@ -327,7 +388,11 @@ function preencherSelect(id, valores){
     sel.appendChild(opt);
   });
 }
-function renderizar(){
+function obterFoto(p) {
+  return p.foto || p.foto_pastilha || '';
+}
+
+function renderizar() {
   const termo = document.getElementById('busca').value.trim().toLowerCase();
   const fFuracao = document.getElementById('filtroFuracao').value;
   const fAcabamento = document.getElementById('filtroAcabamento').value;
@@ -336,7 +401,7 @@ function renderizar(){
   const fMaterial = document.getElementById('filtroMaterial').value;
   const fCorCodigo = document.getElementById('filtroCorCodigo').value;
   const fFoto = document.getElementById('filtroFoto').value;
-  const fCliente = document.getElementById('filtroCliente').value;
+  const fCliente = document.getElementById('filtroCliente') ? document.getElementById('filtroCliente').value : '';
 
   const filtrados = produtos.filter(p => {
     if (filtroFamilia && p.cor_familia !== filtroFamilia) return false;
@@ -346,38 +411,41 @@ function renderizar(){
     if (fReferencia && p.modelo !== fReferencia) return false;
     if (fMaterial && p.material !== fMaterial) return false;
     if (fCorCodigo && p.cor_codigo !== fCorCodigo) return false;
-    if (fFoto === 'com' && !p.foto) return false;
-    if (fFoto === 'sem' && p.foto) return false;
+
+    const img = obterFoto(p);
+    if (fFoto === 'com' && !img) return false;
+    if (fFoto === 'sem' && img) return false;
+
     if (fCliente && p.cliente !== fCliente) return false;
-    if (termo){
+    if (termo) {
       const alvo = [p.modelo, p.cor_codigo, p.cor_nome, p.cliente, p.descricao].filter(Boolean).join(' ').toLowerCase();
       if (!alvo.includes(termo)) return false;
     }
     return true;
   });
 
-  // Display ALL products without slicing
-  const exibidos = filtrados;
-
-  // Counter text for total products found
   document.getElementById('contador').textContent = `${filtrados.length} produto${filtrados.length === 1 ? '' : 's'}`;
 
   const grid = document.getElementById('grid');
   const vazio = document.getElementById('vazio');
   grid.innerHTML = '';
 
-  if (exibidos.length === 0){
+  if (filtrados.length === 0) {
     vazio.style.display = 'block';
     return;
   }
   vazio.style.display = 'none';
 
-  exibidos.forEach(p => {
+  filtrados.forEach(p => {
+    const img = obterFoto(p);
+    // Como index.html está em docs/clientes/slug/, subimos 2 níveis (../../) até a raiz da pasta docs/
+    const urlImagem = img ? `../../${img}` : '';
+
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
-      <div class="foto" style="${p.foto ? `background-image:url('../../${p.foto}')` : ''}">
-        ${p.foto ? '' : 'Sem foto'}
+      <div class="foto" style="${urlImagem ? `background-image:url('${urlImagem}')` : ''}">
+        ${urlImagem ? '' : 'Sem foto'}
       </div>
       <div class="info">
         <div class="modelo">${p.modelo}</div>
@@ -385,7 +453,6 @@ function renderizar(){
         <div class="tags">
           ${p.furacao ? `<span class="tag">${p.furacao}</span>` : ''}
           ${p.tamanho ? `<span class="tag">Tam ${p.tamanho}</span>` : ''}
-          ${p.personalizacao ? `<span class="tag tag-pers">${p.personalizacao}</span>` : ''}
         </div>
         ${p.cliente ? `<div class="cliente">${p.cliente}</div>` : ''}
         <div class="rodape">
@@ -400,10 +467,11 @@ function renderizar(){
 }
 
 function abrirModal(p){
-  document.getElementById('modalFoto').style.backgroundImage = p.foto ? `url('../../${p.foto}')` : '';
+  const img = obterFoto(p);
+  document.getElementById('modalFoto').style.backgroundImage = img ? `url('../../${img}')` : '';
   document.getElementById('modalModelo').textContent = p.modelo;
   document.getElementById('modalCor').textContent = `${p.cor_codigo}${p.cor_nome ? ' · ' + p.cor_nome : ''}`;
-
+ 
   const linhas = [
     ['Cliente', p.cliente],
     ['Descrição', p.descricao],

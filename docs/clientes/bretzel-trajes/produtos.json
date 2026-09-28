@@ -1,0 +1,26 @@
+{
+  "entidade_id": "user_050",
+  "entidade_nome": "BRETZEL TRAJES TIPICOS LTDA",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "102310037",
+      "modelo": "10231",
+      "tamanho": "18",
+      "cor_codigo": "C1679",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10231 4F TAM 18 COR C1679 FOSCO PERS",
+      "qtd_saldo": 35,
+      "unidade": "GR",
+      "cliente": "BRETZEL TRAJES TIPICOS LTDA",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

@@ -21,7 +21,7 @@ PLANILHA_CLIENTES = BASE_DIR / "data" / "ESTOQUES PROJETO V2 - Clientes_teste.xl
 ABA_CLIENTES = "Cliente"
 LINHA_CABECALHO = 11
 
-PASTA_DIST = BASE_DIR / "dist"
+PASTA_DIST = BASE_DIR / "docs"
 PASTA_IMAGENS = BASE_DIR / "imagens"
 TABELA_CORES = BASE_DIR / "apoio" / "tabela_cores_final.xlsx"
 ARQUIVO_USUARIOS = PASTA_DIST / "usuarios.json"

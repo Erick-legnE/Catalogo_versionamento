@@ -1,0 +1,26 @@
+{
+  "entidade_id": "user_068",
+  "entidade_nome": "EDEX INDUSTRIA DE JEANS WEAR EIRELI -EPP",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "119240033",
+      "modelo": "11924",
+      "tamanho": "32",
+      "cor_codigo": "C1325",
+      "tingimento": null,
+      "cor_nome": "SERRAGEM BEGE",
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 11924 2F TAM 32 COR C1325 FOSCO PERS",
+      "qtd_saldo": 7,
+      "unidade": "GR",
+      "cliente": "EDEX INDUSTRIA DE JEANS WEAR EIRELI -EPP",
+      "representante": "VISON REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

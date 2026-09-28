@@ -149,6 +149,7 @@
   .card .cor{ font-size:13px; color:var(--cinza-l); margin-top:2px; }
   .card .tags{ display:flex; gap:6px; margin-top:8px; flex-wrap:wrap; }
   .card .tag{ font-size:11px; background:var(--bg); border:1px solid var(--borda); padding:2px 7px; border-radius:6px; color:var(--cinza-l); }
+  .card .cliente{ margin-top:8px; font-size:11px; color:var(--azul-d); font-weight:700; }
   .card .tag-pers{ background:var(--amarelo); border-color:var(--amarelo); color:#2B3335; font-weight:800; }
   .card .rodape{ display:flex; align-items:center; justify-content:space-between; margin-top:10px; padding-top:8px; border-top:1px solid var(--borda); }
   .card .saldo-label{ font-size:9px; font-weight:900; text-transform:uppercase; letter-spacing:.08em; color:var(--azul-d); }
@@ -175,13 +176,13 @@
     <img src="../../logo_simbolo.jpeg" alt="Brasil Botões" class="logo-img">
     <div class="logo-text-wrap">
       <div class="logo-name">Brasil <span>Botões</span><sup>®</sup></div>
-      <div class="logo-tag">Catálogo de Produtos</div>
+      <div class="logo-tag">Estoque do Cliente</div>
       <div class="rep-nome">{{CLIENTE}}</div>
     </div>
   </div>
   <div class="header-actions">
     <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙 Escuro</button>
-    <a class="link-geral" href="https://brasilbotoes.github.io/catalogo/" target="_blank" rel="noopener">Ver catálogo geral →</a>
+    <a class="link-geral" href="/docs/catalogo_geral.html" target="_blank" rel="noopener">Ver catálogo geral →</a>
   </div>
 </header>
 
@@ -189,7 +190,7 @@
   <div class="search-row">
     <div class="search-box">
       <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="search" id="busca" placeholder="Buscar por modelo, cor...">
+      <input type="search" id="busca" placeholder="Buscar por modelo, cor, cliente...">
     </div>
     <button class="btn-clear" onclick="limparFiltros()">Limpar filtros</button>
   </div>
@@ -216,6 +217,7 @@
         <option value="sem">Sem foto</option>
       </select>
     </div>
+    <div class="filter-group"><span class="filter-label">Cliente</span><select class="filter-select" id="filtroCliente"><option value="">Todos</option></select></div>
   </div>
 </div>
 
@@ -236,6 +238,67 @@
 </div>
 
 <script>
+// 1. Função Auxiliar (adicionar no topo do script)
+function obterFoto(p) {
+  return p.foto || p.foto_pastilha || '';
+}
+
+// 2. Na função renderizar()
+function renderizar() {
+  // ...
+  const filtrados = produtos.filter(p => {
+    if (filtroFamilia && p.cor_familia !== filtroFamilia) return false;
+    if (fFuracao && p.furacao !== fFuracao) return false;
+    if (fAcabamento && p.acabamento !== fAcabamento) return false;
+    if (fTamanho && p.tamanho !== fTamanho) return false;
+    if (fReferencia && p.modelo !== fReferencia) return false;
+    if (fMaterial && p.material !== fMaterial) return false;
+    if (fCorCodigo && p.cor_codigo !== fCorCodigo) return false;
+
+    // Filtro de foto com fallback inteligente
+    const img = obterFoto(p);
+    if (fFoto === 'com' && !img) return false;
+    if (fFoto === 'sem' && img) return false;
+
+    if (fCliente && p.cliente !== fCliente) return false;
+    if (termo) {
+      const alvo = [p.modelo, p.cor_codigo, p.cor_nome, p.cliente, p.descricao].filter(Boolean).join(' ').toLowerCase();
+      if (!alvo.includes(termo)) return false;
+    }
+    return true;
+  });
+
+  grid.innerHTML = '';
+  exibidos.forEach(p => {
+    const img = obterFoto(p);
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="foto" style="${img ? `background-image:url('../../${img}')` : ''}">
+        ${img ? '' : 'Sem foto'}
+      </div>
+      <div class="info">
+        <div class="modelo">${p.modelo}</div>
+        <div class="cor">${p.cor_codigo}${p.cor_nome ? ' · ' + p.cor_nome : ''}</div>
+        <div class="tags">
+          ${p.furacao ? `<span class="tag">${p.furacao}</span>` : ''}
+          ${p.tamanho ? `<span class="tag">Tam ${p.tamanho}</span>` : ''}
+          ${p.personalizacao ? `<span class="tag tag-pers">${p.personalizacao}</span>` : ''}
+        </div>
+        ${p.cliente ? `<div class="cliente">${p.cliente}</div>` : ''}
+        <div class="rodape">
+          <span class="saldo-label">Saldo</span>
+          <span class="saldo-val">${p.qtd_saldo ?? '—'}${p.unidade ? ` <span class="saldo-unid">${p.unidade}</span>` : ''}</span>
+        </div>
+      </div>
+    `;
+    card.addEventListener('click', () => abrirModal(p));
+    grid.appendChild(card);
+  });
+}
+
+// 3. Na função abrirModal(p)
+
 if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.documentElement.setAttribute('data-theme', 'dark');
   document.getElementById('theme-btn').textContent = '☀️ Claro';
@@ -291,9 +354,10 @@ function montarFiltros(){
   preencherSelect('filtroReferencia', valoresUnicos('modelo'));
   preencherSelect('filtroMaterial', valoresUnicos('material'));
   preencherSelect('filtroCorCodigo', valoresUnicos('cor_codigo'));
+  preencherSelect('filtroCliente', valoresUnicos('cliente'));
 
   document.getElementById('busca').addEventListener('input', renderizar);
-  ['filtroFuracao','filtroAcabamento','filtroTamanho','filtroReferencia','filtroMaterial','filtroCorCodigo','filtroFoto']
+  ['filtroFuracao','filtroAcabamento','filtroTamanho','filtroReferencia','filtroMaterial','filtroCorCodigo','filtroFoto','filtroCliente']
     .forEach(id => document.getElementById(id).addEventListener('change', renderizar));
 
   document.getElementById('modalFechar').addEventListener('click', fecharModal);
@@ -324,8 +388,11 @@ function preencherSelect(id, valores){
     sel.appendChild(opt);
   });
 }
+function obterFoto(p) {
+  return p.foto || p.foto_pastilha || '';
+}
 
-function renderizar(){
+function renderizar() {
   const termo = document.getElementById('busca').value.trim().toLowerCase();
   const fFuracao = document.getElementById('filtroFuracao').value;
   const fAcabamento = document.getElementById('filtroAcabamento').value;
@@ -334,8 +401,7 @@ function renderizar(){
   const fMaterial = document.getElementById('filtroMaterial').value;
   const fCorCodigo = document.getElementById('filtroCorCodigo').value;
   const fFoto = document.getElementById('filtroFoto').value;
-
-  const temFiltroAtivo = Boolean(termo || fFuracao || fAcabamento || fTamanho || fReferencia || fMaterial || fCorCodigo || fFoto || filtroFamilia);
+  const fCliente = document.getElementById('filtroCliente') ? document.getElementById('filtroCliente').value : '';
 
   const filtrados = produtos.filter(p => {
     if (filtroFamilia && p.cor_familia !== filtroFamilia) return false;
@@ -345,39 +411,41 @@ function renderizar(){
     if (fReferencia && p.modelo !== fReferencia) return false;
     if (fMaterial && p.material !== fMaterial) return false;
     if (fCorCodigo && p.cor_codigo !== fCorCodigo) return false;
-    if (fFoto === 'com' && !p.foto) return false;
-    if (fFoto === 'sem' && p.foto) return false;
-    if (termo){
-      const alvo = [p.modelo, p.cor_codigo, p.cor_nome, p.descricao].filter(Boolean).join(' ').toLowerCase();
+
+    const img = obterFoto(p);
+    if (fFoto === 'com' && !img) return false;
+    if (fFoto === 'sem' && img) return false;
+
+    if (fCliente && p.cliente !== fCliente) return false;
+    if (termo) {
+      const alvo = [p.modelo, p.cor_codigo, p.cor_nome, p.cliente, p.descricao].filter(Boolean).join(' ').toLowerCase();
       if (!alvo.includes(termo)) return false;
     }
     return true;
   });
 
-  const exibidos = temFiltroAtivo ? filtrados : filtrados.slice(0, 3);
-
-  if (!temFiltroAtivo) {
-    document.getElementById('contador').textContent = `Exibindo 3 de ${filtrados.length} produtos. Use a busca ou os filtros para encontrar mais.`;
-  } else {
-    document.getElementById('contador').textContent = `${filtrados.length} produto${filtrados.length === 1 ? '' : 's'}`;
-  }
+  document.getElementById('contador').textContent = `${filtrados.length} produto${filtrados.length === 1 ? '' : 's'}`;
 
   const grid = document.getElementById('grid');
   const vazio = document.getElementById('vazio');
   grid.innerHTML = '';
 
-  if (exibidos.length === 0){
+  if (filtrados.length === 0) {
     vazio.style.display = 'block';
     return;
   }
   vazio.style.display = 'none';
 
-  exibidos.forEach(p => {
+  filtrados.forEach(p => {
+    const img = obterFoto(p);
+    // Como index.html está em docs/clientes/slug/, subimos 2 níveis (../../) até a raiz da pasta docs/
+    const urlImagem = img ? `../../${img}` : '';
+
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
-      <div class="foto" style="${p.foto ? `background-image:url('../../${p.foto}')` : ''}">
-        ${p.foto ? '' : 'Sem foto'}
+      <div class="foto" style="${urlImagem ? `background-image:url('${urlImagem}')` : ''}">
+        ${urlImagem ? '' : 'Sem foto'}
       </div>
       <div class="info">
         <div class="modelo">${p.modelo}</div>
@@ -385,8 +453,8 @@ function renderizar(){
         <div class="tags">
           ${p.furacao ? `<span class="tag">${p.furacao}</span>` : ''}
           ${p.tamanho ? `<span class="tag">Tam ${p.tamanho}</span>` : ''}
-          ${p.personalizacao ? `<span class="tag tag-pers">${p.personalizacao}</span>` : ''}
         </div>
+        ${p.cliente ? `<div class="cliente">${p.cliente}</div>` : ''}
         <div class="rodape">
           <span class="saldo-label">Saldo</span>
           <span class="saldo-val">${p.qtd_saldo ?? '—'}${p.unidade ? ` <span class="saldo-unid">${p.unidade}</span>` : ''}</span>
@@ -399,11 +467,13 @@ function renderizar(){
 }
 
 function abrirModal(p){
-  document.getElementById('modalFoto').style.backgroundImage = p.foto ? `url('../../${p.foto}')` : '';
+  const img = obterFoto(p);
+  document.getElementById('modalFoto').style.backgroundImage = img ? `url('../../${img}')` : '';
   document.getElementById('modalModelo').textContent = p.modelo;
   document.getElementById('modalCor').textContent = `${p.cor_codigo}${p.cor_nome ? ' · ' + p.cor_nome : ''}`;
-
+ 
   const linhas = [
+    ['Cliente', p.cliente],
     ['Descrição', p.descricao],
     ['Tamanho', p.tamanho],
     ['Furação', p.furacao],
@@ -426,7 +496,7 @@ function fecharModal(){
 
 function limparFiltros(){
   document.getElementById('busca').value = '';
-  ['filtroFuracao','filtroAcabamento','filtroTamanho','filtroReferencia','filtroMaterial','filtroCorCodigo','filtroFoto']
+  ['filtroFuracao','filtroAcabamento','filtroTamanho','filtroReferencia','filtroMaterial','filtroCorCodigo','filtroFoto','filtroCliente']
     .forEach(id => document.getElementById(id).value = '');
   filtroFamilia = '';
   document.querySelectorAll('.cor-chip').forEach(c => c.classList.remove('active'));

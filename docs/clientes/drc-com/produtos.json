@@ -1,0 +1,45 @@
+{
+  "entidade_id": "user_067",
+  "entidade_nome": "DRC COM. DE ART. DE ARMARINHO LTDA.",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "104270001",
+      "modelo": "10427",
+      "tamanho": "18",
+      "cor_codigo": "C002",
+      "tingimento": null,
+      "cor_nome": "MARROM",
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERSONALIZADO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10427 4F TAM 18 COR C002 FOSCO PERS",
+      "qtd_saldo": 16,
+      "unidade": "GR",
+      "cliente": "DRC COM. DE ART. DE ARMARINHO LTDA.",
+      "representante": "SUZANA M. FAINGOLD",
+      "foto": null
+    },
+    {
+      "cod_red": "104280005",
+      "modelo": "10428",
+      "tamanho": "18",
+      "cor_codigo": "C005",
+      "tingimento": null,
+      "cor_nome": 5,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERSONALIZADO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10428 4F TAM 18 COR C005 FOSCO PERS",
+      "qtd_saldo": 14,
+      "unidade": "GR",
+      "cliente": "DRC COM. DE ART. DE ARMARINHO LTDA.",
+      "representante": "",
+      "foto": null
+    }
+  ]
+}

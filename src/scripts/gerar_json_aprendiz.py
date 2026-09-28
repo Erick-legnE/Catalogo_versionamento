@@ -126,6 +126,7 @@ def buscar_imagens(prefixo_com_furacao):
     encontrados.sort(key=ordem)
     return encontrados
 
+
 def buscar_pastilha_fallback(cor_raw):
     """Busca e copia a pastilha da cor para dist/imagens/ caso a foto do botão não exista."""
     if not cor_raw:
@@ -150,6 +151,7 @@ def buscar_pastilha_fallback(cor_raw):
                         shutil.copy2(candidato, destino)
                     return [candidato.name]
     return []
+
 
 def carregar_tabela_cores():
     tabela = {}
@@ -189,18 +191,13 @@ def main():
     print(f"      Caminho: {PLANILHA}")
     wb = openpyxl.load_workbook(PLANILHA, read_only=True, keep_vba=True, data_only=True)
 
+    print("\n[2/4] Carregando tabela de cores...")
     tabela_cores = carregar_tabela_cores()
 
     PASTA_IMAGENS.mkdir(parents=True, exist_ok=True)
     ARQUIVO_JSON.parent.mkdir(parents=True, exist_ok=True)
 
-    imagens = buscar_imagens(prefixo_furacao)
-
-    if not imagens:
-        imagens = buscar_pastilha_fallback(cor_raw)
-
-    tem_foto = bool(imagens)
-    
+    print("\n[3/4] Processando produtos e imagens...")
     ws_est = wb["Estoque"] if "Estoque" in wb.sheetnames else wb.active
     headers = None
     dados_encontrados = False
@@ -261,7 +258,11 @@ def main():
 
         prefixo = montar_prefixo_imagem(modelo, cor_raw, ting)
         prefixo_furacao = f"{prefixo}_{furos}" if furos else prefixo
+        
         imagens = buscar_imagens(prefixo_furacao)
+        if not imagens:
+            imagens = buscar_pastilha_fallback(cor_raw)
+
         tem_foto = bool(imagens)
         if imagens:
             imagens_copiadas += len(imagens)
@@ -299,7 +300,10 @@ def main():
         json.dump(produtos, f, ensure_ascii=False, indent=2)
 
     print(f"\n{'='*52}")
-    print(f"  Concluído! {len(produtos)} produtos exportados para dist/produtos.json.")
+    print(f"  Concluído! {len(produtos)} produtos exportados.")
+    print(f"  - Imagens encontradas/copiadas: {imagens_copiadas}")
+    print(f"  - Produtos sem foto: {sem_foto_ignorados}")
+    print(f"  - Produtos inativos ignorados: {inativos_ignorados}")
     print(f"{'='*52}\n")
 
 
