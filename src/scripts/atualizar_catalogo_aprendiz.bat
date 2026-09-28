@@ -50,7 +50,7 @@ if %errorlevel% neq 0 (
 
 @echo off
 echo Running catalog build and versioning script...
-python src/scripts/gerador.py
+python gerador.py
 if %ERRORLEVEL% EQU 0 (
     echo [SUCCESS] Build completed at %DATE% %TIME%
 ) else (
