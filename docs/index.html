@@ -615,6 +615,20 @@
         </section>
 
         <!-- SEÇÃO REPRESENTANTES -->
+        <section class="section-block" id="section-solicitacoes">
+            <div class="section-header">
+                <span class="section-title">Fluxo de solicitações</span>
+                <span class="section-kicker">Acompanhe o que já foi gerado e o que está aguardando revisão.</span>
+            </div>
+            <div class="grid">
+                <a href="solicitacoes.html" class="card portal-card private-card" data-access="login" data-name="solicitacoes fichas pedidos status revisao pdf 3d">
+                    <div class="card-header"><span class="access-badge login">LOGIN NECESSARIO</span><h2>Minhas Solicitações</h2><p>Acompanhe PDFs gerados, revisões e o futuro processamento 3D de cada ficha.</p></div>
+                    <div class="card-meta"><span class="tag">Status</span><span class="tag">Revisão</span><span class="tag">Histórico</span></div>
+                    <div class="card-btn">Ver Solicitações &rarr;</div>
+                </a>
+            </div>
+        </section>
+
         <section class="section-block" id="section-representantes">
             <div class="section-header">
                 <span class="section-title">Representantes Autorizados</span>
@@ -737,13 +751,13 @@
             return fallback;
         }
         function atualizarAcessos() {
-            const map={catalogo_geral:'catalogo',pastilhas:'pastilhas',cores_preview:'cores_preview',automacao:'automacao'};
+            const map={catalogo_geral:'catalogo',pastilhas:'pastilhas',cores_preview:'cores_preview',automacao:'automacao',solicitacoes:'automacao'};
             const publicAreas = new Set(['catalogo','pastilhas','cores_preview']);
             document.querySelectorAll('a.card.portal-card[href]').forEach(card=>{
                 const page=(card.getAttribute('href')||'').replace('.html','');
                 if (map[page]) card.style.display=(publicAreas.has(map[page]) || pode(map[page]))?'flex':'none';
             });
-            for(const section of ['section-representantes','section-clientes']) {
+            for(const section of ['section-solicitacoes','section-representantes','section-clientes']) {
                 const element=document.getElementById(section);
                 if(element)element.style.display=usuarioAtual?'':'none';
             }

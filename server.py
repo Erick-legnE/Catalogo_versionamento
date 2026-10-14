@@ -228,10 +228,55 @@ def _public_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
     return {
         "id": manifest["id"],
         "created_at": manifest["created_at"],
+        "updated_at": manifest.get("updated_at", manifest["created_at"]),
         "status": manifest["status"],
         "metadata": manifest["metadata"],
         "files": manifest["files"],
+        "history": manifest.get("history", []),
+        "workflow": manifest.get("workflow", {}),
     }
+
+
+REQUEST_STATUSES = {
+    "pdf_ready",
+    "in_review",
+    "approved",
+    "rejected",
+    "production_ready",
+    "rendering_3d",
+    "rendered_3d",
+    "render_error",
+}
+
+
+def _read_manifest(folder: Path) -> dict[str, Any] | None:
+    path = folder / "manifest.json"
+    if not path.is_file():
+        return None
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    return value if isinstance(value, dict) else None
+
+
+def _iter_request_manifests():
+    if not STORAGE_ROOT.exists():
+        return
+    for manifest_path in STORAGE_ROOT.glob("*/*/*/manifest.json"):
+        manifest = _read_manifest(manifest_path.parent)
+        if manifest and manifest.get("id"):
+            yield manifest_path.parent, manifest
+
+
+def _write_manifest(folder: Path, manifest: dict[str, Any]) -> None:
+    target = folder / "manifest.json"
+    temporary = folder / "manifest.json.part"
+    temporary.write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    os.replace(temporary, target)
 
 
 
@@ -241,6 +286,7 @@ PAGES={
  'catalogo_geral.html':'catalogo',
  'pastilhas.html':'pastilhas',
  'automacao.html':'automacao',
+ 'solicitacoes.html':'automacao',
  'cores_preview.html':'cores_preview',
  'admin_usuarios.html':'admin',
 }
@@ -286,7 +332,12 @@ async def enforce_access(request: Request, call_next):
                 if not session or request.headers.get('X-CSRF-Token')!=session['csrf']:
                     return JSONResponse({'detail':'Token CSRF inválido.'},status_code=403)
             return await call_next(request)
-        if path.startswith(('api/solicitacoes/','api/fichas/')):
+        is_request_api = (
+            path == 'api/solicitacoes'
+            or path.startswith('api/solicitacoes/')
+            or path.startswith('api/fichas/')
+        )
+        if is_request_api:
             user=current_user(request)
             if not auth.has(user,'automacao'):
                 return JSONResponse({'detail':'Acesso à Automação negado.'},status_code=403)
@@ -483,6 +534,7 @@ async def export_request(
         raise HTTPException(status_code=400, detail="Envie pelo menos uma arte da personalização.")
     if len(art_files) > MAX_ART_FILES:
         raise HTTPException(status_code=400, detail=f"Máximo de {MAX_ART_FILES} artes por ficha.")
+    owner_user = must_login(request)
     request_id = _new_request_id(parsed)
     folder = _new_request_folder(request_id)
     files: dict[str, Any] = {}
@@ -558,12 +610,23 @@ async def export_request(
 
         manifest = {
             "schema_version": 2,
-            "owner_user_id": must_login(request)["id"],
+            "owner_user_id": owner_user["id"],
             "id": request_id,
             "created_at": created_at,
+            "updated_at": created_at,
             "status": "pdf_ready",
             "metadata": parsed,
             "files": files,
+            "workflow": {
+                "stage": "pdf_ready",
+                "assigned_to": None,
+            },
+            "history": [{
+                "at": created_at,
+                "status": "pdf_ready",
+                "note": "Ficha PDF gerada e solicitação recebida.",
+                "actor": owner_user.get("nome") or owner_user.get("username"),
+            }],
             "pipeline": {
                 "current_stage": "ficha_pdf_generated",
                 "ficha_pdf": "ready",
@@ -580,14 +643,7 @@ async def export_request(
             encoding="utf-8",
         )
 
-        (folder / "manifest.json").write_text(
-            json.dumps(
-                manifest,
-                ensure_ascii=False,
-                indent=2,
-            ),
-            encoding="utf-8",
-        )
+        _write_manifest(folder, manifest)
 
         return {
             **_public_manifest(manifest),
@@ -601,6 +657,113 @@ async def export_request(
         # No partially-saved request packages.
         shutil.rmtree(folder, ignore_errors=True)
         raise
+
+
+@app.get("/api/solicitacoes")
+def list_requests(
+    request: Request,
+    limit: int = 50,
+    offset: int = 0,
+    status: str | None = None,
+) -> dict[str, Any]:
+    user = must_login(request)
+    limit = max(1, min(int(limit), 100))
+    offset = max(0, int(offset))
+    wanted_status = str(status or "").strip()
+    if wanted_status and wanted_status not in REQUEST_STATUSES:
+        raise HTTPException(status_code=400, detail="Status de solicitação inválido.")
+
+    rows: list[dict[str, Any]] = []
+    is_admin = auth.has(user, "admin")
+    for folder, manifest in _iter_request_manifests():
+        if manifest.get("owner_user_id") != user["id"] and not is_admin:
+            continue
+        if wanted_status and manifest.get("status") != wanted_status:
+            continue
+        row = _public_manifest(manifest)
+        row["pdf_url"] = (
+            f"/api/solicitacoes/{manifest['id']}/pdf"
+            if (folder / "ficha_tecnica.pdf").is_file()
+            else None
+        )
+        rows.append(row)
+
+    rows.sort(
+        key=lambda row: row.get("updated_at") or row.get("created_at") or "",
+        reverse=True,
+    )
+    total = len(rows)
+    return {
+        "items": rows[offset:offset + limit],
+        "total": total,
+        "limit": limit,
+        "offset": offset,
+    }
+
+
+@app.patch("/api/solicitacoes/{request_id}")
+def update_request(
+    request_id: str,
+    request: Request,
+    payload: dict = Body(...),
+) -> dict[str, Any]:
+    actor = must_admin(request)
+    folder = _find_request_folder(request_id)
+    manifest = _read_manifest(folder) if folder else None
+    if folder is None or manifest is None:
+        raise HTTPException(status_code=404, detail="Solicitação não encontrada.")
+
+    requested_status = payload.get("status")
+    new_status = (
+        str(requested_status).strip()
+        if requested_status is not None
+        else str(manifest.get("status") or "pdf_ready")
+    )
+    if new_status not in REQUEST_STATUSES:
+        raise HTTPException(status_code=400, detail="Status de solicitação inválido.")
+
+    note = _safe_text(payload.get("note"), 2000)
+    assigned_to = payload.get("assigned_to")
+    if assigned_to is not None:
+        assigned_to = _safe_text(assigned_to, 120) or None
+    if requested_status is None and not note and assigned_to is None:
+        raise HTTPException(status_code=400, detail="Informe status, observação ou responsável.")
+
+    changed_at = datetime.now().astimezone().isoformat(timespec="seconds")
+    workflow = manifest.get("workflow")
+    if not isinstance(workflow, dict):
+        workflow = {}
+    workflow["stage"] = new_status
+    if assigned_to is not None or "assigned_to" in payload:
+        workflow["assigned_to"] = assigned_to
+
+    history = manifest.get("history")
+    if not isinstance(history, list):
+        history = []
+    history.append({
+        "at": changed_at,
+        "status": new_status,
+        "note": note,
+        "actor": actor.get("nome") or actor.get("username"),
+    })
+
+    manifest["status"] = new_status
+    manifest["updated_at"] = changed_at
+    manifest["workflow"] = workflow
+    manifest["history"] = history[-100:]
+    pipeline = manifest.get("pipeline")
+    if not isinstance(pipeline, dict):
+        pipeline = {}
+    pipeline["current_stage"] = new_status
+    manifest["pipeline"] = pipeline
+    _write_manifest(folder, manifest)
+
+    return {
+        **_public_manifest(manifest),
+        "pdf_url": f"/api/solicitacoes/{request_id}/pdf"
+        if (folder / "ficha_tecnica.pdf").is_file()
+        else None,
+    }
 
 
 @app.get("/api/solicitacoes/{request_id}")
@@ -621,11 +784,9 @@ def get_request(request_id: str) -> dict[str, Any]:
             detail="Solicitação sem manifest.json.",
         )
 
-    manifest = json.loads(
-        manifest_path.read_text(
-            encoding="utf-8"
-        )
-    )
+    manifest = _read_manifest(folder)
+    if manifest is None:
+        raise HTTPException(status_code=500, detail="Manifesto inválido.")
 
     return {
         **_public_manifest(manifest),
