@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brasil Botões — Automação de Fichas</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--header:#4d5759;--azul:#00bad2;--azul-d:#0099ad;--amarelo:#fbd722;--verde:#6ebd4a;--cinza:#4d5759;--cinza-l:#7a8b8d;--branco:#fff;--off:#f4fbfc;--borda:#d8f0f3;--warn:#d97706;--danger:#dc2626;--shadow:0 2px 12px rgba(0,186,210,.10);--r:12px}
+[data-theme="dark"]{--header:#020617;--cinza:#f8fafc;--cinza-l:#94a3b8;--branco:#1e293b;--off:#0f172a;--borda:#334155;--shadow:0 5px 18px rgba(0,0,0,.35)}
+*{box-sizing:border-box;margin:0;padding:0} body{font-family:'Nunito Sans',sans-serif;background:var(--off);color:var(--cinza);min-height:100vh} button,input,textarea,select{font:inherit}
+.header{height:68px;background:var(--header);border-bottom:3px solid var(--azul);display:flex;align-items:center;justify-content:space-between;padding:0 24px;position:sticky;top:0;z-index:30}.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none}.logo img{width:44px;height:44px;border-radius:9px;object-fit:cover}.logo strong{font-size:18px;font-weight:900}.logo span{color:var(--azul)}.header-actions{display:flex;gap:7px}.head-btn{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.1);color:#fff;border-radius:20px;padding:7px 11px;font-weight:800;font-size:11px;cursor:pointer}
+.page{max-width:1400px;margin:auto;padding:22px}.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:18px}.hero h1{font-size:27px;font-weight:900;letter-spacing:-.02em}.hero h1 span{color:var(--azul)}.hero p{font-size:12px;color:var(--cinza-l);max-width:780px;line-height:1.55;margin-top:4px}.prototype{font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;background:#fff7ed;color:#9a3412;border:1px solid #fed7aa;border-radius:999px;padding:7px 10px;white-space:nowrap}[data-theme="dark"] .prototype{background:#431407;color:#fdba74;border-color:#7c2d12}
+.layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(350px,.65fr);gap:18px;align-items:start}.panel{background:var(--branco);border:1px solid var(--borda);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}.panel-head{padding:15px 17px;border-bottom:1px solid var(--borda)}.panel-title{font-size:14px;font-weight:900}.panel-sub{font-size:9px;color:var(--cinza-l);margin-top:2px}.body{padding:16px}.steps{display:grid;gap:12px}.step{border:1px solid var(--borda);background:var(--off);border-radius:10px;overflow:hidden}.step-head{display:flex;align-items:center;gap:9px;padding:11px 13px;border-bottom:1px solid var(--borda)}.num{width:27px;height:27px;border-radius:50%;background:var(--azul);color:white;display:grid;place-items:center;font-weight:900;font-size:11px}.step-title{font-weight:900;font-size:12px}.step-desc{font-size:9px;color:var(--cinza-l)}.step-body{padding:13px}.mode-tabs{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px}.mode-btn{border:1px solid var(--borda);background:var(--branco);color:var(--cinza);border-radius:8px;padding:9px;font-size:10px;font-weight:900;cursor:pointer}.mode-btn.active{background:var(--azul);border-color:var(--azul);color:#fff}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.field label{display:block;font-size:8px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;color:var(--azul);margin-bottom:4px}.field input,.field textarea,.field select{width:100%;background:var(--branco);color:var(--cinza);border:1px solid var(--borda);border-radius:8px;padding:9px 10px;outline:0}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--azul);box-shadow:0 0 0 3px rgba(0,186,210,.1)}.field textarea{min-height:70px;resize:vertical}.help{font-size:9px;color:var(--cinza-l);line-height:1.45;margin-top:7px}.upload{border:1px dashed var(--azul);background:rgba(0,186,210,.05);border-radius:9px;padding:12px;position:relative}.upload input{width:100%;font-size:10px}.art-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}.art-chip{display:flex;align-items:center;gap:6px;border:1px solid var(--borda);background:var(--branco);border-radius:8px;padding:5px 7px;cursor:pointer;max-width:220px}.art-chip.active{border-color:var(--azul);box-shadow:0 0 0 2px rgba(0,186,210,.12)}.art-thumb{width:30px;height:30px;object-fit:contain;background:#eef2f7;border-radius:5px}.art-name{font-size:8px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:130px}.art-remove{border:0;background:#fee2e2;color:#991b1b;width:20px;height:20px;border-radius:50%;cursor:pointer;font-weight:900}.active-art-note{font-size:8px;color:var(--cinza-l);margin-top:6px}.status-area{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.status{font-size:8px;font-weight:900;border-radius:999px;padding:4px 7px}.ok{background:#dcfce7;color:#166534}.warn{background:#ffedd5;color:#9a3412}.off{background:#e2e8f0;color:#475569}.info{background:#e0f2fe;color:#075985}.summary{margin-top:10px;border:1px solid var(--borda);border-radius:8px;background:var(--branco);padding:10px;font-size:9px;color:var(--cinza-l);line-height:1.45}.summary strong{color:var(--cinza)}
+.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}.range-row{display:grid;grid-template-columns:85px 1fr 42px;align-items:center;gap:8px}.range-row label{font-size:9px;font-weight:900}.range-row output{font-size:9px;text-align:right;color:var(--cinza-l)} input[type="range"]{width:100%;accent-color:var(--azul)}
+.preview-panel{padding:16px;position:sticky;top:84px}.preview-wrap{aspect-ratio:1;border:1px solid var(--borda);border-radius:13px;overflow:hidden;background:linear-gradient(145deg,#eaf7f9,#d9edf0);position:relative;margin-top:11px}[data-theme="dark"] .preview-wrap{background:linear-gradient(145deg,#0f172a,#15303a)}#preview{display:block;width:100%;height:100%}.preview-caption{font-size:9px;line-height:1.45;color:var(--cinza-l);margin-top:9px}.checks{display:grid;gap:6px;margin-top:12px}.check{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--borda);padding-bottom:6px;font-size:9px}.dot{width:7px;height:7px;border-radius:50%;display:inline-block;background:#94a3b8;margin-right:5px}.dot.green{background:var(--verde)}.dot.orange{background:var(--warn)}
+.final{margin-top:12px;background:linear-gradient(135deg,rgba(0,186,210,.12),rgba(110,189,74,.10));border:1px solid var(--borda);border-radius:10px;padding:13px}.final h3{font-size:12px;font-weight:900}.final p{font-size:9px;color:var(--cinza-l);margin-top:3px;line-height:1.45}.generate{width:100%;margin-top:10px;border:0;background:var(--azul);color:white;border-radius:8px;padding:11px 13px;font-weight:900;cursor:pointer}.generate:hover{background:var(--azul-d)}.generate:disabled{background:#94a3b8;cursor:not-allowed}.dev{margin-top:9px;border-top:1px solid var(--borda);padding-top:8px}.dev summary{cursor:pointer;font-size:8px;color:var(--cinza-l);font-weight:800}.json{margin-top:7px;background:#0f172a;color:#cbd5e1;border-radius:7px;padding:8px;max-height:180px;overflow:auto;white-space:pre-wrap;font:8px ui-monospace,Consolas,monospace}.hidden{display:none!important}.toast{position:fixed;right:18px;bottom:18px;background:#0f172a;color:#fff;border:1px solid #334155;border-radius:9px;padding:11px 13px;box-shadow:0 12px 36px rgba(0,0,0,.28);font-size:10px;z-index:100;display:none;max-width:360px}.server-state{display:flex;align-items:center;gap:7px;margin-top:8px;font-size:8px;color:var(--cinza-l)}.server-light{width:8px;height:8px;border-radius:50%;background:#94a3b8}.server-light.ok{background:var(--verde)}.server-light.bad{background:var(--danger)}.save-result{margin-top:9px;border:1px solid var(--borda);border-radius:8px;background:var(--branco);padding:9px;font-size:8px;line-height:1.55;color:var(--cinza-l);display:none}.save-result strong{color:var(--cinza)}.save-result code{font-size:8px;word-break:break-all}.save-result.show{display:block}
+@media(max-width:980px){.layout{grid-template-columns:1fr}.preview-panel{position:static}}@media(max-width:650px){.page{padding:13px}.grid,.grid.two,.controls{grid-template-columns:1fr}.hero{flex-direction:column}.range-row{grid-template-columns:75px 1fr 36px}}
+ .scale-number{width:66px!important;flex:0 0 66px;padding:5px 6px!important;font-size:10px!important;border:1px solid var(--borda);background:var(--branco);color:var(--cinza);border-radius:6px}
+.pdf-link{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 12px;margin-top:8px;border-radius:7px;background:var(--azul);font-weight:900;color:#fff!important;text-decoration:none;font-size:10px}
+.pdf-link:hover{background:var(--azul-d)}
+</style>
+<script src="js/color_preview.js"></script>
+<script src="js/hole_preview.js"></script>
+</head>
+<body>
+<header class="header"><a class="logo" href="index.html"><img src="logo_simbolo.jpeg"><strong>Brasil <span>Botões</span> — Automação</strong></a><div class="header-actions"><button class="head-btn" onclick="location.href='catalogo_geral.html'">← Catálogo</button><button id="theme-btn" class="head-btn" onclick="toggleTheme()">🌙 Escuro</button></div></header>
+<main class="page">
+<section class="hero"><div><h1>Personalização + <span>Ficha Técnica</span></h1><p>Monte uma prévia visual, inclua as artes recebidas e gere a Ficha Técnica em PDF. O 3D e os dados de produção ficam para uma etapa futura.</p></div><div class="prototype">v9 · Cores + Ficha PDF no servidor</div></section>
+<div class="layout">
+<section class="panel"><div class="panel-head"><div class="panel-title">Solicitação</div><div class="panel-sub">Sem código reduzido obrigatório, sem medida em mm e sem seleção manual de faca.</div></div><div class="body"><div class="steps">
+
+<div class="step"><div class="step-head"><div class="num">1</div><div><div class="step-title">O que será personalizado?</div><div class="step-desc">Botão por referência ou outro item por imagem.</div></div></div><div class="step-body">
+<div class="mode-tabs"><button id="mode-button" class="mode-btn active" onclick="setMode('button')">Botão</button><button id="mode-other" class="mode-btn" onclick="setMode('other')">Outro item / usar imagem</button></div>
+<div id="button-fields"><div class="grid"><div class="field"><label>Referência</label><input id="referencia" list="refs-list" placeholder="Ex.: 13649" autocomplete="off"><datalist id="refs-list"></datalist></div><div class="field"><label>TAM</label><input id="tamanho" type="number" min="1" step="1" placeholder="Ex.: 28"></div><div class="field"><label>Cor</label><input id="cor" list="cores-list" placeholder="Ex.: C3263" autocomplete="off"><datalist id="cores-list"></datalist></div></div><div class="help" style="margin-top:8px"><a href="cores_preview.html" target="_blank" rel="noopener" style="color:var(--azul);font-weight:900">Ver prévias das cores →</a> · Previsões sem foto são <strong>ilustrações estimadas</strong> pelo cadastro, não amostras reais.</div><div class="status-area" id="button-status"></div><div id="button-summary" class="summary">Preencha referência, TAM e cor. A combinação não precisa existir como produto acabado no Consistem.</div></div>
+<div id="other-fields" class="hidden"><div class="grid two"><div class="field"><label>Descrição do item (opcional)</label><input id="other-desc" placeholder="Ex.: fivela metálica, placa, puxador..."></div><div class="field upload"><label>Imagem do item</label><input id="other-image" type="file" accept="image/*"></div></div><div class="help">Para itens sem modelo, usamos a própria foto como referência visual. A ficha indica que é uma simulação 2D.</div></div>
+</div></div>
+
+<div class="step"><div class="step-head"><div class="num">2</div><div><div class="step-title">Arte da personalização</div><div class="step-desc">A arte chega como imagem; não tentamos adivinhar fonte ou reconstruir desenhos malucos.</div></div></div><div class="step-body">
+<div class="upload"><div class="field"><label>Imagens / logos / textos desenhados</label><input id="design-image" type="file" multiple accept="image/png,image/jpeg,image/webp,image/svg+xml"></div><div class="help">Você pode adicionar várias imagens. Clique numa camada abaixo para ajustar escala, rotação, posição e curvatura separadamente.</div><div id="art-list" class="art-list"></div><div id="active-art-note" class="active-art-note">Nenhuma camada selecionada.</div></div>
+<div class="controls"><div class="range-row"><label>Escala</label><input id="scale" type="range" min="0" max="1000" step="1" value="70"><output id="scale-o">70%</output><input id="scale-number" type="number" min="0" max="1000" step="1" value="70" aria-label="Escala exata em porcentagem" title="Digite escala de 0 a 1000%" class="scale-number"></div><div class="range-row"><label>Rotação</label><input id="rotation" type="range" min="-180" max="180" value="0"><output id="rotation-o">0°</output></div><div class="range-row"><label>Posição X</label><input id="posx" type="range" min="-160" max="160" value="0"><output id="posx-o">0</output></div><div class="range-row"><label>Posição Y</label><input id="posy" type="range" min="-160" max="160" value="0"><output id="posy-o">0</output></div><div class="range-row"><label>Curvatura</label><input id="curve" type="range" min="-100" max="100" value="0"><output id="curve-o">0</output></div></div>
+<div class="help">Curvatura simulada na prévia 2D. Escala de 0% a 1000%: a arte pode ultrapassar a borda, mas a simulação a recorta na superfície do botão.</div>
+</div></div>
+
+<div class="step"><div class="step-head"><div class="num">3</div><div><div class="step-title">Dados da Ficha Técnica</div><div class="step-desc">Somente o que realmente faz sentido informar nessa etapa.</div></div></div><div class="step-body"><div class="grid two"><div class="field"><label>Cliente</label><input id="cliente" placeholder="Cliente"></div><div class="field"><label>Representante</label><input id="representante" placeholder="Representante"></div></div><div class="field" style="margin-top:9px"><label>Observações</label><textarea id="observacoes" placeholder="Observações relevantes para a ficha"></textarea></div><div class="help">O código personalizado definitivo será atribuído no processo interno. Pedido/projeto entra posteriormente no fluxo comercial.</div></div></div>
+
+</div></div></section>
+
+<aside class="panel preview-panel"><div class="panel-title">Prévia da personalização</div><div class="panel-sub">Simulação 2D de aplicação, com posição, escala, rotação e curvatura. Não representa a geometria final.</div><div class="preview-wrap"><canvas id="preview" width="700" height="700"></canvas></div><div id="preview-caption" class="preview-caption">Preencha os dados e envie uma arte.</div><div class="checks"><div class="check"><span><i id="dot-ref" class="dot"></i>Referência / item</span><strong id="check-ref">aguardando</strong></div><div class="check"><span><i id="dot-past" class="dot"></i>Pastilha / cor</span><strong id="check-past">aguardando</strong></div><div class="check"><span><i id="dot-photo" class="dot"></i>Foto da cor</span><strong id="check-photo">aguardando</strong></div><div class="check"><span><i id="dot-art" class="dot"></i>Arte</span><strong id="check-art">aguardando</strong></div></div>
+<div class="final">
+<h3>Gerar Ficha Técnica</h3>
+<p>Cria a Ficha em PDF, salva a solicitação e suas imagens na máquina do servidor e disponibiliza o PDF para abrir ou baixar. <strong>Prévia de aplicação 2D para aprovação</strong>; sem geração 3D ou medidas físicas inferidas.</p>
+<div class="server-state"><span id="server-light" class="server-light"></span><span id="server-status">verificando servidor...</span></div>
+<button id="save-server-btn" class="generate" onclick="saveRequestToServer()">Gerar e salvar Ficha Técnica (PDF)</button>
+<div id="save-result" class="save-result" role="status" aria-live="polite"></div>
+<details class="dev"><summary>Desenvolvimento: ver dados internos da solicitação</summary><pre id="json-preview" class="json"></pre><button class="generate" style="margin-top:7px;background:#475569" onclick="downloadRequest()">Baixar JSON de teste</button></details>
+</div></aside>
+</div></main><div id="toast" class="toast"></div>
+<script>
+let products=[], refIndex={references:{}}, pastIndex={by_color:{}}, photoIndex={}, pastPhotos=[];
+let colorsCatalog={colors:{}}, colorOverrides={colors:{}}, holePatterns={patterns:{}}, refHoleMap={refs:{}};
+let baseLoadToken=0;
+let mode='button', designLayers=[], activeDesignIndex=-1, otherImg=null, baseImg=null, baseSource='', baseImageSrc='', serverOnline=false, lastSavedRequest=null;
+const $=id=>document.getElementById(id);
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
+function normalizeRef(v){return String(v||'').trim().replace(/^0+(?=\d)/,'')}
+function normalizeCor(v){let s=String(v||'').trim().toUpperCase().replace(/\s+/g,''); if(s && !s.startsWith('C') && /^\d+$/.test(s))s='C'+s; if(/^C\d{1,2}$/.test(s))s='C'+s.slice(1).padStart(3,'0'); return s}
+function applyTheme(){const d=localStorage.getItem('theme')==='dark'||(!localStorage.getItem('theme')&&matchMedia('(prefers-color-scheme: dark)').matches);if(d){document.documentElement.setAttribute('data-theme','dark');$('theme-btn').textContent='☀️ Claro'}}
+function toggleTheme(){const d=document.documentElement.getAttribute('data-theme')==='dark';if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');$('theme-btn').textContent='🌙 Escuro'}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');$('theme-btn').textContent='☀️ Claro'}}
+async function init(){
+ applyTheme();
+ const json=async path=>{const r=await fetch(path);if(!r.ok)throw new Error(path+': '+r.status);return r.json()};
+ try {
+  [products,refIndex,pastIndex,photoIndex,colorsCatalog,colorOverrides,holePatterns,refHoleMap]=await Promise.all([
+   json('produtos.json'),json('data/referencias_consistem.json'),json('data/pastilhas_consistem.json'),
+   json('data/pastilhas_fotos_index.json'),json('data/cores_catalogo.json'),
+   json('data/cores_overrides.json'),json('data/hole_patterns.json'),json('data/ref_hole_map.json')
+  ]);
+  fillLists();bind();prefillFromQuery();refreshAll();checkServer();
+ }catch(err){console.error('Dados do catálogo:',err);$('preview-caption').textContent='Erro ao carregar dados locais. Execute pelo servidor e verifique docs/data.'}
+}
+function fillLists(){
+ $('refs-list').innerHTML=Object.keys(refIndex.references||{}).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true})).map(x=>`<option value="${esc(x)}"></option>`).join('');
+ const all=new Set([...Object.keys(pastIndex.by_color||{}),...Object.keys(colorsCatalog.colors||{})]);
+ $('cores-list').innerHTML=[...all].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true})).map(x=>`<option value="${esc(x)}"></option>`).join('');
+}
+function bind(){['referencia','tamanho','cor','other-desc','cliente','representante','observacoes'].forEach(id=>$(id).addEventListener('input',refreshAll));['scale','rotation','posx','posy','curve'].forEach(id=>$(id).addEventListener('input',()=>{if(id==='scale')$('scale-number').value=$('scale').value;syncActiveDesignFromControls();updateOutputs();drawPreview();updateInternal()}));$('scale-number').addEventListener('change',()=>{const n=Math.max(0,Math.min(1000,Math.round(Number($('scale-number').value)||0)));$('scale').value=n;$('scale-number').value=n;syncActiveDesignFromControls();updateOutputs();drawPreview();updateInternal()});$('design-image').addEventListener('change',e=>loadDesignUploads([...e.target.files]));$('other-image').addEventListener('change',e=>loadUpload(e.target.files[0],'other'));window.addEventListener('resize',drawPreview)}
+function prefillFromQuery(){const q=new URLSearchParams(location.search);if(q.get('referencia'))$('referencia').value=q.get('referencia');if(q.get('tamanho'))$('tamanho').value=q.get('tamanho');if(q.get('cor'))$('cor').value=q.get('cor')}
+function setMode(m){mode=m;$('mode-button').classList.toggle('active',m==='button');$('mode-other').classList.toggle('active',m==='other');$('button-fields').classList.toggle('hidden',m!=='button');$('other-fields').classList.toggle('hidden',m!=='other');refreshAll()}
+function loadUpload(file,which){if(!file){if(which==='other')otherImg=null;refreshAll();return}const url=URL.createObjectURL(file);const img=new Image();img.onload=()=>{if(which==='other')otherImg={img,file,url};refreshAll()};img.src=url}
+function loadDesignUploads(files){for(const file of files){const url=URL.createObjectURL(file),img=new Image();img.onload=()=>{designLayers.push({img,file,url,scale:.70,rotation:0,posx:0,posy:0,curve:0});activeDesignIndex=designLayers.length-1;renderArtList();loadActiveDesignControls();refreshAll()};img.src=url}$('design-image').value=''}
+function renderArtList(){const box=$('art-list');box.innerHTML=designLayers.map((layer,i)=>`<div class="art-chip ${i===activeDesignIndex?'active':''}" onclick="setActiveDesign(${i})"><img class="art-thumb" src="${layer.url}"><span class="art-name" title="${esc(layer.file.name)}">${esc(layer.file.name)}</span><button class="art-remove" onclick="event.stopPropagation();removeDesign(${i})" title="Remover">×</button></div>`).join('');$('active-art-note').textContent=activeDesignIndex>=0&&designLayers[activeDesignIndex]?`Editando camada ${activeDesignIndex+1}/${designLayers.length}: ${designLayers[activeDesignIndex].file.name}`:'Nenhuma camada selecionada.'}
+function setActiveDesign(i){if(!designLayers[i])return;activeDesignIndex=i;renderArtList();loadActiveDesignControls();drawPreview();updateInternal()}
+function removeDesign(i){if(!designLayers[i])return;try{URL.revokeObjectURL(designLayers[i].url)}catch{}designLayers.splice(i,1);if(!designLayers.length)activeDesignIndex=-1;else activeDesignIndex=Math.min(i,designLayers.length-1);renderArtList();loadActiveDesignControls();refreshAll()}
+function syncActiveDesignFromControls(){const l=designLayers[activeDesignIndex];if(!l)return;l.scale=Number($('scale').value)/100;l.rotation=Number($('rotation').value);l.posx=Number($('posx').value);l.posy=Number($('posy').value);l.curve=Number($('curve').value)/100}
+function loadActiveDesignControls(){const l=designLayers[activeDesignIndex];const values=l?{scale:Math.round(l.scale*100),rotation:l.rotation,posx:l.posx,posy:l.posy,curve:Math.round(l.curve*100)}:{scale:70,rotation:0,posx:0,posy:0,curve:0};for(const [id,v] of Object.entries(values))$(id).value=v;$('scale-number').value=values.scale;updateOutputs()}
+function updateOutputs(){$('scale-number').value=$('scale').value;$('scale-o').value=$('scale').value+'%';$('rotation-o').value=$('rotation').value+'°';$('posx-o').value=$('posx').value;$('posy-o').value=$('posy').value;$('curve-o').value=$('curve').value}
+function buttonInput(){return{ref:normalizeRef($('referencia').value),tam:parseInt($('tamanho').value)||null,cor:normalizeCor($('cor').value)}}
+function exactProduct(ref,tam,cor){return products.find(p=>normalizeRef(p.referencia)===ref&&parseInt(p.tamanho)===tam&&normalizeCor(p.cor_codigo)===cor)||null}
+function nearestProduct(ref,tam,cor){return exactProduct(ref,tam,cor)||products.find(p=>normalizeRef(p.referencia)===ref&&parseInt(p.tamanho)===tam)||products.find(p=>normalizeRef(p.referencia)===ref)||null}
+function productImage(p){if(!p)return'';const a=(p.imagens||[])[0]||(p.pastilha_fallback||[])[0]||'';return a?(a.startsWith('imagens/')?a:'imagens/'+a):''}
+function loadBaseButton(){
+ const {ref,tam,cor}=buttonInput();
+ const exact=exactProduct(ref,tam,cor);
+ const sameColor=products.find(p=>normalizeRef(p.referencia)===ref&&normalizeCor(p.cor_codigo)===cor)||null;
+ const src=productImage(exact||sameColor);
+ baseSource='';baseImageSrc='';
+ if(src){baseSource=exact?'catalogo_exato':'catalogo_mesma_cor';baseImageSrc=src;setBaseImage(src);return}
+ const imgs=photoIndex[cor]||[];
+ if(imgs.length){baseSource='pastilha';baseImageSrc=imgs[0];setBaseImage(imgs[0]);return}
+ baseLoadToken++;baseImg=null;
+ baseSource=(colorsCatalog.colors||{})[cor]?'cores_xlsx_estimativa':'sem_referencia_visual';
+ drawPreview();
+}
+function setBaseImage(src){
+ const url=new URL(src,location.href).href;
+ if(baseImg&&baseImg.src===url){drawPreview();return}
+ const token=++baseLoadToken;
+ baseImg=null;drawPreview();
+ const img=new Image();
+ img.onload=()=>{if(token!==baseLoadToken)return;baseImg=img;drawPreview()};
+ img.onerror=()=>{if(token!==baseLoadToken)return;baseImg=null;baseSource=(colorsCatalog.colors||{})[buttonInput().cor]?'cores_xlsx_estimativa':'sem_referencia_visual';baseImageSrc='';drawPreview()};
+ img.src=src;
+}
+function refreshAll(){updateOutputs();if(mode==='button'){updateButtonStatus();loadBaseButton()}else{updateOtherStatus();baseImg=otherImg?otherImg.img:null}drawPreview();updateInternal()}
+function updateButtonStatus(){const {ref,tam,cor}=buttonInput();const statuses=[];const r=(refIndex.references||{})[ref];if(ref){if(r)statuses.push(`<span class="status ok">✓ Referência conhecida</span>`);else statuses.push(`<span class="status warn">Referência não encontrada — exige cadastro técnico</span>`)}if(tam&&r){if((r.known_sizes||[]).includes(tam))statuses.push(`<span class="status info">TAM ${tam} já visto nessa referência</span>`);else statuses.push(`<span class="status warn">TAM ${tam} é novo para esta referência — permitido</span>`)}const c=(pastIndex.by_color||{})[cor];let exactPast=[];if(c&&tam)exactPast=(c.sizes||{})[String(tam)]||[];if(c&&tam){if(exactPast.length){const pos=exactPast.filter(x=>Number(x.saldo)>0).length;statuses.push(`<span class="status ok">✓ Pastilha ${cor}/TAM ${tam}: ${exactPast.length} opção(ões), ${pos} com saldo</span>`)}else statuses.push(`<span class="status warn">Cor ${cor} existe, mas não achamos TAM ${tam} — pode precisar criar pastilha</span>`)}else if(c){statuses.push(`<span class="status info">Cor ${cor} existe no cadastro de pastilhas</span>`)}else if(cor){statuses.push(`<span class="status warn">Cor ${cor} não encontrada no cadastro de pastilhas</span>`)}const colorRule=BBColorPreview.select(cor,colorsCatalog,colorOverrides);
+ if(cor&&colorRule.entry){
+  const q=colorRule.recipe.confidence;
+  statuses.push(`<span class="status ${q==='unknown'?'warn':'info'}">${q==='unknown'?'⚠ Cor descrita, sem cor visual dedutível':'◈ Prévia ilustrativa disponível'} · ${esc(colorRule.entry.descricao.slice(0,82))}</span>`);
+ }
+ const hasPhoto=!!((photoIndex[cor]||[]).length);if(cor)statuses.push(`<span class="status ${hasPhoto?'ok':'warn'}">${hasPhoto?'Foto indexada para esta cor':'Sem foto da cor no índice'}</span>`);$('button-status').innerHTML=statuses.join('');const exact=ref&&tam&&cor?exactProduct(ref,tam,cor):null;let msg='<strong>Combinações novas são aceitas.</strong> O sistema usa a referência como família geométrica e TAM/cor como pedido do representante.';if(exact)msg+=`<br>Existe um produto acabado exatamente igual no catálogo (#${esc(exact.reduzido)}), então ele pode ser usado como referência visual.`;else if(ref&&tam&&cor)msg+='<br>Não encontramos esse botão acabado exatamente assim — isso não bloqueia a solicitação.';if(r)msg+=`<br>Internamente a referência possui dados técnicos históricos para ${r.known_sizes.length} TAM(s); eles ficam escondidos do representante.`;$('button-summary').innerHTML=msg;$('dot-ref').className='dot '+(r?'green':ref?'orange':'');$('check-ref').textContent=r?'referência conhecida':ref?'cadastro técnico pendente':'aguardando';$('dot-past').className='dot '+(exactPast.length?'green':cor?'orange':'');$('check-past').textContent=exactPast.length?'combinação encontrada':cor?'não exata / verificar':'aguardando';$('dot-photo').className='dot '+(hasPhoto?'green':cor?'orange':'');$('check-photo').textContent=hasPhoto?'disponível':cor?'não encontrada':'aguardando';$('preview-caption').textContent=ref&&tam&&cor?`Ref. ${ref} · TAM ${tam} · ${cor}${exact?' · produto existente':' · combinação nova permitida'}`:'Preencha referência, TAM e cor.'}
+function updateOtherStatus(){$('dot-ref').className='dot '+(otherImg?'green':'');$('check-ref').textContent=otherImg?'imagem recebida':'aguardando';$('dot-past').className='dot';$('check-past').textContent='não se aplica';$('dot-photo').className='dot '+(otherImg?'green':'');$('check-photo').textContent=otherImg?'imagem base':'aguardando';$('preview-caption').textContent=otherImg?'Outro item: prévia baseada somente na imagem enviada.':'Envie uma imagem do item.'}
+function fitRect(iw,ih,w,h,pad=.08){const ar=iw/ih, aw=w*(1-pad*2), ah=h*(1-pad*2);let dw=aw,dh=dw/ar;if(dh>ah){dh=ah;dw=dh*ar}return{x:(w-dw)/2,y:(h-dh)/2,w:dw,h:dh}}
+function drawPreview(){const c=$('preview'),ctx=c.getContext('2d'),W=c.width,H=c.height;ctx.clearRect(0,0,W,H);ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--off')||'#eef7f8';ctx.fillRect(0,0,W,H);if(mode==='button'){drawButtonBase(ctx,W,H);ctx.save();ctx.beginPath();ctx.arc(W/2,H/2,Math.min(W,H)*.37,0,Math.PI*2);ctx.clip();designLayers.forEach(layer=>drawDesign(ctx,W,H,layer));ctx.restore();drawButtonHoles(ctx,W,H)}else{drawOtherBase(ctx,W,H);designLayers.forEach(layer=>drawDesign(ctx,W,H,layer))}$('dot-art').className='dot '+(designLayers.length?'green':'');$('check-art').textContent=designLayers.length?`${designLayers.length} arte(s)`:'aguardando'}
+function currentHoles(){
+ const {ref,tam}=buttonInput();return BBHoles.resolve(ref,tam,holePatterns,refHoleMap);
+}
+function drawButtonBase(ctx,W,H){
+ const cx=W/2,cy=H/2,r=Math.min(W,H)*.37;
+ ctx.save();ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.clip();
+ if(baseImg){
+   const rr=fitRect(baseImg.width,baseImg.height,r*2,r*2,0);
+   ctx.drawImage(baseImg,cx-r+rr.x,cy-r+rr.y,rr.w,rr.h);
+ }else{
+   const {cor}=buttonInput();const selected=BBColorPreview.select(cor,colorsCatalog,colorOverrides);
+   BBColorPreview.paint(ctx,cx,cy,r,selected.recipe,cor);
+ }
+ ctx.restore();
+ ctx.strokeStyle='rgba(0,0,0,.20)';ctx.lineWidth=2;
+ ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.stroke();
+}
+function drawButtonHoles(ctx,W,H){
+ const h=currentHoles(),r=Math.min(W,H)*.37;
+ BBColorPreview.drawHoles(ctx,W/2,H/2,r,h.pattern);
+}
+function drawOtherBase(ctx,W,H){if(!otherImg){ctx.fillStyle='rgba(100,116,139,.12)';ctx.fillRect(W*.16,H*.22,W*.68,H*.56);ctx.fillStyle='#64748b';ctx.textAlign='center';ctx.font='700 24px Nunito Sans';ctx.fillText('Envie a imagem do item',W/2,H/2);return}const rr=fitRect(otherImg.img.width,otherImg.img.height,W,H,.05);ctx.drawImage(otherImg.img,rr.x,rr.y,rr.w,rr.h)}
+function drawDesign(ctx,W,H,layer){const img=layer.img,scale=layer.scale,rot=layer.rotation*Math.PI/180,px=layer.posx,py=layer.posy,curve=layer.curve;let maxW=W*.5*scale,maxH=H*.32*scale;let ar=img.width/img.height,dw=maxW,dh=dw/ar;if(dh>maxH){dh=maxH;dw=dh*ar}ctx.save();ctx.translate(W/2+px,H/2+py);ctx.rotate(rot);if(Math.abs(curve)<.01){ctx.drawImage(img,-dw/2,-dh/2,dw,dh)}else{const slices=120;for(let i=0;i<slices;i++){const t=i/(slices-1),sx=i*img.width/slices,sw=img.width/slices+1,x=-dw/2+i*dw/slices;const n=t*2-1,dy=curve*(n*n-.333)*dh*.62;const stretch=1-Math.abs(curve)*Math.abs(n)*.10;ctx.drawImage(img,sx,0,sw,img.height,x,-dh/2+dy,dw/slices+1,dh*stretch)}}ctx.restore()}
+function buildInternal(){
+  const assets=designLayers.map((l,i)=>({
+    layer:i+1,
+    asset_name:l.file.name,
+    content_type:l.file.type||'',
+    size_bytes:l.file.size||0,
+    scale:l.scale,
+    rotation_deg:l.rotation,
+    position_x:l.posx,
+    position_y:l.posy,
+    curvature:l.curve
+  }));
+  const common={
+    schema_version:4,
+    source:'automacao.html',
+    personalization:{assets},
+    ficha:{
+      cliente:$('cliente').value.trim(),
+      representante:$('representante').value.trim(),
+      observacoes:$('observacoes').value.trim()
+    }
+  };
+  if(mode==='button'){
+    const x=buttonInput(),exact=x.ref&&x.tam&&x.cor?exactProduct(x.ref,x.tam,x.cor):null;
+    return {
+      ...common,
+      item:{
+        type:'button',
+        reference:x.ref,
+        size_tam:x.tam,
+        color:x.cor,
+        source_reduzido:exact?exact.reduzido:null,
+        codigo_personalizado:'AUTO'
+      },
+      visual_reference:{
+        source:baseSource||null,
+        color_preview: (function(){
+          const p=BBColorPreview.select(x.cor,colorsCatalog,colorOverrides);
+          return {code:x.cor,kind:p.recipe.kind,confidence:p.recipe.confidence,
+                  method:p.recipe.method,origin:p.override?'manual_override':'Cores1.xlsx'};
+        })(),
+        holes_visual: (function(){
+          const h=BBHoles.resolve(x.ref,x.tam,holePatterns,refHoleMap);
+          return {pattern:h.key,count:h.count,verified_count:h.verifiedCount,exact_positions_verified:false};
+        })(),
+        relative_image:baseImageSrc||null
+      },
+      requested_outputs:{ficha_pdf:true,preview_2d:true}
+    };
+  }
+  return {
+    ...common,
+    item:{
+      type:'other',
+      description:$('other-desc').value.trim(),
+      base_image_name:otherImg?otherImg.file.name:null,
+      codigo_personalizado:'AUTO'
+    },
+    visual_reference:{
+      source:'user_upload',
+      relative_image:null
+    },
+    requested_outputs:{
+      image_based_mockup:true,
+      ficha_pdf:true
+    }
+  };
+}
+function updateInternal(){$('json-preview').textContent=JSON.stringify(buildInternal(),null,2)}
+function validate(){if(mode==='button'){const x=buttonInput();if(!x.ref||!x.tam||!x.cor)return'Informe referência, TAM e cor.'}else if(!otherImg)return'Envie uma imagem do item.';if(!designLayers.length)return'Envie pelo menos uma arte da personalização.';return''}
+async function checkServer(){
+  try{
+    const r=await fetch('/api/health',{cache:'no-store'});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const d=await r.json();
+    serverOnline=!!d.ok;
+    $('server-light').className='server-light '+(serverOnline?'ok':'bad');
+    $('server-status').textContent=serverOnline
+      ? `servidor conectado · armazenamento local ativo`
+      : 'servidor respondeu, mas não está pronto';
+  }catch(err){
+    serverOnline=false;
+    $('server-light').className='server-light bad';
+    $('server-status').textContent='backend não conectado — inicie com INICIAR_SERVIDOR.bat';
+  }
+}
+function canvasBlob(){
+  return new Promise((resolve,reject)=>{
+    $('preview').toBlob(blob=>blob?resolve(blob):reject(new Error('Não foi possível gerar a prévia PNG.')),'image/png',0.95);
+  });
+}
+async function saveRequestToServer(){
+  const e=validate();
+  if(e){toast(e);return}
+  if(!serverOnline){
+    await checkServer();
+    if(!serverOnline){toast('Servidor não conectado. Abra o site usando INICIAR_SERVIDOR.bat.');return}
+  }
+
+  syncActiveDesignFromControls();
+  updateInternal();
+
+  const btn=$('save-server-btn');
+  const oldText=btn.textContent;
+  btn.disabled=true;
+  btn.textContent='Gerando Ficha Técnica...';
+
+  try{
+    const data=buildInternal();
+    const form=new FormData();
+    form.append('metadata',JSON.stringify(data));
+
+    const previewBlob=await canvasBlob();
+    form.append('preview',previewBlob,'preview.png');
+
+    designLayers.forEach((layer)=>{
+      form.append('art_files',layer.file,layer.file.name);
+    });
+
+    if(mode==='other'&&otherImg){
+      form.append('other_base',otherImg.file,otherImg.file.name);
+    }
+
+    const session=await (await fetch('/api/auth/me')).json();
+    const response=await fetch('/api/fichas/export',{
+      method:'POST',
+      headers:{'X-CSRF-Token':session.csrf},
+      body:form
+    });
+
+    let result={};
+    try{result=await response.json()}catch{}
+
+    if(!response.ok){
+      const detail=result.detail||`HTTP ${response.status}`;
+      throw new Error(detail);
+    }
+
+    lastSavedRequest=result;
+    const box=$('save-result');
+    box.classList.add('show');
+    const pdfUrl=result.pdf_url;
+    box.innerHTML=
+      `<strong>✓ Ficha Técnica gerada e salva!</strong><br>`+
+      `ID: <code>${esc(result.id)}</code><br>`+
+      `Pasta: <code>${esc(result.relative_storage_path)}</code><br>`+
+      `<a class="pdf-link" target="_blank" rel="noopener" href="${esc(pdfUrl)}">Abrir PDF</a> `+
+      `<a class="pdf-link" href="${esc(pdfUrl)}?download=1">Baixar PDF</a>`;
+
+    toast('Ficha Técnica gerada! PDF salvo no servidor.');
+  }catch(err){
+    console.error(err);
+    toast('Erro ao salvar: '+err.message);
+  }finally{
+    btn.disabled=false;
+    btn.textContent=oldText;
+  }
+}
+function downloadRequest(){const data=buildInternal(),blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);const stem=mode==='button'?`${data.item.reference}_TAM${data.item.size_tam}_${data.item.color}`:'OUTRO_ITEM';a.download=`solicitacao_${stem}.json`;a.click();URL.revokeObjectURL(a.href)}
+function toast(msg){const t=$('toast');t.textContent=msg;t.style.display='block';clearTimeout(window.__toast);window.__toast=setTimeout(()=>t.style.display='none',3800)}
+const designInput=document.getElementById('design-image');
+if(designInput)designInput.accept='image/png,image/jpeg,image/webp';
+const otherInput=document.getElementById('other-image');
+if(otherInput)otherInput.accept='image/png,image/jpeg,image/webp';
+init().catch(err=>{console.error(err);toast('Erro ao carregar dados do site. Veja o console.')});
+</script></body></html>

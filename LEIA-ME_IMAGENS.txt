@@ -1,0 +1,30 @@
+CORREÇÃO DE IMAGENS - CATÁLOGO GERAL
+====================================
+
+Coloque os 3 arquivos ao lado de server.py, na raiz do projeto:
+  atualizar_imagens_catalogo.py
+  DIAGNOSTICAR_IMAGENS.bat
+  ATUALIZAR_IMAGENS.bat
+
+Confirme a pasta:
+  docs/imagens/
+     13649_C2914_4F.png  (exemplo de foto real)
+     pastilhas/
+         pastilha_C011.png
+
+1. Execute DIAGNOSTICAR_IMAGENS.bat para ver o diagnóstico sem alterar arquivos.
+2. Execute ATUALIZAR_IMAGENS.bat para atualizar docs/produtos.json.
+   Um backup automático é criado em backups/.
+3. No navegador, atualize com Ctrl+F5.
+
+O script não mexe na planilha, nos logins, nas fotos nem em outros campos do
+catálogo. Ele cria um relatório de fotos sem correspondência exata.
+
+Se suas fotos estão em imagens/ na pasta raiz, e não em docs/imagens/: 
+   py atualizar_imagens_catalogo.py --import-root --write
+Isso COPIA as fotos necessárias para docs/imagens/, não move as originais.
+
+ATENÇÃO: Se uma foto tem nome muito diferente da convenção
+  REFERENCIA_COR_FURACAO.png
+ela pode constar em relatorio_imagens_sem_correspondencia.csv.
+Esse comportamento é intencional: não atribuímos a foto errada a um produto.

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gerador de Ficha Técnica — Brasil Botões</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <span class="ic">
+      <svg viewBox="0 0 100 100"><rect x="0" y="0" width="72" height="100" rx="6" fill="#00bdd1"/><circle cx="72" cy="27" r="27" fill="#00bdd1"/><circle cx="72" cy="73" r="27" fill="#00bdd1"/><path d="M46,8 C53,38 58,43 88,50 C58,57 53,62 46,92 C39,62 34,57 4,50 C34,43 39,38 46,8 Z" fill="#fff"/><circle cx="46" cy="50" r="9" fill="#00bdd1"/></svg>
+    </span>
+    <span>Brasil Botões <span class="sub">· gerador de ficha técnica</span></span>
+  </div>
+  <div class="topbar-actions">
+    <button class="btn btn-ghost" id="clearBtn" type="button">Limpar</button>
+    <button class="btn btn-primary" id="printBtn" type="button">Imprimir / salvar PDF</button>
+  </div>
+</div>
+
+<div class="layout">
+  <!-- ==================== FORM ==================== -->
+  <form class="formcol" id="form" autocomplete="off">
+
+    <h2>Dados comerciais</h2>
+    <div class="row2">
+      <div class="field">
+        <label for="data">Data</label>
+        <input type="text" id="data" placeholder="DD/MM/AAAA">
+      </div>
+      <div class="field">
+        <label for="pedido">Pedido nº</label>
+        <input type="text" id="pedido" placeholder="opcional">
+      </div>
+    </div>
+    <div class="field">
+      <label for="cliente">Cliente</label>
+      <input type="text" id="cliente" placeholder="Nome da empresa">
+    </div>
+    <div class="field">
+      <label for="representante">Representante</label>
+      <input type="text" id="representante" placeholder="Nome do representante / estúdio">
+    </div>
+
+    <h2>Dados técnicos do botão</h2>
+    <div class="row2">
+      <div class="field">
+        <label for="referencia">Referência</label>
+        <input type="text" id="referencia" placeholder="ex.: 90001">
+      </div>
+      <div class="field">
+        <label for="codigoLaser">Código personalizado</label>
+        <input type="text" id="codigoLaser" placeholder="ex.: P5231">
+      </div>
+    </div>
+    <div class="row3">
+      <div class="field">
+        <label for="tamanho">Tamanho (lignes)</label>
+        <input type="number" id="tamanho" placeholder="18" step="1">
+      </div>
+      <div class="field">
+        <label for="diametro">Diâmetro (mm)</label>
+        <input type="text" id="diametro" placeholder="auto">
+        <div class="hint">Calculado (lignes × 0,635) — editável</div>
+      </div>
+      <div class="field">
+        <label for="espessura">Espessura (mm)</label>
+        <input type="text" id="espessura" placeholder="1,8">
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="material">Material</label>
+        <input type="text" id="material" value="Poliéster">
+      </div>
+      <div class="field">
+        <label for="acabamento">Acabamento</label>
+        <select id="acabamento">
+          <option>Brilho</option>
+          <option>Fosco</option>
+          <option>Acetinado</option>
+        </select>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="cor">Cor (código)</label>
+        <input type="text" id="cor" placeholder="ex.: C001">
+      </div>
+      <div class="field">
+        <label for="corSufixo">Sufixo da cor</label>
+        <input type="text" id="corSufixo" placeholder="ex.: Ting. / 1061">
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="chapaMedia">Chapa média (grs)</label>
+        <input type="text" id="chapaMedia" placeholder="37">
+      </div>
+      <div class="field">
+        <label for="chapaGrande">Chapa grande (grs)</label>
+        <input type="text" id="chapaGrande" placeholder="75">
+      </div>
+    </div>
+
+    <h2>Personalização a laser</h2>
+    <div class="field">
+      <label for="textoLaser">Texto do laser</label>
+      <input type="text" id="textoLaser" placeholder="ex.: EMPÓRIO HORSE (vazio se só logo)">
+    </div>
+    <div class="field">
+      <label for="descCor">Descrição da cor / efeito</label>
+      <input type="text" id="descCor" placeholder="ex.: Branco, Perolado, Transparente">
+    </div>
+    <div class="field">
+      <label>Processos adicionais</label>
+      <div class="chips">
+        <label class="chip"><input type="checkbox" id="pTingir"> Tingir</label>
+        <label class="chip"><input type="checkbox" id="pEstonar"> Estonar</label>
+      </div>
+    </div>
+    <div class="field">
+      <label for="obs">Observações</label>
+      <textarea id="obs" placeholder="opcional"></textarea>
+    </div>
+
+  </form>
+
+  <!-- ==================== PREVIEW (fiel ao PDF) ==================== -->
+  <div class="previewcol">
+    <div class="sheet" id="sheet">
+      <div class="sheet-head">
+        <div class="sheet-title">
+          <h1><b>Ficha</b> <b class="teal">Técnica</b> | Personalização a Laser</h1>
+        </div>
+        <div class="sheet-date">Data: <span id="outData">—</span></div>
+      </div>
+
+      <div class="sheet-body">
+        <dl class="datalist">
+          <div class="row"><dt>Cliente: </dt><dd id="outCliente">—</dd></div>
+          <div class="row"><dt>Representante: </dt><dd id="outRepresentante">—</dd></div>
+          <div class="row"><dt>Pedido nº.: </dt><dd id="outPedido">—</dd></div>
+          <div class="row"><dt>Referência: </dt><dd id="outReferencia">—</dd></div>
+          <div class="row"><dt>Código Personalizado: </dt><dd id="outCodigoLaser">—</dd></div>
+          <div class="row"><dt>Tamanho: </dt><dd id="outTamanho">—</dd></div>
+          <div class="row"><dt>Diâmetro: </dt><dd id="outDiametro">—</dd></div>
+          <div class="row"><dt>Espessura: </dt><dd id="outEspessura">—</dd></div>
+          <div class="row"><dt>Material: </dt><dd id="outMaterial">—</dd></div>
+          <div class="row"><dt>Cor: </dt><dd id="outCor">—</dd></div>
+          <div class="row"><dt>Acabamento: </dt><dd id="outAcabamento">—</dd></div>
+          <div class="row"><dt>Chapa Média: </dt><dd id="outChapaMedia">—</dd></div>
+          <div class="row"><dt>Chapa Grande: </dt><dd id="outChapaGrande">—</dd></div>
+        </dl>
+
+        <div class="personal-box">
+          <h3>Detalhamento da personalização:</h3>
+          <ul id="outPersonal"></ul>
+        </div>
+      </div>
+
+      <div class="sim-label">Simulação da Aplicação:</div>
+      <div class="visual-row">
+        <div class="visual-box real">
+          <div class="btn-shape"><span class="hole" style="top:30%;left:26%;"></span><span class="hole" style="top:30%;left:59%;"></span><span class="hole" style="top:55%;left:26%;"></span><span class="hole" style="top:55%;left:59%;"></span></div>
+          <span class="visual-caption">Tamanho Real</span>
+        </div>
+        <div class="visual-box amp">
+          <div class="btn-shape"><span class="hole" style="top:30%;left:26%;"></span><span class="hole" style="top:30%;left:59%;"></span><span class="hole" style="top:55%;left:26%;"></span><span class="hole" style="top:55%;left:59%;"></span></div>
+          <span class="visual-caption">Perspectiva Ampliada</span>
+        </div>
+      </div>
+      <div class="empty-note">Render final entra aqui numa próxima versão.</div>
+
+      <div class="sheet-foot">
+        <div class="foot-brand">
+          <span class="ic">
+            <svg viewBox="0 0 100 100"><rect x="0" y="0" width="72" height="100" rx="6" fill="#00bdd1"/><circle cx="72" cy="27" r="27" fill="#00bdd1"/><circle cx="72" cy="73" r="27" fill="#00bdd1"/><path d="M46,8 C53,38 58,43 88,50 C58,57 53,62 46,92 C39,62 34,57 4,50 C34,43 39,38 46,8 Z" fill="#fff"/><circle cx="46" cy="50" r="9" fill="#00bdd1"/></svg>
+          </span>
+          <div class="word">Brasil<br>Botões<sup>®</sup></div>
+        </div>
+        <div class="slogan">Transformamos o<br><span class="teal">essencial</span> no seu <span class="teal">diferencial.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

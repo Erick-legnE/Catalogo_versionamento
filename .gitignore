@@ -19,3 +19,46 @@ dir_to_ignore/dist/imagens
 dir_to_ignore/dist/modelos
 # Optional: If dist/ is your build target and only root is published, 
 # or vice-versa, exclude redundant build outputs if needed.
+
+# Bulk local product photography (kept locally; use object storage or Git LFS
+# for a future public asset release instead of putting several GB in Git).
+imagens/
+docs/imagens/
+
+# Private runtime state and credentials - never publish these.
+usuarios.json
+usuarios.json.part
+docs/usuarios.json
+src/usuarios.json
+dist/usuarios.json
+server_data/
+backups/
+
+# Local source material and generated archives/reports.
+apoio/
+data/
+Documentacao/
+docs/clientes/
+docs/representantes/
+docs/subsites_index.json
+dist/catalogo_subsites.json
+dist/subsites_index.json
+dist/relatorio_representantes.json
+dist/dados_linhas.json
+dist/relatorio_analise.json
+docs/data/facas.json
+docs/data/referencias_consistem.json
+docs/data/pastilhas_consistem.json
+docs/data/ref_hole_map.json
+docs/data/cores_review.json
+docs/facas.json
+*.xlsx
+*.xlsm
+*.docx
+facas_library/
+*.blend
+*.blend1
+nexa.zip
+output.txt
+relatorio_imagens_sem_correspondencia.csv
+readmegpt.txt

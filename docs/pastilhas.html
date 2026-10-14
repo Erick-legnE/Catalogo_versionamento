@@ -62,6 +62,8 @@
 
         .header-title { font-size: 1.5rem; font-weight: 900; }
         .header-title span { color: var(--primary); }
+        .portal-link { color: #fff; text-decoration: none; font-size: .78rem; font-weight: 800; opacity: .82; border: 1px solid rgba(255,255,255,.24); border-radius: 999px; padding: .4rem .7rem; }
+        .portal-link:hover { opacity: 1; background: rgba(255,255,255,.12); }
 
         .theme-toggle {
             background: rgba(255, 255, 255, 0.1);
@@ -236,7 +238,8 @@
 
     <header>
         <div class="header-content">
-            <div class="header-top">
+        <div class="header-top">
+            <a class="portal-link" href="index.html">Portal</a>
                 <h1 class="header-title">Brasil <span>Botões</span> — Pastilhas</h1>
                 <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙 Escuro</button>
             </div>

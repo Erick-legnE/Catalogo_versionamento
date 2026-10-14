@@ -58,6 +58,8 @@ body { font-family: 'Nunito Sans', sans-serif; background: var(--off); color: va
 .logo-tag { font-size: 9px; font-weight: 300; color: var(--azul-l); letter-spacing: 0.18em; text-transform: uppercase; margin-top: 2px; }
 
 .header-right { display: flex; align-items: center; gap: 20px; }
+.header-back { color: #fff; text-decoration: none; font-size: 12px; font-weight: 800; padding: 7px 11px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; transition: var(--tr); }
+.header-back:hover { background: rgba(255,255,255,.16); }
 .btn-theme {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -154,6 +156,7 @@ body { font-family: 'Nunito Sans', sans-serif; background: var(--off); color: va
 .badge-estoque { background: var(--verde); color: #fff; }
 .badge-pers { background: var(--amarelo); color: #4d5759; }
 .badge-semfoto { background: var(--cinza-l); color: #fff; }
+.badge-pastilha { background: #d97706; color: #fff; }
 .card-body { padding: 12px 14px 14px; }
 .card-ref { font-size: 9px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.12em; color: var(--azul); margin-bottom: 4px; }
 .card-desc { font-size: 12px; font-weight: 700; color: var(--cinza); line-height: 1.4; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -197,6 +200,15 @@ body { font-family: 'Nunito Sans', sans-serif; background: var(--off); color: va
 .modal-saldo-num { font-size: 36px; font-weight: 900; color: var(--amarelo); line-height: 1; }
 .modal-saldo-unit { font-size: 12px; font-weight: 300; color: #94a3b8; }
 .modal-local { margin-top: 10px; font-size: 12px; font-weight: 700; color: var(--cinza); text-align: center; background: var(--off); border: 1px solid var(--borda); border-radius: 8px; padding: 8px 12px; }
+.modal-actions { display:flex; gap:8px; margin-top:14px; }
+.btn-automacao {
+  width:100%; border:0; border-radius:9px; padding:11px 14px;
+  background:linear-gradient(135deg,var(--azul),var(--azul-d));
+  color:#fff; font:inherit; font-size:12px; font-weight:900; cursor:pointer;
+  transition:var(--tr); box-shadow:0 5px 16px rgba(0,186,210,.20);
+}
+.btn-automacao:hover { transform:translateY(-1px); box-shadow:0 8px 22px rgba(0,186,210,.28); }
+.btn-automacao small { display:block; font-size:9px; font-weight:600; opacity:.82; margin-top:2px; }
 .card-local { margin-top: 4px; font-size: 10px; font-weight: 700; color: var(--cinza-l); text-align: right; }
 
 @media (max-width: 768px) {
@@ -219,6 +231,7 @@ body { font-family: 'Nunito Sans', sans-serif; background: var(--off); color: va
     </div>
   </div>
   <div class="header-right">
+    <a class="header-back" href="index.html">Portal</a>
     <button class="btn-theme" onclick="toggleTheme()" id="theme-btn">🌙 Escuro</button>
     <div class="header-stat">
       <div class="header-stat-num" id="total-stat">—</div>
@@ -311,6 +324,12 @@ body { font-family: 'Nunito Sans', sans-serif; background: var(--off); color: va
         <div class="modal-saldo-unit" id="m-unit"></div>
       </div>
       <div class="modal-local" id="m-local" style="display:none"></div>
+      <div class="modal-actions">
+        <button class="btn-automacao" onclick="abrirAutomacaoProduto()">
+          Criar personalização / Ficha Técnica
+          <small>leva este produto direto para o novo fluxo de automação</small>
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -325,6 +344,7 @@ const familiaHex = {
   'Dourado':'#C9A84C','Prata':'#C0C0C0','Multicolor':'#00bad2','Natural':'#C4A882', 'Coco':'#7B5A3C',
 };
 let produtos = [], filtroFamilia = '';
+let produtoModalAtual = null;
 
 /* Theme Toggle Initialization */
 if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -431,6 +451,8 @@ function criarCard(p) {
   div.className='card'; div.onclick=()=>abrirModal(p);
   const hex=p.cor_hex||familiaHex[p.cor_familia]||'#ccc';
   const pers=p.acabamento&&p.acabamento.includes('PERS');
+  // Compatibilidade com JSON antigo + novo campo explícito do gerador.
+  const tipoImagem = p.tipo_imagem || (p.usa_pastilha ? 'pastilha' : (p.tem_foto ? 'produto' : 'sem_imagem'));
   div.innerHTML=`
     <div class="card-stripe"></div>
     <div class="card-img-wrap" id="iw-${p.reduzido}">
@@ -438,7 +460,9 @@ function criarCard(p) {
       <div class="badge-row">
         <span class="badge badge-estoque">Em estoque</span>
         ${pers?'<span class="badge badge-pers">Personalizado</span>':''}
-        ${!p.tem_foto?'<span class="badge badge-semfoto">Sem foto</span>':''}
+        ${tipoImagem==='pastilha'
+          ? '<span class="badge badge-pastilha">Amostra de cor</span>'
+          : (tipoImagem==='sem_imagem' ? '<span class="badge badge-semfoto">Sem foto</span>' : '')}
       </div>
     </div>
     <div class="card-body">
@@ -462,8 +486,25 @@ function criarCard(p) {
     const wrap=document.getElementById(`iw-${p.reduzido}`);
     if(!img)return;
     const foto = (p.imagens && p.imagens[0]) ? p.imagens[0] : `${p.imagem_base}.png`;
+    const pastilhaFallback = (p.pastilha_fallback && p.pastilha_fallback[0]) ? p.pastilha_fallback[0] : '';
     img.src=`${IMAGES_BASE}${foto}`;
     img.onerror=()=>{
+      // Segurança extra: se uma foto real foi apagada depois do build,
+      // tenta a pastilha da mesma cor antes de desistir da imagem.
+      if(pastilhaFallback && !img.dataset.tentouPastilha && foto !== pastilhaFallback){
+        img.dataset.tentouPastilha='1';
+        img.src=`${IMAGES_BASE}${pastilhaFallback}`;
+
+        const badgeRow=wrap.querySelector('.badge-row');
+        if(badgeRow && !badgeRow.querySelector('.badge-pastilha')){
+          const badge=document.createElement('span');
+          badge.className='badge badge-pastilha';
+          badge.textContent='Amostra de cor';
+          badgeRow.appendChild(badge);
+        }
+        return;
+      }
+
       img.style.display='none';
       const ni=document.createElement('div');
       ni.className='no-img';
@@ -475,6 +516,7 @@ function criarCard(p) {
 }
 
 function abrirModal(p) {
+  produtoModalAtual = p;
   document.getElementById('m-ref').textContent=`Ref. ${p.referencia} · #${p.reduzido}`;
   document.getElementById('m-desc').textContent=p.descricao;
   document.getElementById('m-saldo').textContent=p.saldo.toLocaleString('pt-BR');
@@ -503,6 +545,16 @@ function abrirModal(p) {
   document.body.style.overflow='hidden';
 }
 
+function abrirAutomacaoProduto(){
+  if(!produtoModalAtual){ window.location.href='automacao.html'; return; }
+  const params=new URLSearchParams({
+    reduzido:String(produtoModalAtual.reduzido||''),
+    referencia:String(produtoModalAtual.referencia||''),
+    tamanho:String(produtoModalAtual.tamanho||''),
+    cor:String(produtoModalAtual.cor_codigo||'')
+  });
+  window.location.href=`automacao.html?${params.toString()}`;
+}
 function fecharOverlay(e){if(e.target===document.getElementById('modal'))fecharModal();}
 function fecharModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';}
 function limparFiltros(){

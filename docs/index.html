@@ -510,7 +510,16 @@
                 right: 0.75rem;
             }
         }
-    </style>
+    #admin-tools-card{display:none}
+        a.card.portal-card[href]{display:none}
+        .portal-card{position:relative;overflow:hidden;border-top:4px solid var(--primary)}
+        .portal-card.private-card{border-top-color:#64748b}
+        .access-badge{display:inline-flex;align-items:center;gap:.3rem;width:max-content;margin-bottom:.7rem;padding:.28rem .55rem;border-radius:999px;font-size:.68rem;font-weight:900;letter-spacing:.08em}
+        .access-badge.public{background:#dcfce7;color:#166534}
+        .access-badge.login{background:#e2e8f0;color:#334155}
+        .portal-intro{max-width:720px;margin:.55rem auto 0;color:rgba(255,255,255,.72);font-size:.9rem;line-height:1.55}
+        .section-kicker{display:block;margin-top:.25rem;color:var(--text-muted);font-size:.78rem;font-weight:600}
+</style>
 </head>
 <body>
 
@@ -525,6 +534,7 @@
             </div>
             <h1 class="brand-title">Brasil <span>Botões</span></h1>
             <p class="brand-subtitle">Portal Central de Catálogos & Atendimento Personalizado</p>
+            <p class="portal-intro">Consulte produtos e cores sem login. As ferramentas de atendimento e os catálogos individuais aparecem somente para usuários autorizados.</p>
 
             <div class="search-container">
                 <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -538,11 +548,13 @@
         <!-- ACESSO GERAL -->
         <section class="section-block">
             <div class="section-header">
-                <span class="section-title">Acesso Geral (Livre)</span>
+                <span class="section-title">Acesso rápido</span>
+                <span class="section-kicker">Comece por uma área pública ou entre para acessar recursos internos.</span>
             </div>
             <div class="grid">
-                <a href="catalogo_geral.html" class="card featured portal-card" data-name="catálogo geral pronta entrega estoque">
+                <a href="catalogo_geral.html" class="card featured portal-card public-card" data-access="public" data-name="catálogo geral pronta entrega estoque">
                     <div>
+                        <span class="access-badge public">● PÚBLICO</span>
                         <span class="featured-badge">Pronta Entrega</span>
                         <div class="card-header">
                             <h2>Catálogo Geral de Produtos</h2>
@@ -556,8 +568,9 @@
                     <div class="card-btn">Acessar Catálogo →</div>
                 </a>
 
-                <a href="pastilhas.html" class="card portal-card" data-name="pastilhas acervo cores frente verso">
+                <a href="pastilhas.html" class="card portal-card public-card" data-access="public" data-name="pastilhas acervo cores frente verso">
                     <div class="card-header">
+                        <span class="access-badge public">● PÚBLICO</span>
                         <h2>Catálogo de Pastilhas</h2>
                         <p>Visualização simplificada de cores e amostras com galeria frente/verso.</p>
                     </div>
@@ -566,6 +579,37 @@
                         <span class="tag">Cores</span>
                     </div>
                     <div class="card-btn">Ver Pastilhas →</div>
+                </a>
+
+                <a href="cores_preview.html" class="card portal-card public-card" data-access="public" data-name="cores tabela de cores catálogo prévias ilustrativas códigos descrição pesquisa">
+                    <div class="card-header">
+                        <span class="access-badge public">● PÚBLICO</span>
+                        <h2>Prévia de Cores</h2>
+                        <p>Consulte as cores do cadastro, veja simulações ilustrativas e encontre quais precisam de foto.</p>
+                    </div>
+                    <div class="card-meta">
+                        <span class="tag">Cores</span><span class="tag">Prévia</span><span class="tag">Cadastro</span>
+                    </div>
+                    <div class="card-btn">Explorar Cores →</div>
+                </a>
+
+                <a href="automacao.html" class="card portal-card private-card" data-access="login" data-name="automação fichas técnicas personalização 3d blender botão">
+                    <div class="card-header">
+                        <span class="access-badge login">🔒 LOGIN NECESSÁRIO</span>
+                        <h2>Automação de Fichas</h2>
+                        <p>Informe referência, TAM e cor, envie a arte e prepare a criação automática do botão personalizado e da Ficha Técnica.</p>
+                    </div>
+                    <div class="card-meta">
+                        <span class="tag">Personalização</span>
+                        <span class="tag">3D</span>
+                        <span class="tag">Ficha Técnica</span>
+                    </div>
+                    <div class="card-btn">Abrir Automação →</div>
+                </a>
+                <a id="admin-tools-card" href="admin_usuarios.html" class="card portal-card private-card" data-access="login" data-name="administração usuários permissões funcionários representantes">
+                    <div class="card-header"><span class="access-badge login">🔒 ADMINISTRADOR</span><h2>Administração de Usuários</h2><p>Gerencie funcionários, representantes e acesso a cada ferramenta.</p></div>
+                    <div class="card-meta"><span class="tag">Administração</span><span class="tag">Acessos</span></div>
+                    <div class="card-btn">Gerenciar permissões →</div>
                 </a>
             </div>
         </section>
@@ -626,10 +670,11 @@
     </footer>
 
     <script>
-        const MASTER_KEY = "brasilbotoesmelhor";
+        // Autenticação exclusivamente pelo servidor; não existe senha mestra no JavaScript.
         const PAGE_SIZE = 3;
         let subsitesData = [];
-        let usuariosData = [];
+        let usuarioAtual = null;
+        let csrfToken = null;
         let targetUrl = null; // Store pending redirect target if clicked on a restricted card
 
         let visibleCounts = {
@@ -638,13 +683,20 @@
         };
 
         async function inicializar() {
-            await Promise.all([carregarSubsites(), carregarUsuarios()]);
+            await carregarSessao();
+            await carregarSubsites();
             checkActiveSession();
+            atualizarAcessos();
         }
 
         async function carregarSubsites() {
+            if (!usuarioAtual) {
+                subsitesData = [];
+                return;
+            }
             try {
                 const response = await fetch('subsites_index.json');
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 subsitesData = await response.json();
                 renderSection('representante');
                 renderSection('cliente');
@@ -653,21 +705,20 @@
             }
         }
 
-        async function carregarUsuarios() {
+        async function carregarSessao() {
             try {
-                const response = await fetch('usuarios.json');
-                usuariosData = await response.json();
-            } catch (erro) {
-                console.warn('usuarios.json não encontrado ou inválido.', erro);
-            }
+                const response = await fetch('/api/auth/me', {cache:'no-store'});
+                if (response.ok) {
+                    const data = await response.json();
+                    usuarioAtual = data.user;
+                    csrfToken = data.csrf;
+                }
+            } catch(e) { console.warn('Sessão indisponível',e); }
         }
-
         function checkActiveSession() {
-            const userJson = sessionStorage.getItem('bb_authenticated_user');
             const authBtn = document.getElementById('auth-btn');
-            if (userJson) {
-                const user = JSON.parse(userJson);
-                authBtn.textContent = `👤 ${user.nome.split(' ')[0]}`;
+            if (usuarioAtual) {
+                authBtn.textContent = '👤 ' + (usuarioAtual.nome || usuarioAtual.username).split(' ')[0];
                 authBtn.classList.add('active-user');
                 authBtn.onclick = logout;
             } else {
@@ -676,8 +727,55 @@
                 authBtn.onclick = () => openLoginModal();
             }
         }
+        function pode(area) {
+            return !!usuarioAtual && (usuarioAtual.permissoes || []).includes(area);
+        }
+        function safeLocalUrl(value, fallback='index.html') {
+            const raw=String(value||'').trim();
+            if (raw.startsWith('/') && !raw.startsWith('//') && !raw.includes('\\')) return raw;
+            if (/^[A-Za-z0-9_-]+\/[A-Za-z0-9._-]+\/[A-Za-z0-9._-]+$/.test(raw)) return raw;
+            return fallback;
+        }
+        function atualizarAcessos() {
+            const map={catalogo_geral:'catalogo',pastilhas:'pastilhas',cores_preview:'cores_preview',automacao:'automacao'};
+            const publicAreas = new Set(['catalogo','pastilhas','cores_preview']);
+            document.querySelectorAll('a.card.portal-card[href]').forEach(card=>{
+                const page=(card.getAttribute('href')||'').replace('.html','');
+                if (map[page]) card.style.display=(publicAreas.has(map[page]) || pode(map[page]))?'flex':'none';
+            });
+            for(const section of ['section-representantes','section-clientes']) {
+                const element=document.getElementById(section);
+                if(element)element.style.display=usuarioAtual?'':'none';
+            }
+            const admin=document.getElementById('admin-tools-card');
+            if(admin)admin.style.display=pode('admin')?'flex':'none';
+            renderSection('representante');renderSection('cliente');
+            const next=new URLSearchParams(location.search).get('next');
+            if(next && !usuarioAtual) openLoginModal();
+        }
+
+        function criarSafeCard(item) {
+            const pathUrl = safeLocalUrl(item.url || `${item.tipo}s/${item.slug}/index.html`);
+            const card=document.createElement('div');
+            card.className='card portal-card';
+            card.dataset.name=String(item.nome||'').toLowerCase();
+            card.addEventListener('click',()=>accessCatalog(pathUrl,String(item.slug||'')));
+            const header=document.createElement('div'); header.className='card-header';
+            const title=document.createElement('h3'); title.textContent=String(item.nome||'Sem nome');
+            const desc=document.createElement('p'); desc.textContent='Catálogo dedicado de produtos.';
+            header.append(title,desc);
+            const meta=document.createElement('div'); meta.className='card-meta';
+            [['Restrito','restricted'],[item.badge,''],[`${item.qtd||0} produtos`,'']].forEach(([value,extra])=>{
+                const tag=document.createElement('span'); tag.className=`tag ${extra}`.trim(); tag.textContent=String(value||''); meta.append(tag);
+            });
+            const action=document.createElement('div'); action.className='card-btn'; action.textContent='Acessar área restrita →';
+            card.append(header,meta,action);
+            return card;
+        }
 
         function criarCard(item) {
+            return criarSafeCard(item);
+            /* Legacy template kept below only for reference; all rendering uses DOM nodes. */
             const pathUrl = item.url ? item.url : `${item.tipo}s/${item.slug}/index.html`;
             return `
                 <div class="card portal-card" data-name="${item.nome.toLowerCase()}" onclick="accessCatalog('${pathUrl}', '${item.slug}')">
@@ -696,16 +794,10 @@
         }
 
         function accessCatalog(url, slug) {
-            const session = sessionStorage.getItem('bb_authenticated_user');
-            if (session) {
-                const user = JSON.parse(session);
-                // Allow access if admin or matching target slug
-                if (user.slug === slug || user.username === 'admin') {
-                    window.location.href = url;
-                    return;
-                }
+            if (usuarioAtual && (pode('subsites') || usuarioAtual.slug === slug)) {
+                window.location.href = url;return;
             }
-            // Require login
+            if(usuarioAtual){alert('Você não tem acesso a este catálogo.');return;}
             targetUrl = url;
             openLoginModal(slug);
         }
@@ -718,7 +810,7 @@
             const grid = document.getElementById(gridId);
             const btn = document.getElementById(btnId);
 
-            let filtered = subsitesData.filter(i => i.tipo === tipo);
+            let filtered = subsitesData.filter(i => i.tipo === tipo && (pode('subsites') || (usuarioAtual && i.slug===usuarioAtual.slug)));
 
             if (query) {
                 filtered = filtered.filter(i => i.nome.toLowerCase().includes(query));
@@ -733,7 +825,7 @@
                 return;
             }
 
-            grid.innerHTML = itemsToDisplay.map(criarCard).join('');
+            grid.replaceChildren(...itemsToDisplay.map(criarSafeCard));
 
             if (btn) {
                 if (!query && visibleCounts[tipo] < totalFiltered) {
@@ -780,59 +872,33 @@
             targetUrl = null;
         }
 
-        function handleLogin(event) {
-    event.preventDefault();
-    const usernameInput = document.getElementById('input-username').value.trim();
-    const passwordInput = document.getElementById('input-password').value.trim();
-    const errorDiv = document.getElementById('login-error');
-
-    let usuarioEncontrado = null;
-
-    // Check if the user entered the Master Key
-    if (passwordInput === MASTER_KEY) {
-        // Find user by username/slug or default to an Admin session
-        usuarioEncontrado = usuariosData.find(u => 
-            u.username === usernameInput || u.slug === usernameInput || u.id === usernameInput
-        ) || {
-            id: "user_admin",
-            nome: "Administrador Master",
-            slug: usernameInput || "admin",
-            username: "admin",
-            ativo: true
-        };
-    } else {
-        // Standard lookup checking exact user password
-        usuarioEncontrado = usuariosData.find(u => 
-            (u.username === usernameInput || u.slug === usernameInput || u.id === usernameInput) &&
-            u.password === passwordInput && u.ativo !== false
-        );
-    }
-
-    if (usuarioEncontrado) {
-        sessionStorage.setItem('bb_authenticated_user', JSON.stringify(usuarioEncontrado));
-        checkActiveSession();
-        closeLoginModal();
-
-        if (targetUrl) {
-            window.location.href = targetUrl;
-        } else {
-            const matchedSubsite = subsitesData.find(s => s.slug === usuarioEncontrado.slug);
-            if (matchedSubsite) {
-                window.location.href = `${matchedSubsite.tipo}s/${matchedSubsite.slug}/index.html`;
-            } else {
-                alert(`Bem-vindo, ${usuarioEncontrado.nome}!`);
-            }
+        async function handleLogin(event) {
+            event.preventDefault();
+            const username=document.getElementById('input-username').value.trim();
+            const password=document.getElementById('input-password').value;
+            const error=document.getElementById('login-error');
+            error.style.display='none';
+            try {
+                const response=await fetch('/api/auth/login',{
+                    method:'POST',headers:{'Content-Type':'application/json'},
+                    body:JSON.stringify({username,password})
+                });
+                const data=await response.json();
+                if(!response.ok)throw new Error(data.detail||'Erro de acesso');
+                usuarioAtual=data.user;csrfToken=data.csrf;
+                document.getElementById('input-password').value='';
+                const requested=targetUrl||new URLSearchParams(location.search).get('next');
+                closeLoginModal();
+                checkActiveSession();await carregarSubsites();atualizarAcessos();
+                // Only same-site relative destinations.
+                if(requested && requested.startsWith('/') && !requested.startsWith('//')) location.href=requested;
+                else if(requested && !requested.includes(':') && !requested.startsWith('//')) location.href=requested;
+            }catch(e){error.textContent=e.message;error.style.display='block';}
         }
-    } else {
-        errorDiv.style.display = 'block';
-    }
-}
-
-        function logout() {
-            if (confirm('Deseja encerrar sua sessão?')) {
-                sessionStorage.removeItem('bb_authenticated_user');
-                checkActiveSession();
-            }
+        async function logout() {
+            if(!confirm('Deseja encerrar sua sessão?'))return;
+            try{await fetch('/api/auth/logout',{method:'POST'});}catch(e){}
+            usuarioAtual=null;csrfToken=null;location.href='/index.html';
         }
 
         /* Theme Toggle */
