@@ -1,0 +1,39 @@
+{
+  "reference": "13659",
+  "size": 32,
+  "row": {
+    "codigo_reduzido": "136590008",
+    "descricao_produto": "BOTAO BAS 13659 4F TAM 32 COR C2944 FOSCO LISO",
+    "mascara": "1.1.08.13659.2944.032.4.0008",
+    "pastilha": "       4,6",
+    "espessura_final": "        4,2",
+    "faca_frente": "4805    ",
+    "fundo": "505    ",
+    "num_furos": "      4",
+    "broca": "    2,2",
+    "distancia_furos": "        7,3",
+    "medida_em_mm": "20,32MM",
+    "observacao": "FURACAO ESPECIAL",
+    "acabamento": "FOSCO          ",
+    "tingimento": "Sem tingimen",
+    "estonado": "Sem estonado",
+    "grosas_por_tubo": "220 PCS",
+    "material": "C2944 - BASTAO 52 % LEITOSO / 18 % BRANCO / 30 % MARROM",
+    "cod_personalizado": null,
+    "desc_personal": null,
+    "chapa_grande": "            ",
+    "chapa_media": "            ",
+    "num_cartela": "            "
+  },
+  "expected_geometry": {
+    "diameter_mm": 32,
+    "thickness_mm": 4.2,
+    "hole_count": 4,
+    "hole_radius_mm": 1.1,
+    "hole_distance_mm": 3.65
+  },
+  "front_dxf": "C:\\Users\\Aprendiz Financeiro\\BRASIL BOTOES LTDA\\Desenvolvimento - Documentos\\facas\\4805-32.dxf",
+  "back_dxf": "C:\\Users\\Aprendiz Financeiro\\BRASIL BOTOES LTDA\\Desenvolvimento - Documentos\\facas\\op-40-44.dxf",
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\bases\\button_13659_32.blend",
+  "texture": null
+}

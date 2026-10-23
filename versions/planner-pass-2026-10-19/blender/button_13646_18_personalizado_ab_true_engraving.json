@@ -1,0 +1,15 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\planner-pass-2026-10-19\\blender\\button_13646_18_personalizado_ab_true_engraving.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "AB",
+  "image": null,
+  "position_mm": [
+    0.0,
+    0.0
+  ],
+  "rotation_degrees": 0.0,
+  "created_objects": [],
+  "render": null
+}

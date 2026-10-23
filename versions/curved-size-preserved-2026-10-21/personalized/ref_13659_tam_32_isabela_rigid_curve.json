@@ -1,0 +1,81 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13659_tam_32_isabela_rigid_curve.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "ISABELA",
+  "image": null,
+  "face": "BACK",
+  "position_mm": [
+    -1.2355212355212355,
+    8.957528957528957
+  ],
+  "surface_base_world": [
+    0.0,
+    2.0999999046325684,
+    0.0
+  ],
+  "rotation_degrees": -14.0,
+  "curvature": 0.9,
+  "preview_style": "LIGHT",
+  "material_preset": false,
+  "geometry_diagnostics": {
+    "surface_point_world": [
+      -1.235521,
+      1.248163,
+      8.957529
+    ],
+    "surface_normal_world": [
+      0.022251,
+      0.988435,
+      -0.150007
+    ],
+    "surface_projection": 1.248163,
+    "cutter_inner_projection": 0.698163,
+    "cutter_outer_projection": 2.21,
+    "cutter_vertices": 254538,
+    "body_vertices_before": 16170,
+    "body_vertices_after": 145708,
+    "body_polygons_before": 15936,
+    "body_polygons_after": 143027,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "curvature": {
+      "applied": true,
+      "value": 0.9,
+      "vertex_count": 4630,
+      "connected_component_count": 25,
+      "glyph_group_count": 7,
+      "transformation": "rigid_per_glyph",
+      "glyph_size_max_radius_error": 1.18e-07,
+      "local_y_offset_min": -0.613715,
+      "local_y_offset_max": 0.331912,
+      "tangent_angle_min_degrees": -21.914972,
+      "tangent_angle_max_degrees": 25.291978
+    }
+  },
+  "automation_context": {
+    "request_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\scripts\\fixtures\\curved_engraving\\ref_13659_isabela.json",
+    "layer": 1,
+    "text": "ISABELA",
+    "font_family": "Trebuchet MS",
+    "font_path": "C:\\Windows\\Fonts\\trebuc.ttf",
+    "mode": "ENGRAVE",
+    "depth_mm": 0.55,
+    "curvature": 0.9,
+    "face": "BACK",
+    "source_face": "front",
+    "position_mm": [
+      -1.2355212355212355,
+      8.957528957528957
+    ],
+    "rotation_degrees": -14.0,
+    "target_width_mm": 16.06177606177606,
+    "target_height_mm": 3.583011583011583,
+    "flip_x": false,
+    "flip_y": false,
+    "mm_per_preview_px": 0.06177606177606178
+  },
+  "created_objects": [],
+  "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13659_tam_32_isabela_rigid_curve.png"
+}

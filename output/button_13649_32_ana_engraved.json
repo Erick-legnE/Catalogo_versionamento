@@ -1,0 +1,45 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\output\\button_13649_32_ana_engraved.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "ANA",
+  "image": null,
+  "face": "FRONT",
+  "position_mm": [
+    0.0,
+    0.0
+  ],
+  "surface_base_world": [
+    0.0,
+    -2.0999999046325684,
+    0.0
+  ],
+  "rotation_degrees": 0.0,
+  "preview_style": "DARK",
+  "material_preset": false,
+  "geometry_diagnostics": {
+    "surface_point_world": [
+      0.0,
+      -1.63963,
+      0.0
+    ],
+    "surface_normal_world": [
+      -0.002298,
+      -0.998903,
+      -0.046774
+    ],
+    "surface_projection": 1.63963,
+    "cutter_inner_projection": 1.28963,
+    "cutter_outer_projection": 2.17,
+    "cutter_vertices": 50902,
+    "body_vertices_before": 16178,
+    "body_vertices_after": 41963,
+    "body_polygons_before": 15944,
+    "body_polygons_after": 40878,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "created_objects": [],
+  "render": null
+}

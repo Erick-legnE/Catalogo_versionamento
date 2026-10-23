@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "mappings": {
+    "016|24": {
+      "front_dxf": "facas/016-24.dxf",
+      "back_dxf": "facas/op-40-44.dxf",
+      "target_diameter_mm": 0,
+      "target_thickness_mm": 0,
+      "notes": "EXEMPLO de estrutura; confirmar relação real antes de produção."
+    }
+  }
+}

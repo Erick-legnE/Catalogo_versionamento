@@ -1,0 +1,14 @@
+{
+  "item": {
+    "reference": "13646",
+    "size_tam": "18",
+    "diametro_mm": 18,
+    "espessura_final_mm": 3.2,
+    "num_furos": 4,
+    "broca_mm": 1.8,
+    "distancia_furos_mm": 5.6,
+    "faca_frente": "OP90",
+    "fundo": "390",
+    "acabamento": "FOSCO"
+  }
+}

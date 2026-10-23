@@ -1,0 +1,25 @@
+BRASIL BOTÕES — AUTOMAÇÃO FICHA PDF (v6)
+====================================
+
+Objetivo atual: SOMENTE FICHA PDF. Nenhum Blender é executado.
+
+1. Extraia o ZIP COMPLETO (ou aplique o PATCH na pasta principal da v4).
+2. Dê duplo clique em INICIAR_SERVIDOR.bat (na raiz, FORA de docs).
+3. Abra http://localhost:8000/automacao.html
+4. REF / TAM / COR ou Outro Item; importe as artes.
+5. Ajuste escala de 0 a 500%, rotação, X, Y e curvatura.
+6. Clique em GERAR E SALVAR FICHA TÉCNICA (PDF).
+7. Abra ou baixe o PDF. Cópia fica em:
+   server_data/solicitacoes/AAAA/MM/ID/ficha_tecnica.pdf
+
+O PDF usa o visual ORIGINAL de brasil-botoes-fichas(1).zip.
+O PDF é uma FICHA DE PERSONALIZAÇÃO/PREVIA 2D. Não é uma ficha com medidas de fabricação validadas, nem render 3D.
+Não inventa diâmetro, espessura, código personalizado ou pedido.
+
+Para guardar arquivos em outro drive/pasta (Windows):
+  set AUTOMACAO_STORAGE_DIR=D:\BrasilBotoesData\solicitacoes
+  py server.py
+
+LEIA TAMBÉM: README_FICHA_V6_ORIGINAL.md
+
+Gerador PDF: Chrome/Edge headless no Windows; WeasyPrint opcional.

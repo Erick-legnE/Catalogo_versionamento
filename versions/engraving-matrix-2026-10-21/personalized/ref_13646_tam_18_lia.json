@@ -1,0 +1,66 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13646_tam_18_lia.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "LIA",
+  "image": null,
+  "face": "BACK",
+  "position_mm": [
+    -0.0,
+    5.386100386100386
+  ],
+  "surface_base_world": [
+    0.0,
+    1.600000023841858,
+    0.0
+  ],
+  "rotation_degrees": -0.0,
+  "preview_style": "LIGHT",
+  "material_preset": false,
+  "geometry_diagnostics": {
+    "surface_point_world": [
+      0.0,
+      1.176376,
+      5.3861
+    ],
+    "surface_normal_world": [
+      -0.008017,
+      0.986561,
+      -0.163199
+    ],
+    "surface_projection": 1.176376,
+    "cutter_inner_projection": 0.826376,
+    "cutter_outer_projection": 1.67,
+    "cutter_vertices": 26606,
+    "body_vertices_before": 15914,
+    "body_vertices_after": 28455,
+    "body_polygons_before": 15616,
+    "body_polygons_after": 27679,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "automation_context": {
+    "request_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\scripts\\fixtures\\engraving_matrix\\ref_13646_lia.json",
+    "layer": 1,
+    "text": "LIA",
+    "font_family": "Arial",
+    "font_path": "C:\\Windows\\Fonts\\arial.ttf",
+    "mode": "ENGRAVE",
+    "depth_mm": 0.35,
+    "face": "BACK",
+    "source_face": "front",
+    "position_mm": [
+      -0.0,
+      5.386100386100386
+    ],
+    "rotation_degrees": -0.0,
+    "target_width_mm": 4.517374517374518,
+    "target_height_mm": 1.5637065637065637,
+    "flip_x": false,
+    "flip_y": false,
+    "mm_per_preview_px": 0.03474903474903475
+  },
+  "created_objects": [],
+  "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13646_tam_18_lia.png"
+}

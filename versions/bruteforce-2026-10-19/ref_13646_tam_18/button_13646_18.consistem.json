@@ -1,0 +1,39 @@
+{
+  "reference": "13646",
+  "size": 18,
+  "row": {
+    "codigo_reduzido": "136460001",
+    "descricao_produto": "BOTAO BAS 13646 4F TAM 18 COR C2914 FOSCO LISO",
+    "mascara": "1.2.08.13646.2914.018.4.0001",
+    "pastilha": "       3,6",
+    "espessura_final": "        3,2",
+    "faca_frente": "OP90",
+    "fundo": "390    ",
+    "num_furos": "      4",
+    "broca": "    1,8",
+    "distancia_furos": "        5,6",
+    "medida_em_mm": "            ",
+    "observacao": "Furação especial",
+    "acabamento": "FOSCO          ",
+    "tingimento": null,
+    "estonado": null,
+    "grosas_por_tubo": "343 PCS",
+    "material": "C2914 - BASTAO 70% LEITOSO / 30% PRETO",
+    "cod_personalizado": null,
+    "desc_personal": null,
+    "chapa_grande": null,
+    "chapa_media": null,
+    "num_cartela": null
+  },
+  "expected_geometry": {
+    "diameter_mm": 18,
+    "thickness_mm": 3.2,
+    "hole_count": 4,
+    "hole_radius_mm": 0.9,
+    "hole_distance_mm": 2.8
+  },
+  "front_dxf": "C:\\Users\\Aprendiz Financeiro\\BRASIL BOTOES LTDA\\Desenvolvimento - Documentos\\facas\\opn-18.dxf",
+  "back_dxf": "C:\\Users\\Aprendiz Financeiro\\BRASIL BOTOES LTDA\\Desenvolvimento - Documentos\\facas\\op-40-44.dxf",
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\bruteforce-2026-10-19\\ref_13646_tam_18\\button_13646_18.blend",
+  "texture": null
+}

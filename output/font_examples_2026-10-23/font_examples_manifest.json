@@ -1,0 +1,44 @@
+[
+  {
+    "index": 1,
+    "family": "Arial",
+    "text": "ANA",
+    "font_path": "C:\\Windows\\Fonts\\arial.ttf",
+    "preview": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\output\\font_examples_2026-10-23\\01_arial.png"
+  },
+  {
+    "index": 2,
+    "family": "Times New Roman",
+    "text": "BRUNO",
+    "font_path": "C:\\Windows\\Fonts\\times.ttf",
+    "preview": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\output\\font_examples_2026-10-23\\02_times_new_roman.png"
+  },
+  {
+    "index": 3,
+    "family": "Georgia",
+    "text": "CLARA",
+    "font_path": "C:\\Windows\\Fonts\\georgia.ttf",
+    "preview": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\output\\font_examples_2026-10-23\\03_georgia.png"
+  },
+  {
+    "index": 4,
+    "family": "Trebuchet MS",
+    "text": "DAVI",
+    "font_path": "C:\\Windows\\Fonts\\trebuc.ttf",
+    "preview": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\output\\font_examples_2026-10-23\\04_trebuchet_ms.png"
+  },
+  {
+    "index": 5,
+    "family": "Courier New",
+    "text": "ELISA",
+    "font_path": "C:\\Windows\\Fonts\\cour.ttf",
+    "preview": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\output\\font_examples_2026-10-23\\05_courier_new.png"
+  },
+  {
+    "index": 6,
+    "family": "Bahnschrift",
+    "text": "FELIPE",
+    "font_path": "C:\\Windows\\Fonts\\bahnschrift.ttf",
+    "preview": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\output\\font_examples_2026-10-23\\06_bahnschrift.png"
+  }
+]

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import logging
 import os
 import re
 import shutil
@@ -43,6 +44,7 @@ STORAGE_ROOT = Path(
     )
 ).resolve()
 STORAGE_ROOT.mkdir(parents=True, exist_ok=True)
+AUDIT_LOG_PATH = STORAGE_ROOT.parent / "audit.ndjson"
 
 MAX_UPLOAD_MB = _env_int("AUTOMACAO_MAX_UPLOAD_MB", 30, 1, 100)
 MAX_UPLOAD_BYTES = MAX_UPLOAD_MB * 1024 * 1024
@@ -59,22 +61,35 @@ IMAGE_TYPES = {
     "image/webp": ".webp",
 }
 IMAGE_FORMATS = {"image/png": "PNG", "image/jpeg": "JPEG", "image/webp": "WEBP"}
+FONT_EXTENSIONS = {".ttf", ".otf"}
+MAX_FONT_BYTES = 10 * 1024 * 1024
 
 app = FastAPI(
     title="Brasil Botões - Automação API",
     version="1.0.0",
 )
+logger = logging.getLogger("brasil_botoes")
+if not logger.handlers:
+    logging.basicConfig(level=os.environ.get("AUTOMACAO_LOG_LEVEL", "INFO").upper())
 
 
 @app.middleware('http')
 async def security_headers(request: Request, call_next):
-    response = await call_next(request)
+    request_id = uuid.uuid4().hex[:12]
+    try:
+        response = await call_next(request)
+    except Exception:
+        logger.exception("request_failed id=%s method=%s path=%s", request_id, request.method, request.url.path)
+        return JSONResponse({"detail": "Erro interno. Informe o código de suporte.", "request_id": request_id}, status_code=500)
     response.headers.setdefault('X-Content-Type-Options', 'nosniff')
     response.headers.setdefault('X-Frame-Options', 'DENY')
     response.headers.setdefault('Referrer-Policy', 'no-referrer')
     response.headers.setdefault('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')
     if request.url.path.startswith('/api/'):
         response.headers['Cache-Control'] = 'no-store'
+    if response.status_code >= 500:
+        logger.error("request_error id=%s status=%s method=%s path=%s", request_id, response.status_code, request.method, request.url.path)
+    response.headers['X-Request-ID'] = request_id
     if os.environ.get('AUTOMACAO_HTTPS', '0') == '1':
         response.headers.setdefault('Strict-Transport-Security', 'max-age=31536000; includeSubDomains')
     return response
@@ -224,6 +239,53 @@ async def _save_upload(
     }
 
 
+async def _save_font_upload(upload: UploadFile, folder: Path) -> dict[str, Any]:
+    """Validate and persist a user-supplied TrueType/OpenType font."""
+    original_name = _safe_text(upload.filename, 180) or "fonte.ttf"
+    suffix = Path(original_name).suffix.lower()
+    if suffix not in FONT_EXTENSIONS:
+        raise HTTPException(status_code=415, detail="A fonte deve estar em formato TTF ou OTF.")
+    final_path = folder / ("fonte_personalizacao" + suffix)
+    sha = hashlib.sha256()
+    total = 0
+    fd, tmp_name = tempfile.mkstemp(prefix="font_", suffix=suffix, dir=folder)
+    tmp_path = Path(tmp_name)
+    try:
+        with os.fdopen(fd, "wb") as handle:
+            while True:
+                chunk = await upload.read(1024 * 1024)
+                if not chunk:
+                    break
+                total += len(chunk)
+                if total > MAX_FONT_BYTES:
+                    raise HTTPException(status_code=413, detail="A fonte excede o limite de 10 MB.")
+                sha.update(chunk)
+                handle.write(chunk)
+        try:
+            from fontTools.ttLib import TTFont
+            parsed_font = TTFont(str(tmp_path), lazy=True)
+            family_name = parsed_font['name'].getDebugName(1) or original_name
+            subfamily_name = parsed_font['name'].getDebugName(2) or "Regular"
+            parsed_font.close()
+        except Exception as exc:
+            raise HTTPException(status_code=415, detail="O arquivo não é uma fonte TTF/OTF válida.") from exc
+        tmp_path.replace(final_path)
+    except Exception:
+        tmp_path.unlink(missing_ok=True)
+        raise
+    finally:
+        await upload.close()
+    return {
+        "filename": final_path.name,
+        "original_filename": original_name,
+        "content_type": upload.content_type or "application/octet-stream",
+        "size_bytes": total,
+        "sha256": sha.hexdigest(),
+        "family_name": str(family_name),
+        "subfamily_name": str(subfamily_name),
+    }
+
+
 def _public_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
     return {
         "id": manifest["id"],
@@ -234,6 +296,7 @@ def _public_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
         "files": manifest["files"],
         "history": manifest.get("history", []),
         "workflow": manifest.get("workflow", {}),
+        "pipeline": manifest.get("pipeline", {}),
     }
 
 
@@ -260,6 +323,105 @@ def _read_manifest(folder: Path) -> dict[str, Any] | None:
     return value if isinstance(value, dict) else None
 
 
+_CATALOG_CACHE: dict[str, Any] = {}
+
+
+def _catalog_json(relative_path: str, default: Any) -> Any:
+    if relative_path in _CATALOG_CACHE:
+        return _CATALOG_CACHE[relative_path]
+    try:
+        value = json.loads((BASE_DIR / relative_path).read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        value = default
+    _CATALOG_CACHE[relative_path] = value
+    return value
+
+
+def _catalog_ref(value: Any) -> str:
+    return re.sub(r"^0+(?=\d)", "", _safe_text(value, 80))
+
+
+def _catalog_color(value: Any) -> str:
+    code = re.sub(r"\s+", "", _safe_text(value, 80)).upper()
+    if code and not code.startswith("C") and code.isdigit():
+        code = "C" + code
+    return code
+
+
+def _has_value(value: Any) -> bool:
+    return value is not None and str(value).strip() not in ("", "AUTO", "N/A", "NULL")
+
+
+def _complete_button_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
+    item = metadata.get("item") or {}
+    if item.get("type") != "button":
+        return metadata
+
+    item = dict(item)
+    ref = _catalog_ref(item.get("reference"))
+    size = _safe_text(item.get("size_tam"), 20)
+    color = _catalog_color(item.get("color"))
+    refs = _catalog_json("docs/data/referencias_consistem.json", {}).get("references", {})
+    products = _catalog_json("docs/produtos.json", [])
+    colors = _catalog_json("docs/data/cores_catalogo.json", {}).get("colors", {})
+    ref_data = refs.get(ref) if isinstance(refs, dict) else None
+    size_data = (ref_data or {}).get("by_size", {}).get(size, {}) if isinstance(ref_data, dict) else {}
+    exact = next((row for row in products if _catalog_ref(row.get("referencia")) == ref
+                  and _safe_text(row.get("tamanho"), 20) == size
+                  and _catalog_color(row.get("cor_codigo")) == color), None)
+    color_data = colors.get(color) if isinstance(colors, dict) else None
+
+    completed: dict[str, dict[str, Any]] = {}
+
+    def fill(field: str, value: Any, source: str):
+        if _has_value(value) and not _has_value(item.get(field)):
+            item[field] = value
+            completed[field] = {"value": value, "source": source}
+
+    for field in (
+        "fundo", "pastilha_mm", "espessura_final_mm", "broca_mm",
+        "distancia_furos_mm", "num_furos", "acabamento",
+    ):
+        fill(field, size_data.get(field), "referencias_consistem:by_size")
+
+    if size_data.get("num_furos") and not _has_value(item.get("furacao")):
+        fill("furacao", f"{size_data['num_furos']}F", "referencias_consistem:by_size")
+
+    if isinstance(exact, dict):
+        for field in ("material", "acabamento", "furacao", "cor_nome", "cor_familia", "tingimento", "obs"):
+            fill(field, exact.get(field), "produtos.json:exact_reference_size_color")
+        if _has_value(exact.get("reduzido")):
+            fill("source_reduzido", exact.get("reduzido"), "produtos.json:exact_reference_size_color")
+
+    if isinstance(color_data, dict):
+        fill("color_description", color_data.get("descricao"), "cores_catalogo.json")
+        fill("color_observation", color_data.get("observacao"), "cores_catalogo.json")
+        preview = color_data.get("preview") or {}
+        fill("color_preview_kind", preview.get("kind"), "cores_catalogo.json:preview")
+        fill("color_preview_confidence", preview.get("confidence"), "cores_catalogo.json:preview")
+
+    result = dict(metadata)
+    result["item"] = item
+    warnings = []
+    if not ref_data:
+        warnings.append("Referência não localizada no Consistem")
+    elif not size_data:
+        warnings.append("TAM não localizado para a referência")
+    if not color_data:
+        warnings.append("Cor não localizada no catálogo")
+    if not _has_value(item.get("espessura_final_mm")):
+        warnings.append("Espessura final ausente")
+    result["technical_completion"] = {
+        "reference_known": bool(ref_data),
+        "size_known": bool(size_data),
+        "exact_product_found": bool(exact),
+        "color_known": bool(color_data),
+        "filled_fields": completed,
+        "warnings": warnings,
+    }
+    return result
+
+
 def _iter_request_manifests():
     if not STORAGE_ROOT.exists():
         return
@@ -279,6 +441,23 @@ def _write_manifest(folder: Path, manifest: dict[str, Any]) -> None:
     os.replace(temporary, target)
 
 
+def _append_audit(event: str, actor: dict[str, Any] | None, target: str, details: dict[str, Any] | None = None) -> None:
+    """Append a privacy-safe record for sensitive actions without storing passwords."""
+    entry = {
+        "at": datetime.now().astimezone().isoformat(timespec="seconds"),
+        "event": event,
+        "actor": (actor or {}).get("username") or (actor or {}).get("id") or "system",
+        "target": _safe_text(target, 180),
+        "details": details or {},
+    }
+    try:
+        AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with AUDIT_LOG_PATH.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    except OSError:
+        logger.exception("audit_write_failed event=%s target=%s", event, target)
+
+
 
 # Access is checked by the server, never from the browser's JSON/sessionStorage.
 # The portal and its logo are intentionally available to unauthenticated users.
@@ -291,13 +470,20 @@ PAGES={
  'admin_usuarios.html':'admin',
 }
 PRIVATE_FILES={'usuarios.json','facas.json','facas.example.json'}
-PUBLIC_HTML = {'catalogo_geral.html', 'pastilhas.html', 'cores_preview.html'}
-PUBLIC_FILES = {
-    'logo_simbolo.jpeg', 'favicon.ico', 'produtos.json', 'pastilhas.json',
-    'data/cores_catalogo.json', 'data/cores_overrides.json',
-    'data/pastilhas_fotos_index.json', 'data/hole_patterns.json',
-}
+PUBLIC_FILES = {'logo_simbolo.jpeg', 'favicon.ico', 'produtos.json'}
 PUBLIC_PREFIXES = ('css/', 'js/', 'imagens/')
+PUBLIC_AREA_PATHS = {
+    'catalogo_geral.html': 'catalogo',
+    'produtos.json': 'catalogo',
+}
+PROTECTED_DATA_AREAS = {
+    'pastilhas.json': ('pastilhas',),
+    'data/cores_catalogo.json': ('cores_preview', 'automacao', 'pastilhas'),
+    'data/cores_overrides.json': ('cores_preview', 'automacao'),
+    'data/pastilhas_fotos_index.json': ('pastilhas', 'automacao', 'cores_preview'),
+    'data/hole_patterns.json': ('pastilhas', 'automacao', 'cores_preview'),
+    'data/ref_hole_map.json': ('automacao',),
+}
 
 def current_user(request: Request):
     return auth.get_session(request.cookies.get(auth.COOKIE))[0]
@@ -315,6 +501,11 @@ def must_admin(request: Request):
 def can_open_subsite(user, area, slug):
     if auth.has(user,'subsites'): return True
     return user and user.get('role')==area and str(user.get('slug'))==slug
+
+def can_open_area(user, area):
+    if area == 'pastilhas' and user and user.get('role') in ('representante', 'cliente'):
+        return False
+    return auth.has(user, area)
 
 @app.middleware('http')
 async def enforce_access(request: Request, call_next):
@@ -359,13 +550,22 @@ async def enforce_access(request: Request, call_next):
     # Reject attempts to fetch credentials directly, regardless of hosting mistakes.
     if path in PRIVATE_FILES or path.endswith('/usuarios.json') or path.endswith('/usuarios.json.part'):
         return JSONResponse({'detail':'Arquivo privado.'},status_code=404)
-    if path in ('','index.html') or path in PUBLIC_HTML or path in PUBLIC_FILES or any(path.startswith(prefix) for prefix in PUBLIC_PREFIXES):
+    if path in ('','index.html') or path in PUBLIC_FILES or path in PUBLIC_AREA_PATHS or any(path.startswith(prefix) for prefix in PUBLIC_PREFIXES):
+        area = PUBLIC_AREA_PATHS.get(path)
+        user = current_user(request) if area else None
+        if user and not can_open_area(user, area):
+            return JSONResponse({'detail':'Você não tem permissão para acessar esta área.'},status_code=403)
         return await call_next(request)
     user=current_user(request)
     if not user:
         if path.endswith('.html') or path in PAGES:
             return RedirectResponse('/index.html?next='+quote('/'+path,safe=''),status_code=303)
         return JSONResponse({'detail':'Faça login.'},status_code=401)
+    required_areas = PROTECTED_DATA_AREAS.get(path)
+    if required_areas is not None:
+        if not any(can_open_area(user, area) for area in required_areas):
+            return JSONResponse({'detail':'Você não tem permissão para acessar estes dados.'},status_code=403)
+        return await call_next(request)
     if path.startswith('representantes/') or path.startswith('clientes/'):
         bits=path.split('/')
         category='representante' if bits[0]=='representantes' else 'cliente'
@@ -379,7 +579,7 @@ async def enforce_access(request: Request, call_next):
                 return JSONResponse({'detail':'Sem permissão para os dados.'},status_code=403)
         # other images/CSS/fonts are covered by login
         return await call_next(request)
-    if not auth.has(user,area):
+    if not can_open_area(user,area):
         return JSONResponse({'detail':'Você não tem permissão para acessar esta área.'},status_code=403)
     return await call_next(request)
 
@@ -474,6 +674,8 @@ def admin_modify_users(request:Request, payload:dict=Body(...)):
             user['password_hash']=auth.password_hash(str(payload['password']))
     else:raise HTTPException(400,'Ação desconhecida.')
     auth.save_users(db)
+    target_user = username if action == "create" else str(payload.get("id") or "unknown")
+    _append_audit("admin_user_" + str(action), actor, target_user, {"fields": sorted(key for key in payload if key != "password")})
     return {'ok':True}
 
 @app.get("/api/health")
@@ -494,6 +696,7 @@ async def export_request(
     preview: UploadFile | None = File(None),
     art_files: list[UploadFile] | None = File(None),
     other_base: UploadFile | None = File(None),
+    font_file: UploadFile | None = File(None),
 ) -> dict[str, Any]:
     content_length = request.headers.get('content-length')
     if content_length and content_length.isdigit() and int(content_length) > MAX_BODY_BYTES:
@@ -526,14 +729,27 @@ async def export_request(
     if item.get("type") == "button":
         if not all(str(item.get(k) or "").strip() for k in ("reference", "size_tam", "color")):
             raise HTTPException(status_code=400, detail="Informe referência, TAM e cor.")
+        parsed = _complete_button_metadata(parsed)
+        item = parsed["item"]
     if preview is None:
         raise HTTPException(status_code=400, detail="Prévia PNG obrigatória para gerar a Ficha.")
     if item.get("type") == "other" and other_base is None:
         raise HTTPException(status_code=400, detail="Outro item exige imagem base.")
-    if not art_files:
+    personalization = parsed.get("personalization")
+    assets = personalization.get("assets") if isinstance(personalization, dict) else None
+    if not isinstance(assets, list) or not assets:
         raise HTTPException(status_code=400, detail="Envie pelo menos uma arte da personalização.")
-    if len(art_files) > MAX_ART_FILES:
+    if len(assets) > MAX_ART_FILES:
         raise HTTPException(status_code=400, detail=f"Máximo de {MAX_ART_FILES} artes por ficha.")
+    image_assets = [asset for asset in assets if isinstance(asset, dict) and asset.get("kind", "image") != "text"]
+    native_text_assets = [asset for asset in assets if isinstance(asset, dict) and asset.get("kind") == "text"]
+    if any(not str(asset.get("text") or "").strip() for asset in native_text_assets):
+        raise HTTPException(status_code=400, detail="Camada de texto sem conteúdo.")
+    if len(art_files or []) != len(image_assets):
+        raise HTTPException(status_code=400, detail="A quantidade de imagens não corresponde às camadas da personalização.")
+    custom_font = personalization.get("custom_font") if isinstance(personalization, dict) else None
+    if custom_font and font_file is None:
+        raise HTTPException(status_code=400, detail="A personalizaÃ§Ã£o informa uma fonte importada, mas o arquivo nÃ£o foi enviado.")
     owner_user = must_login(request)
     request_id = _new_request_id(parsed)
     folder = _new_request_folder(request_id)
@@ -567,14 +783,60 @@ async def export_request(
                 f"arte_{index:02d}",
                 IMAGE_TYPES,
             )
-            saved["layer"] = index
+            saved["layer"] = image_assets[index - 1].get("layer", index)
+            saved["kind"] = "image"
             saved_arts.append(saved)
             total_upload_bytes += saved['size_bytes']
             if total_upload_bytes > MAX_TOTAL_UPLOAD_BYTES:
                 raise HTTPException(status_code=413, detail='O total de arquivos excede o limite permitido.')
 
-        if saved_arts:
-            files["artes"] = saved_arts
+        if font_file is not None:
+            font_record = await _save_font_upload(font_file, folder)
+            files["font"] = font_record
+            personalization = dict(personalization or {})
+            custom_font = dict(custom_font or {})
+            custom_font.update({
+                "filename": font_record["filename"],
+                "original_filename": font_record["original_filename"],
+                "family_name": font_record["family_name"],
+                "subfamily_name": font_record["subfamily_name"],
+                "format": Path(font_record["filename"]).suffix.lower().lstrip("."),
+                "size_bytes": font_record["size_bytes"],
+                "sha256": font_record["sha256"],
+            })
+            # Browser previews give an imported font an ephemeral CSS family.
+            # Replace that temporary label with the parsed family before the
+            # metadata becomes the Ficha, manifest, and Blender input.
+            for asset in native_text_assets:
+                if str(asset.get("font_family") or "").startswith("FonteImportada_"):
+                    asset["font_family"] = font_record["family_name"]
+                asset["font_source"] = "uploaded"
+                asset["font_sha256"] = font_record["sha256"]
+            personalization["custom_font"] = custom_font
+            parsed["personalization"] = personalization
+
+        # Native text is an artwork layer even though it has no uploaded image
+        # file.  Keep it in the manifest's artwork inventory so the Ficha,
+        # request history, and Blender worker all count the same layers.
+        text_records = [
+            {
+                "filename": None,
+                "content_type": "text/plain",
+                "size_bytes": len(str(asset.get("text") or "").encode("utf-8")),
+                "sha256": hashlib.sha256(str(asset.get("text") or "").encode("utf-8")).hexdigest(),
+                "layer": asset.get("layer"),
+                "kind": "text",
+                "text": str(asset.get("text") or "").strip(),
+                "geometry_mode": asset.get("geometry_mode"),
+            }
+            for asset in native_text_assets
+        ]
+        artwork_records = sorted(
+            [*saved_arts, *text_records],
+            key=lambda record: int(record.get("layer") or 0),
+        )
+        if artwork_records:
+            files["artes"] = artwork_records
 
         created_at = datetime.now().astimezone().isoformat(
             timespec="seconds"
@@ -591,6 +853,7 @@ async def export_request(
             art_paths=artwork_paths,
             logo_path=DOCS_DIR / "logo_simbolo.jpeg",
             request_id=request_id,
+            font_path=(folder / files["font"]["filename"]) if files.get("font") else None,
         )
         html_path = folder / "ficha_tecnica.html"
         if html_path.is_file():
@@ -757,6 +1020,7 @@ def update_request(
     pipeline["current_stage"] = new_status
     manifest["pipeline"] = pipeline
     _write_manifest(folder, manifest)
+    _append_audit("request_workflow_update", actor, request_id, {"status": new_status, "assigned_to": assigned_to})
 
     return {
         **_public_manifest(manifest),
@@ -764,6 +1028,55 @@ def update_request(
         if (folder / "ficha_tecnica.pdf").is_file()
         else None,
     }
+
+
+@app.post("/api/solicitacoes/{request_id}/render")
+def request_blender_render(request_id: str, request: Request) -> dict[str, Any]:
+    """Queue a saved Ficha for the separate Blender worker.
+
+    The HTTP process only records the durable queue state.  Blender is never
+    launched inside this request, so a slow or unavailable Blender executable
+    cannot block the site or create a half-written response.
+    """
+    actor = must_admin(request)
+    folder = _find_request_folder(request_id)
+    manifest = _read_manifest(folder) if folder else None
+    if folder is None or manifest is None:
+        raise HTTPException(status_code=404, detail="SolicitaÃ§Ã£o nÃ£o encontrada.")
+    if manifest.get("status") == "rendering_3d":
+        return {**_public_manifest(manifest), "queued": True}
+
+    metadata = manifest.get("metadata") or {}
+    personalization = metadata.get("personalization") if isinstance(metadata, dict) else None
+    assets = personalization.get("assets") if isinstance(personalization, dict) else []
+    text_assets = [asset for asset in assets if isinstance(asset, dict) and asset.get("kind") == "text" and str(asset.get("text") or "").strip()]
+    if not text_assets:
+        raise HTTPException(status_code=400, detail="A solicitaÃ§Ã£o nÃ£o possui texto nativo para gerar no Blender.")
+
+    changed_at = datetime.now().astimezone().isoformat(timespec="seconds")
+    history = manifest.get("history") if isinstance(manifest.get("history"), list) else []
+    history.append({
+        "at": changed_at,
+        "status": "rendering_3d",
+        "note": "RenderizaÃ§Ã£o Blender colocada na fila.",
+        "actor": actor.get("nome") or actor.get("username"),
+    })
+    pipeline = manifest.get("pipeline") if isinstance(manifest.get("pipeline"), dict) else {}
+    pipeline.update({
+        "current_stage": "blender_queued",
+        "blender_requested": True,
+        "blender_requested_at": changed_at,
+        "blender": {"status": "queued"},
+    })
+    manifest.update({
+        "status": "rendering_3d",
+        "updated_at": changed_at,
+        "history": history[-100:],
+        "pipeline": pipeline,
+    })
+    _write_manifest(folder, manifest)
+    _append_audit("blender_render_queued", actor, request_id, {"text_layers": len(text_assets)})
+    return {**_public_manifest(manifest), "queued": True}
 
 
 @app.get("/api/solicitacoes/{request_id}")
@@ -847,6 +1160,20 @@ def download_request_file(
         target,
         filename=target.name,
     )
+
+
+@app.get("/api/solicitacoes/{request_id}/blender/{filename}")
+def download_blender_file(request_id: str, filename: str):
+    """Expose only worker-produced Blender evidence for the request owner."""
+    folder = _find_request_folder(request_id)
+    if folder is None:
+        raise HTTPException(status_code=404, detail="Solicitação não encontrada.")
+    if Path(filename).name != filename or Path(filename).suffix.lower() not in {".blend", ".png", ".json"}:
+        raise HTTPException(status_code=400, detail="Arquivo Blender inválido.")
+    target = (folder / "blender" / filename).resolve()
+    if target.parent != (folder / "blender").resolve() or not target.is_file():
+        raise HTTPException(status_code=404, detail="Arquivo Blender não encontrado.")
+    return FileResponse(target, filename=target.name)
 
 
 # API routes are declared before this catch-all static mount.

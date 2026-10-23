@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "item": {
+    "reference": "13649",
+    "size_tam": "32",
+    "diametro_mm": 32,
+    "espessura_final_mm": 4.2,
+    "num_furos": 4,
+    "broca_mm": 2.2,
+    "distancia_furos_mm": 7.3,
+    "faca_frente": "13649",
+    "fundo": "OP 90",
+    "acabamento": "FOSCO"
+  },
+  "issues": []
+}

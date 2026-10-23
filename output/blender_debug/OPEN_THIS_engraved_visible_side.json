@@ -1,0 +1,45 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\output\\blender_debug\\OPEN_THIS_engraved_visible_side.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "TESTE",
+  "image": null,
+  "face": "BACK",
+  "position_mm": [
+    0.0,
+    0.0
+  ],
+  "surface_base_world": [
+    0.0,
+    2.0999999046325684,
+    0.0
+  ],
+  "rotation_degrees": 0.0,
+  "preview_style": "DARK",
+  "material_preset": false,
+  "geometry_diagnostics": {
+    "surface_point_world": [
+      0.0,
+      1.394362,
+      0.0
+    ],
+    "surface_normal_world": [
+      -0.003311,
+      0.997721,
+      -0.067387
+    ],
+    "surface_projection": 1.394362,
+    "cutter_inner_projection": 0.894362,
+    "cutter_outer_projection": 2.2,
+    "cutter_vertices": 117266,
+    "body_vertices_before": 16178,
+    "body_vertices_after": 75403,
+    "body_polygons_before": 15944,
+    "body_polygons_after": 73789,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "created_objects": [],
+  "render": null
+}

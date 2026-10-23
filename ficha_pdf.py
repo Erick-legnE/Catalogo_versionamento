@@ -24,6 +24,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.colors import HexColor, Color
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from nexa_fonts import ensure_nexa_fonts
 
 PAGE_W, PAGE_H = A4
@@ -44,6 +45,18 @@ def _fonts():
 def _text(value):
     text = str(value).strip() if value is not None else ''
     return '' if text.upper() in ('NONE','NULL','AUTO','N/A','NAN') else text
+
+
+def _has_value(value):
+    return value is not None and str(value).strip() not in ('', 'NONE', 'NULL', 'AUTO', 'N/A', 'NAN')
+
+
+def _measurement(value):
+    """Display a numeric production measurement consistently in millimetres."""
+    value = _text(value)
+    if not value:
+        return ''
+    return value if re.search(r'\bmm\b', value, re.I) else f'{value} mm'
 
 
 def _item(meta, *names):
@@ -202,7 +215,8 @@ def _logo(c,logo_path):
 
 
 def render_ficha(path:Path, metadata:dict, preview_path:Path,
-                 art_paths:list[Path], logo_path:Path, request_id:str):
+                 art_paths:list[Path], logo_path:Path, request_id:str,
+                 font_path:Path|None=None):
     """Generate a single-page Ficha PDF, preserving the existing server.py API."""
     path=Path(path)
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -212,6 +226,11 @@ def render_ficha(path:Path, metadata:dict, preview_path:Path,
     assets=personalization.get('assets') or []
     is_button=item.get('type')=='button'
     reg,bold,light=_fonts()
+    if font_path and Path(font_path).is_file():
+        # Register the uploaded font so the PDF pipeline validates and embeds
+        # the same file that the user selected for the personalization.
+        custom_font_name='UploadedPersonalizationFont'
+        pdfmetrics.registerFont(TTFont(custom_font_name, str(font_path)))
 
     c=canvas.Canvas(str(path),pagesize=A4,pageCompression=1)
     c.setTitle('Ficha Técnica | Personalização a Laser')
@@ -252,13 +271,18 @@ def render_ficha(path:Path, metadata:dict, preview_path:Path,
         'Referência':_item(item,'reference') if is_button else 'Outro item',
         'Código Personalizado':'',  # Assigned later; do not invent a P code.
         'Tamanho':((_item(item,'size_tam')+'”') if _item(item,'size_tam') and is_button else ''),
-        'Diâmetro':_item(item,'diametro_mm','diameter_verified_mm'),
-        'Espessura':_item(item,'espessura_mm','thickness_verified_mm'),
+        'Diâmetro':_measurement(_item(item,'diametro_mm','diameter_verified_mm','size_tam')),
+        'Espessura':_measurement(_item(item,'espessura_final_mm','espessura_mm','thickness_verified_mm')),
         'Material':_item(item,'material'),
         'Cor':_item(item,'color') if is_button else _item(item,'color'),
         'Acabamento':_item(item,'acabamento'),
-        'Chapa Média':_item(item,'chapa_media'),
-        'Chapa Grande':_item(item,'chapa_grande'),
+        'Furação':_item(item,'furacao') or (
+            f"{_item(item,'num_furos')}F" if _item(item,'num_furos') else ''
+        ),
+        'Fundo':_item(item,'fundo'),
+        'Pastilha':(
+            f"{_item(item,'pastilha_mm')} mm" if _item(item,'pastilha_mm') else ''
+        ),
     }
     # Do not add 'mm' to unverified numeric input (the representative supplies TAM).
     for n,(label,v) in enumerate(details.items()):
@@ -274,12 +298,35 @@ def render_ficha(path:Path, metadata:dict, preview_path:Path,
     c.drawString(290,_top(139),'Detalhamento da personalização:')
 
     y=163
+    warnings=(metadata.get('technical_completion') or {}).get('warnings') or []
+    if warnings:
+        y=_detail_label_value(c,y,'Atenção:', '; '.join(str(value) for value in warnings),reg,bold,max_lines=2)
     if assets:
         if len(assets)==1:
-            art_name=_item(assets[0],'asset_name') or 'Arte enviada'
+            if assets[0].get('kind')=='text' and _has_value(assets[0].get('text')):
+                art_name='Texto: "'+_item(assets[0],'text')+'"'
+                font_name=_item(assets[0],'font_family')
+                if font_name:
+                    art_name += ' · fonte ' + font_name
+            else:
+                art_name=_item(assets[0],'asset_name') or 'Arte enviada'
+            transforms=[]
+            if _has_value(assets[0].get('scale')):
+                transforms.append(f"escala {_item(assets[0], 'scale')}x")
+            if _has_value(assets[0].get('rotation')) or _has_value(assets[0].get('rotation_deg')):
+                transforms.append(f"rotação {_item(assets[0], 'rotation', 'rotation_deg')}°")
+            if _has_value(assets[0].get('opacity')):
+                transforms.append(f"opacidade {_item(assets[0], 'opacity')}%")
+            if transforms:
+                art_name += ' · ' + ' · '.join(transforms)
             y=_detail_label_value(c,y,'Arte:',art_name,reg,bold,max_lines=2)
         else:
-            y=_detail_label_value(c,y,'Arte:',f'{len(assets)} imagens enviadas',reg,bold,max_lines=2)
+            text_count=sum(1 for asset in assets if isinstance(asset,dict) and asset.get('kind')=='text')
+            image_count=len(assets)-text_count
+            kinds=[]
+            if text_count: kinds.append(f'{text_count} texto' + ('s' if text_count != 1 else ''))
+            if image_count: kinds.append(f'{image_count} imagem' + ('s' if image_count != 1 else ''))
+            y=_detail_label_value(c,y,'Arte:',f'{len(assets)} camadas (' + ', '.join(kinds) + ')',reg,bold,max_lines=2)
     else:
         y=_detail_label_value(c,y,'Arte:','Não informada',reg,bold,max_lines=2)
 

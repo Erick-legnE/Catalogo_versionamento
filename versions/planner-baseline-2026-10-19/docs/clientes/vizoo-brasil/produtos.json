@@ -1,0 +1,45 @@
+{
+  "entidade_id": "user_135",
+  "entidade_nome": "VIZOO BRASIL MODAS LTDA",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "45690003",
+      "modelo": "4569",
+      "tamanho": "33",
+      "cor_codigo": "C060",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "2F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "PLAQUINHA POL 4569 2F TAM 33 COR  C060 FOSCO PERS",
+      "qtd_saldo": 11,
+      "unidade": "GR",
+      "cliente": "VIZOO BRASIL MODAS LTDA",
+      "representante": "SUZANA M. FAINGOLD",
+      "foto": null
+    },
+    {
+      "cod_red": "119220010",
+      "modelo": "11922",
+      "tamanho": "28",
+      "cor_codigo": "C1325",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL DIF 11922 4F TAM 28 COR C1325 FOSCO PERS",
+      "qtd_saldo": 8,
+      "unidade": "GR",
+      "cliente": "VIZOO BRASIL MODAS LTDA",
+      "representante": "SUZANA M. FAINGOLD",
+      "foto": null
+    }
+  ]
+}

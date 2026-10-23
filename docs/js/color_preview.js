@@ -8,11 +8,37 @@ function select(code,catalog,overrides){
  const entry=catalog?.colors?.[key]||null;
  const base=entry?.preview||UNKNOWN;
  const ov=overrides?.colors?.[key]||null;
- return {code:key,entry,recipe:ov?{...base,...ov}:base,override:!!ov};
+ const recipe=ov?{...base,...ov}:{...base};
+ const text=[entry?.descricao,entry?.observacao,entry?.observacao_extra].filter(Boolean).join(' ').toUpperCase();
+ const ratios=[...text.matchAll(/(\d+(?:[.,]\d+)?)\s*%/g)].map(m=>Number(m[1].replace(',','.'))).filter(Number.isFinite);
+ if(!ov?.kind&&Array.isArray(recipe.palette)&&recipe.palette.length>1&&ratios.length>1&&/[\/+]/.test(text)){
+   recipe.kind='layered';recipe.mix_ratios=ratios.slice(0,recipe.palette.length);recipe.method='mistura percentual ilustrativa';
+ }
+ return {code:key,entry,recipe,override:!!ov};
+}
+function depthLayers(entryOrRecipe){
+ const entry=entryOrRecipe?.entry||entryOrRecipe||null;
+ const recipe=entryOrRecipe?.recipe||entryOrRecipe?.preview||entryOrRecipe||UNKNOWN;
+ const colors=Array.isArray(recipe.palette)&&recipe.palette.length?recipe.palette:['#58656b'];
+ const text=[entry?.descricao,entry?.observacao,entry?.observacao_extra].filter(Boolean).join(' ').toUpperCase();
+ const mm=[...text.matchAll(/(\d+(?:[.,]\d+)?)\s*MM\b/g)].map(m=>Number(m[1].replace(',','.'))).filter(Number.isFinite);
+ const depth=Math.max(.1,Math.min(1.2,mm[0]||.2));
+ let back=colors[1]||blend(colors[0],'#17232a',.42);
+ let label='espessura visual estimada';
+ const names=Array.isArray(recipe.color_names)?recipe.color_names:[];
+ const layerMatch=text.match(/(?:FUNDO|BASE|VERSO)\s+([^/;]+)/);
+ if(layerMatch&&names.length){const idx=names.findIndex(name=>layerMatch[1].includes(String(name).toUpperCase()));if(idx>=0&&colors[idx])back=colors[idx]}
+ if(/FUNDO|BASE|VERSO|CAMADA/.test(text))label='fundo/camada visual estimada';
+ if(recipe.kind==='border_core'&&colors[1])label='fundo visual estimado';
+ return [{color:back,depthMm:depth,label,source:mm.length?'descrição com espessura':'estimativa padrão'}];
 }
 function randgen(text){let state=2166136261;for(let i=0;i<text.length;i++)state=Math.imul(state^text.charCodeAt(i),16777619)>>>0;return function(){state^=state<<13;state^=state>>>17;state^=state<<5;return (state>>>0)/4294967296}}
 function blend(a,b,t){const ac=parseColor(a),bc=parseColor(b);return 'rgb('+ac.map((x,i)=>Math.round(x*(1-t)+bc[i]*t)).join(',')+')'}
 function parseColor(hex){hex=String(hex||'#9baab5').replace('#','');if(!/^[0-9a-f]{6}$/i.test(hex))hex='9baab5';return [0,2,4].map(i=>parseInt(hex.slice(i,i+2),16))}
+function weightedMix(colors,ratios){
+ const weights=Array.isArray(ratios)&&ratios.length?ratios:colors.map(()=>1),total=weights.reduce((a,b)=>a+b,0)||1;
+ const rgb=colors.map(parseColor);return 'rgb('+[0,1,2].map(i=>Math.round(rgb.reduce((sum,c,j)=>sum+c[i]*(weights[j]||0),0)/total)).join(',')+')';
+}
 function circle(ctx,x,y,r,c){ctx.beginPath();ctx.arc(x,y,Math.max(0,r),0,Math.PI*2);ctx.fillStyle=c;ctx.fill()}
 function shine(ctx,x,y,r){
  const g=ctx.createRadialGradient(x-r*.42,y-r*.5,r*.08,x,y,r*1.25);
@@ -38,8 +64,15 @@ function paint(ctx,x,y,r,entryOrRecipe,seed=''){
    fill(colors[1]||'#d9d5c8',.77);
    if(colors[2])fill(colors[2],.47);
  }else if(type==='layered'){
-   fill(colors[0]);
-   for(let i=1;i<Math.min(colors.length,5);i++)fill(colors[i],1-i/(colors.length+.5));
+   if(Array.isArray(recipe.mix_ratios)&&recipe.mix_ratios.length>1){
+    fill(weightedMix(colors,recipe.mix_ratios));
+    ctx.globalAlpha=.16;
+    for(let i=0;i<Math.min(colors.length,5);i++)fill(colors[i],.82-i*.08);
+    ctx.globalAlpha=1;
+   }else{
+    fill(colors[0]);
+    for(let i=1;i<Math.min(colors.length,5);i++)fill(colors[i],1-i/(colors.length+.5));
+   }
  }else if(type==='transparent'){
    fill('#e0e6df');
    const grd=ctx.createLinearGradient(x-r,y-r,x+r,y+r);grd.addColorStop(0,'rgba(255,255,255,.76)');grd.addColorStop(.6,'rgba(255,255,255,.10)');grd.addColorStop(1,'rgba(93,140,151,.18)');fill(grd);
@@ -88,8 +121,22 @@ function paint(ctx,x,y,r,entryOrRecipe,seed=''){
 }
 function drawButton(canvas,entry,pattern,seed){
  const ctx=canvas.getContext('2d'),W=canvas.width,H=canvas.height,r=Math.min(W,H)*.40,cx=W/2,cy=H/2;
- ctx.clearRect(0,0,W,H);paint(ctx,cx,cy,r,entry,seed||'button');
+ ctx.clearRect(0,0,W,H);drawButton3D(ctx,cx,cy,r,entry,seed||'button');
  if(pattern)drawHoles(ctx,cx,cy,r,pattern);
+}
+function drawButton3D(ctx,x,y,r,entryOrRecipe,seed='button'){
+ const recipe=entryOrRecipe?.preview||entryOrRecipe||UNKNOWN;
+ const layers=depthLayers(entryOrRecipe);
+ const depthPx=Math.max(3,Math.min(r*.16,layers[0].depthMm*r*.34));
+ const ox=-depthPx*.72,oy=-depthPx;
+ const back=layers[0];
+ const steps=Math.max(4,Math.ceil(depthPx/2));
+ for(let i=steps;i>=1;i--){
+  const t=i/steps,cx=x+ox*t,cy=y+oy*t;
+  circle(ctx,cx,cy,r,back.color);
+  ctx.save();ctx.strokeStyle='rgba(20,30,34,.25)';ctx.lineWidth=Math.max(.8,r*.012);ctx.beginPath();ctx.arc(cx,cy,r-.8,0,Math.PI*2);ctx.stroke();ctx.restore();
+ }
+ paint(ctx,x,y,r,entryOrRecipe,seed);
 }
 function drawHoles(ctx,x,y,r,pattern){
  const points=pattern?.points||[];
@@ -103,5 +150,5 @@ function drawHoles(ctx,x,y,r,pattern){
   const g=ctx.createRadialGradient(cx-rr*.25,cy-rr*.25,rr*.1,cx,cy,rr);g.addColorStop(0,'#222e37');g.addColorStop(.68,'#17232a');g.addColorStop(1,'#09141e');circle(ctx,cx,cy,rr,g)
  }
 }
-global.BBColorPreview={select,paint,drawButton,drawHoles};
+global.BBColorPreview={select,paint,drawButton,drawButton3D,depthLayers,drawHoles};
 })(window);

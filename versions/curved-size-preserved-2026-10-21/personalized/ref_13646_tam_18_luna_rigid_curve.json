@@ -1,0 +1,81 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13646_tam_18_luna_rigid_curve.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "LUNA",
+  "image": null,
+  "face": "BACK",
+  "position_mm": [
+    -0.0,
+    5.212355212355212
+  ],
+  "surface_base_world": [
+    0.0,
+    1.600000023841858,
+    0.0
+  ],
+  "rotation_degrees": -0.0,
+  "curvature": 0.7,
+  "preview_style": "LIGHT",
+  "material_preset": false,
+  "geometry_diagnostics": {
+    "surface_point_world": [
+      0.0,
+      1.147634,
+      5.212355
+    ],
+    "surface_normal_world": [
+      -0.008017,
+      0.986561,
+      -0.163199
+    ],
+    "surface_projection": 1.147634,
+    "cutter_inner_projection": 0.797634,
+    "cutter_outer_projection": 1.67,
+    "cutter_vertices": 43172,
+    "body_vertices_before": 15914,
+    "body_vertices_after": 36590,
+    "body_polygons_before": 15616,
+    "body_polygons_after": 35491,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "curvature": {
+      "applied": true,
+      "value": 0.7,
+      "vertex_count": 1630,
+      "connected_component_count": 13,
+      "glyph_group_count": 4,
+      "transformation": "rigid_per_glyph",
+      "glyph_size_max_radius_error": 1.02e-07,
+      "local_y_offset_min": -0.244156,
+      "local_y_offset_max": 0.210804,
+      "tangent_angle_min_degrees": -19.99186,
+      "tangent_angle_max_degrees": 22.209193
+    }
+  },
+  "automation_context": {
+    "request_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\scripts\\fixtures\\curved_engraving\\ref_13646_luna.json",
+    "layer": 1,
+    "text": "LUNA",
+    "font_family": "Arial",
+    "font_path": "C:\\Windows\\Fonts\\arial.ttf",
+    "mode": "ENGRAVE",
+    "depth_mm": 0.35,
+    "curvature": 0.7,
+    "face": "BACK",
+    "source_face": "front",
+    "position_mm": [
+      -0.0,
+      5.212355212355212
+    ],
+    "rotation_degrees": -0.0,
+    "target_width_mm": 5.559845559845559,
+    "target_height_mm": 1.5637065637065637,
+    "flip_x": false,
+    "flip_y": false,
+    "mm_per_preview_px": 0.03474903474903475
+  },
+  "created_objects": [],
+  "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13646_tam_18_luna_rigid_curve.png"
+}

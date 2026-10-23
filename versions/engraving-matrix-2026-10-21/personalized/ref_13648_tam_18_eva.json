@@ -1,0 +1,66 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13648_tam_18_eva.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "EVA",
+  "image": null,
+  "face": "BACK",
+  "position_mm": [
+    2.9536679536679538,
+    4.517374517374518
+  ],
+  "surface_base_world": [
+    4.76837158203125e-07,
+    1.600000023841858,
+    0.0
+  ],
+  "rotation_degrees": 12.0,
+  "preview_style": "LIGHT",
+  "material_preset": false,
+  "geometry_diagnostics": {
+    "surface_point_world": [
+      2.953668,
+      1.173936,
+      4.517375
+    ],
+    "surface_normal_world": [
+      0.057299,
+      0.99377,
+      0.095598
+    ],
+    "surface_projection": 1.173936,
+    "cutter_inner_projection": 0.773936,
+    "cutter_outer_projection": 1.68,
+    "cutter_vertices": 32010,
+    "body_vertices_before": 15890,
+    "body_vertices_after": 30320,
+    "body_polygons_before": 15600,
+    "body_polygons_after": 29421,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "automation_context": {
+    "request_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\scripts\\fixtures\\engraving_matrix\\ref_13648_eva.json",
+    "layer": 1,
+    "text": "EVA",
+    "font_family": "Times New Roman",
+    "font_path": "C:\\Windows\\Fonts\\times.ttf",
+    "mode": "ENGRAVE",
+    "depth_mm": 0.4,
+    "face": "BACK",
+    "source_face": "front",
+    "position_mm": [
+      2.9536679536679538,
+      4.517374517374518
+    ],
+    "rotation_degrees": 12.0,
+    "target_width_mm": 4.1698841698841695,
+    "target_height_mm": 1.3899613899613898,
+    "flip_x": false,
+    "flip_y": false,
+    "mm_per_preview_px": 0.03474903474903475
+  },
+  "created_objects": [],
+  "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13648_tam_18_eva.png"
+}

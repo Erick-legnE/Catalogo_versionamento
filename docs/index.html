@@ -534,7 +534,7 @@
             </div>
             <h1 class="brand-title">Brasil <span>Botões</span></h1>
             <p class="brand-subtitle">Portal Central de Catálogos & Atendimento Personalizado</p>
-            <p class="portal-intro">Consulte produtos e cores sem login. As ferramentas de atendimento e os catálogos individuais aparecem somente para usuários autorizados.</p>
+            <p class="portal-intro">Consulte o catálogo geral sem login. Entre para acessar as pastilhas e demais ferramentas autorizadas para o seu perfil.</p>
 
             <div class="search-container">
                 <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -549,7 +549,7 @@
         <section class="section-block">
             <div class="section-header">
                 <span class="section-title">Acesso rápido</span>
-                <span class="section-kicker">Comece por uma área pública ou entre para acessar recursos internos.</span>
+                <span class="section-kicker">Comece por uma área pública ou entre para acessar recursos autorizados.</span>
             </div>
             <div class="grid">
                 <a href="catalogo_geral.html" class="card featured portal-card public-card" data-access="public" data-name="catálogo geral pronta entrega estoque">
@@ -568,9 +568,9 @@
                     <div class="card-btn">Acessar Catálogo →</div>
                 </a>
 
-                <a href="pastilhas.html" class="card portal-card public-card" data-access="public" data-name="pastilhas acervo cores frente verso">
+                <a href="pastilhas.html" class="card portal-card private-card" data-access="login" data-name="pastilhas acervo cores frente verso">
                     <div class="card-header">
-                        <span class="access-badge public">● PÚBLICO</span>
+                        <span class="access-badge login">🔒 LOGIN NECESSÁRIO</span>
                         <h2>Catálogo de Pastilhas</h2>
                         <p>Visualização simplificada de cores e amostras com galeria frente/verso.</p>
                     </div>
@@ -581,9 +581,9 @@
                     <div class="card-btn">Ver Pastilhas →</div>
                 </a>
 
-                <a href="cores_preview.html" class="card portal-card public-card" data-access="public" data-name="cores tabela de cores catálogo prévias ilustrativas códigos descrição pesquisa">
+                <a href="cores_preview.html" class="card portal-card private-card" data-access="login" data-name="cores tabela de cores catálogo prévias ilustrativas códigos descrição pesquisa">
                     <div class="card-header">
-                        <span class="access-badge public">● PÚBLICO</span>
+                        <span class="access-badge login">🔒 LOGIN NECESSÁRIO</span>
                         <h2>Prévia de Cores</h2>
                         <p>Consulte as cores do cadastro, veja simulações ilustrativas e encontre quais precisam de foto.</p>
                     </div>
@@ -752,10 +752,15 @@
         }
         function atualizarAcessos() {
             const map={catalogo_geral:'catalogo',pastilhas:'pastilhas',cores_preview:'cores_preview',automacao:'automacao',solicitacoes:'automacao'};
-            const publicAreas = new Set(['catalogo','pastilhas','cores_preview']);
+            const publicAreas = new Set(['catalogo']);
+            const canShowArea = area => {
+                if (!usuarioAtual) return publicAreas.has(area);
+                if (area === 'pastilhas' && ['representante','cliente'].includes(usuarioAtual.role)) return false;
+                return pode(area);
+            };
             document.querySelectorAll('a.card.portal-card[href]').forEach(card=>{
                 const page=(card.getAttribute('href')||'').replace('.html','');
-                if (map[page]) card.style.display=(publicAreas.has(map[page]) || pode(map[page]))?'flex':'none';
+                if (map[page]) card.style.display=canShowArea(map[page])?'flex':'none';
             });
             for(const section of ['section-solicitacoes','section-representantes','section-clientes']) {
                 const element=document.getElementById(section);

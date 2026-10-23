@@ -1,0 +1,39 @@
+{
+  "reference": "13654",
+  "size": 24,
+  "row": {
+    "codigo_reduzido": "136540003",
+    "descricao_produto": "BOTAO BAS 13654 4F TAM 24 COR C2926 FOSCO LISO",
+    "mascara": "1.1.08.13654.2926.024.4.0003",
+    "pastilha": "       4,0",
+    "espessura_final": "        3,6",
+    "faca_frente": "1220    ",
+    "fundo": "OP 90",
+    "num_furos": "      4",
+    "broca": "    1,8",
+    "distancia_furos": "        5,6",
+    "medida_em_mm": "C2926 C2926 - BASTAO LEITOSO / MARROM  ",
+    "observacao": "*** = REF 10175 PORÉM COR BASTÃO ** - FURACAO ESPECIAL",
+    "acabamento": "FOSCO          ",
+    "tingimento": "            ",
+    "estonado": "            ",
+    "grosas_por_tubo": "250 PCS",
+    "material": "C2926",
+    "cod_personalizado": null,
+    "desc_personal": null,
+    "chapa_grande": null,
+    "chapa_media": null,
+    "num_cartela": null
+  },
+  "expected_geometry": {
+    "diameter_mm": 24,
+    "thickness_mm": 3.6,
+    "hole_count": 4,
+    "hole_radius_mm": 0.9,
+    "hole_distance_mm": 2.8
+  },
+  "front_dxf": "C:\\Users\\Aprendiz Financeiro\\BRASIL BOTOES LTDA\\Desenvolvimento - Documentos\\facas\\1220-24.dxf",
+  "back_dxf": "C:\\Users\\Aprendiz Financeiro\\BRASIL BOTOES LTDA\\Desenvolvimento - Documentos\\facas\\op-40-44.dxf",
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\bases\\button_13654_24.blend",
+  "texture": null
+}

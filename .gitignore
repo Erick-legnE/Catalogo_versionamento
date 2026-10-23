@@ -62,3 +62,6 @@ nexa.zip
 output.txt
 relatorio_imagens_sem_correspondencia.csv
 readmegpt.txt
+.codex-build/node_modules/
+outputs/**/node_modules/
+*.inspect.ndjson
