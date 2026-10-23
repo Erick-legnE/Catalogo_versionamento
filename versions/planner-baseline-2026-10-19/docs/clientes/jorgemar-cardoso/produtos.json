@@ -1,0 +1,26 @@
+{
+  "entidade_id": "user_089",
+  "entidade_nome": "JORGEMAR CARDOSO VIEIRA",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "10280001",
+      "modelo": "10280",
+      "tamanho": "18",
+      "cor_codigo": "C226",
+      "tingimento": null,
+      "cor_nome": "TRANSPARENTE COM PRETO",
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "BRILHO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 10280 4F TAM 18 COR C226 BRILHO PERS Código personalização(P-4761). (Dt_Prev.: 20/03/26)",
+      "qtd_saldo": 40,
+      "unidade": "GR",
+      "cliente": "JORGEMAR CARDOSO VIEIRA",
+      "representante": "STUDIO NEW REPRESENTACOES LTDA ME",
+      "foto": null
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13654_tam_24_sofia.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "SOFIA",
+  "image": null,
+  "face": "BACK",
+  "position_mm": [
+    -0.0,
+    6.949806949806949
+  ],
+  "surface_base_world": [
+    0.0,
+    1.7999999523162842,
+    0.0
+  ],
+  "rotation_degrees": -8.0,
+  "preview_style": "LIGHT",
+  "material_preset": false,
+  "geometry_diagnostics": {
+    "surface_point_world": [
+      0.0,
+      0.991018,
+      6.949807
+    ],
+    "surface_normal_world": [
+      -0.00226,
+      0.998938,
+      -0.046011
+    ],
+    "surface_projection": 0.991018,
+    "cutter_inner_projection": 0.541018,
+    "cutter_outer_projection": 1.89,
+    "cutter_vertices": 103582,
+    "body_vertices_before": 16066,
+    "body_vertices_after": 61219,
+    "body_polygons_before": 15816,
+    "body_polygons_after": 59790,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "automation_context": {
+    "request_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\scripts\\fixtures\\engraving_matrix\\ref_13654_sofia.json",
+    "layer": 1,
+    "text": "SOFIA",
+    "font_family": "Trebuchet MS",
+    "font_path": "C:\\Windows\\Fonts\\trebuc.ttf",
+    "mode": "ENGRAVE",
+    "depth_mm": 0.45,
+    "face": "BACK",
+    "source_face": "front",
+    "position_mm": [
+      -0.0,
+      6.949806949806949
+    ],
+    "rotation_degrees": -8.0,
+    "target_width_mm": 8.803088803088803,
+    "target_height_mm": 2.3166023166023164,
+    "flip_x": false,
+    "flip_y": false,
+    "mm_per_preview_px": 0.04633204633204633
+  },
+  "created_objects": [],
+  "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13654_tam_24_sofia.png"
+}

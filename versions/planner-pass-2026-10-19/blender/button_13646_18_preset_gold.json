@@ -1,0 +1,25 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\planner-pass-2026-10-19\\blender\\button_13646_18_preset_gold.blend",
+  "base_button": "Button_3D",
+  "mode": "RAISE",
+  "geometry": "VISUAL",
+  "text": "A",
+  "image": null,
+  "face": "FRONT",
+  "position_mm": [
+    0.0,
+    0.0
+  ],
+  "surface_base_world": [
+    0.0,
+    -1.600000023841858,
+    0.0
+  ],
+  "rotation_degrees": 0.0,
+  "preview_style": "GOLD",
+  "material_preset": true,
+  "created_objects": [
+    "Personalizado_Text"
+  ],
+  "render": null
+}

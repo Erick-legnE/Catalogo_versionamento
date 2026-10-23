@@ -1,0 +1,160 @@
+{
+  "color_code": "C2622",
+  "debug_mode": "PHOTO",
+  "recess_tint_strength": 0.35,
+  "layer_feather_t": 0.015,
+  "marble_coord_scale_multiplier": 1.0,
+  "marble_distortion": 0.85,
+  "class": "MARBLED",
+  "layers": [
+    {
+      "t": [
+        0.0,
+        1.0
+      ],
+      "lab": [
+        16.601865337870265,
+        -1.3893401578416176,
+        -7.630647206330554
+      ],
+      "rgb": [
+        0.126238357925284,
+        0.16515763154902427,
+        0.20300848736104543
+      ],
+      "hex": "#202A34"
+    }
+  ],
+  "candidate_layers": [
+    {
+      "t": [
+        0.0,
+        0.6964285714285714
+      ],
+      "lab": [
+        13.308906726381462,
+        -1.2066716224993224,
+        -7.506681935365567
+      ],
+      "rgb": [
+        0.10119603863786403,
+        0.13782553200808417,
+        0.17435830147516312
+      ],
+      "hex": "#1A232C"
+    },
+    {
+      "t": [
+        0.6964285714285714,
+        0.9196428571428571
+      ],
+      "lab": [
+        30.342841279222522,
+        -3.9546041386189223,
+        -9.558526395904387
+      ],
+      "rgb": [
+        0.21615138156470326,
+        0.28992309826803275,
+        0.337479783969655
+      ],
+      "hex": "#374A56"
+    },
+    {
+      "t": [
+        0.9196428571428571,
+        1.0
+      ],
+      "lab": [
+        60.238185493411486,
+        -5.728942613864085,
+        -3.591375347719561
+      ],
+      "rgb": [
+        0.5126838883357806,
+        0.5824177045165995,
+        0.5931750416103407
+      ],
+      "hex": "#839597"
+    }
+  ],
+  "palette": [
+    {
+      "lab": [
+        12.71134632341569,
+        -0.9913827891455951,
+        -6.6360141010529725
+      ],
+      "rgb": [
+        0.10161950429731403,
+        0.13241950184475576,
+        0.1646794661404676
+      ],
+      "hex": "#1A222A",
+      "fraction": 0.4862666666666667
+    },
+    {
+      "lab": [
+        25.301571023405288,
+        -3.0385826289280327,
+        -9.251283395960264
+      ],
+      "rgb": [
+        0.1803000658488025,
+        0.24303772161571424,
+        0.2892140067665528
+      ],
+      "hex": "#2E3E4A",
+      "fraction": 0.3568
+    },
+    {
+      "lab": [
+        50.27192722759165,
+        -5.149282249217221,
+        -6.422720711655449
+      ],
+      "rgb": [
+        0.40713497357699835,
+        0.4812562051272324,
+        0.5108476504438799
+      ],
+      "hex": "#687B82",
+      "fraction": 0.15693333333333334
+    }
+  ],
+  "pattern_scale_source_px": 4.9,
+  "metrics": {
+    "between_row_variance": 272.2926971134244,
+    "within_row_variance": 32.010660842880945,
+    "between_rms_de": 16.501293801197058,
+    "within_rms_de": 5.657796465310585,
+    "variance_ratio": 8.506312895254748,
+    "segmented_contrast_de": 30.536646416092093,
+    "row_p80_de_p90": 24.353110997208173,
+    "textured_row_fraction": 0.25892857142857145,
+    "longest_textured_y_streak_fraction": 0.25892857142857145,
+    "sustained_marbling": true
+  },
+  "confidence_notes": [
+    "pattern plus physical layer candidates: keep band boundaries for Stage D"
+  ],
+  "source": "photo",
+  "side_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\Fotos\\button_results\\pastilhas_C2622_lado_clean.png",
+  "front_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\Fotos\\fotos_o_frente_verso\\C2622 - Frente.png",
+  "verso_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\Fotos\\fotos_o_frente_verso\\C2622 - Verso.png",
+  "orientation_reverse_source_rows": true,
+  "strip_frame_px": {
+    "center": [
+      324.44581294416975,
+      280.3020418705609
+    ],
+    "axis_u": [
+      368.57533397806816,
+      2.7351270444559663
+    ],
+    "axis_v": [
+      -0.5762321210987816,
+      77.65085242141605
+    ]
+  }
+}

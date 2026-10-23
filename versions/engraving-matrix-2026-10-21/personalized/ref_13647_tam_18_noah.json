@@ -1,0 +1,66 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13647_tam_18_noah.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "NOAH",
+  "image": null,
+  "face": "BACK",
+  "position_mm": [
+    -0.0,
+    -5.386100386100386
+  ],
+  "surface_base_world": [
+    0.0,
+    1.600000023841858,
+    0.0
+  ],
+  "rotation_degrees": -0.0,
+  "preview_style": "LIGHT",
+  "material_preset": false,
+  "geometry_diagnostics": {
+    "surface_point_world": [
+      0.0,
+      0.793146,
+      -5.3861
+    ],
+    "surface_normal_world": [
+      -0.009195,
+      0.982284,
+      0.187175
+    ],
+    "surface_projection": 0.793146,
+    "cutter_inner_projection": 0.493146,
+    "cutter_outer_projection": 1.66,
+    "cutter_vertices": 80398,
+    "body_vertices_before": 15906,
+    "body_vertices_after": 44523,
+    "body_polygons_before": 15608,
+    "body_polygons_after": 43203,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "automation_context": {
+    "request_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\scripts\\fixtures\\engraving_matrix\\ref_13647_noah.json",
+    "layer": 1,
+    "text": "NOAH",
+    "font_family": "Georgia",
+    "font_path": "C:\\Windows\\Fonts\\georgia.ttf",
+    "mode": "ENGRAVE",
+    "depth_mm": 0.3,
+    "face": "BACK",
+    "source_face": "front",
+    "position_mm": [
+      -0.0,
+      -5.386100386100386
+    ],
+    "rotation_degrees": -0.0,
+    "target_width_mm": 5.212355212355212,
+    "target_height_mm": 1.4594594594594594,
+    "flip_x": false,
+    "flip_y": false,
+    "mm_per_preview_px": 0.03474903474903475
+  },
+  "created_objects": [],
+  "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13647_tam_18_noah.png"
+}

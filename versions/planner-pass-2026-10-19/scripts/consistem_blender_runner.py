@@ -82,6 +82,33 @@ def find_row(rows: list[dict[str, Any]], reference: str, size: int) -> dict[str,
     return matches[0]
 
 
+def validate_row(row: dict[str, Any]) -> dict[str, float | int]:
+    """Reject unsafe/incomplete production inputs before Blender is launched."""
+    diameter = row_size(row)
+    thickness = number(row.get("espessura_final"))
+    holes = int(number(row.get("num_furos")))
+    drill = number(row.get("broca"))
+    spacing = number(row.get("distancia_furos"))
+    faca = text(row.get("faca_frente"))
+    if diameter is None or diameter <= 0:
+        raise SystemExit("Consistem row has no valid TAM/diameter")
+    if thickness <= 0:
+        raise SystemExit("Consistem row has no valid final thickness")
+    if holes < 0:
+        raise SystemExit("Consistem row has an invalid negative hole count")
+    if holes and (drill <= 0 or spacing <= 0):
+        raise SystemExit("Consistem row with holes requires valid drill and hole spacing")
+    if not faca:
+        raise SystemExit("Consistem row has no front faca")
+    return {
+        "diameter_mm": diameter,
+        "thickness_mm": thickness,
+        "hole_count": holes,
+        "hole_radius_mm": drill / 2 if holes else 0.0,
+        "hole_distance_mm": spacing / 2 if holes else 0.0,
+    }
+
+
 def resolve_front_dxf(faca: str, size: int, faca_dir: Path) -> Path:
     normalized = re.sub(r"\s+", "", faca).upper()
     candidates: list[Path] = []
@@ -122,6 +149,28 @@ def configure_builder(source: str, row: dict[str, Any], front_dxf: Path, back_dx
     return configured
 
 
+def configure_texture(
+    source: str,
+    color_code: str,
+    front_image: Path,
+    verso_image: Path,
+    side_image: Path,
+    output: Path,
+    report: Path,
+    mode: str,
+) -> str:
+    """Stage the user's texture script without modifying the original file."""
+    configured = source
+    configured = replace_assignment(configured, "COLOR_CODE", repr(color_code))
+    configured = replace_assignment(configured, "FRONT_IMAGE_PATH", repr(str(front_image)))
+    configured = replace_assignment(configured, "VERSO_IMAGE_PATH", repr(str(verso_image)))
+    configured = replace_assignment(configured, "SIDE_IMAGE_PATH", repr(str(side_image)))
+    configured = replace_assignment(configured, "DEBUG_MODE", repr(mode))
+    configured = replace_assignment(configured, "OUTPUT_BLEND_PATH", repr(str(output)))
+    configured = replace_assignment(configured, "OUTPUT_REPORT_PATH", repr(str(report)))
+    return configured
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--consistem", required=True, type=Path)
@@ -133,9 +182,22 @@ def main() -> None:
     parser.add_argument("--back-dxf", type=Path, required=True)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--render", type=Path)
+    parser.add_argument("--texture-script", type=Path)
+    parser.add_argument("--front-image", type=Path)
+    parser.add_argument("--verso-image", type=Path)
+    parser.add_argument("--side-image", type=Path)
+    parser.add_argument("--color-code")
+    parser.add_argument("--texture-mode", choices=("PHOTO", "EXPOSURE", "LAYER_IDS", "LAYER_COLORS", "Y_GRADIENT", "SEMANTIC", "MARBLE_3D"), default="PHOTO")
+    parser.add_argument("--texture-output", type=Path)
+    parser.add_argument("--texture-report", type=Path)
     args = parser.parse_args()
 
+    if not args.consistem.is_file() or not args.builder.is_file() or not args.blender.is_file():
+        raise SystemExit("Consistem workbook, builder script, or Blender executable was not found")
+    if not args.faca_dir.is_dir():
+        raise SystemExit(f"Faca directory not found: {args.faca_dir}")
     row = find_row(load_rows(args.consistem), args.reference, args.size)
+    expected_geometry = validate_row(row)
     front_dxf = resolve_front_dxf(text(row.get("faca_frente")), args.size, args.faca_dir)
     back_dxf = args.back_dxf.resolve()
     if not back_dxf.is_file():
@@ -146,11 +208,51 @@ def main() -> None:
     staged = args.output.resolve().with_name(args.output.stem + "_builder.py")
     configured = configure_builder(args.builder.read_text(encoding="utf-8"), row, front_dxf, back_dxf, args.output.resolve(), args.render.resolve() if args.render else None)
     staged.write_text(configured, encoding="utf-8")
-    context = {"reference": args.reference, "size": args.size, "row": row, "front_dxf": str(front_dxf), "back_dxf": str(back_dxf), "output": str(args.output.resolve())}
+    texture_context = None
+    if args.texture_script:
+        required = (args.front_image, args.verso_image, args.side_image, args.color_code)
+        if any(value is None for value in required):
+            raise SystemExit("Texturing requires --front-image, --verso-image, --side-image, and --color-code")
+        for image in (args.front_image, args.verso_image, args.side_image):
+            if not image.is_file():
+                raise SystemExit(f"Texture image not found: {image}")
+        texture_output = (args.texture_output or args.output.with_name(args.output.stem + "_textured.blend")).resolve()
+        texture_report = (args.texture_report or args.output.with_name(args.output.stem + "_texture_report.json")).resolve()
+        staged_texture = args.output.resolve().with_name(args.output.stem + "_texture.py")
+        texture_source = configure_texture(
+            args.texture_script.read_text(encoding="utf-8"),
+            args.color_code,
+            args.front_image.resolve(),
+            args.verso_image.resolve(),
+            args.side_image.resolve(),
+            texture_output,
+            texture_report,
+            args.texture_mode,
+        )
+        staged_texture.write_text(texture_source, encoding="utf-8")
+        texture_context = {
+            "script": str(staged_texture),
+            "output": str(texture_output),
+            "report": str(texture_report),
+            "mode": args.texture_mode,
+            "color_code": args.color_code,
+            "front_image": str(args.front_image.resolve()),
+            "verso_image": str(args.verso_image.resolve()),
+            "side_image": str(args.side_image.resolve()),
+        }
+    context = {"reference": args.reference, "size": args.size, "row": row, "expected_geometry": expected_geometry, "front_dxf": str(front_dxf), "back_dxf": str(back_dxf), "output": str(args.output.resolve()), "texture": texture_context}
     args.output.with_suffix(".consistem.json").write_text(json.dumps(context, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
     result = subprocess.run([str(args.blender), "--background", "--python", str(staged)], cwd=str(args.output.parent), check=False)
     if result.returncode:
         raise SystemExit(result.returncode)
+    if texture_context:
+        texture_result = subprocess.run(
+            [str(args.blender), "--background", str(args.output.resolve()), "--python", texture_context["script"]],
+            cwd=str(args.output.parent),
+            check=False,
+        )
+        if texture_result.returncode:
+            raise SystemExit(texture_result.returncode)
     print(json.dumps(context, ensure_ascii=False, default=str))
 
 

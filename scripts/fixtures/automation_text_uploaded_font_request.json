@@ -1,0 +1,22 @@
+{
+  "item": {"size_tam": 32},
+  "personalization": {
+    "coordinate_system": {"button_diameter_px": 518},
+    "production_rules": {"pastilha_back_face_recess_mm": 0.2},
+    "custom_font": {
+      "filename": "fonte_personalizacao.ttf",
+      "family_name": "Example Uploaded Font",
+      "sha256": "abc123"
+    },
+    "assets": [{
+      "layer": 1,
+      "kind": "text",
+      "text": "ANA",
+      "font_family": "Example Uploaded Font",
+      "geometry_mode": "ENGRAVE",
+      "depth_mm": 0.35,
+      "preview_footprint_px": {"width_px": 160, "height_px": 50}
+    }]
+  },
+  "visual_reference": {"pastilha_faces": {"selected": "back"}}
+}

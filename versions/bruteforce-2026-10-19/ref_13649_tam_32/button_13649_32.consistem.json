@@ -1,0 +1,39 @@
+{
+  "reference": "13649",
+  "size": 32,
+  "row": {
+    "codigo_reduzido": "136490003",
+    "descricao_produto": "BOTAO BAS 13649 4F TAM 32 COR C2914 FOSCO LISO",
+    "mascara": "1.2.08.13649.2914.032.4.0003",
+    "pastilha": "       4,6",
+    "espessura_final": "        4,2",
+    "faca_frente": "13649   ",
+    "fundo": "OP 90",
+    "num_furos": "      4",
+    "broca": "    2,2",
+    "distancia_furos": "        7,3",
+    "medida_em_mm": "C2914 - BASTAO 70% LEITOSO / 30% PRETO  ",
+    "observacao": "FURACAO ESPECIAL",
+    "acabamento": "FOSCO          ",
+    "tingimento": "Sem tingimen",
+    "estonado": "Sem estonado",
+    "grosas_por_tubo": "220 PCS",
+    "material": "C2914 - BASTAO 70% LEITOSO / 30% PRETO",
+    "cod_personalizado": null,
+    "desc_personal": null,
+    "chapa_grande": "            ",
+    "chapa_media": "            ",
+    "num_cartela": "            "
+  },
+  "expected_geometry": {
+    "diameter_mm": 32,
+    "thickness_mm": 4.2,
+    "hole_count": 4,
+    "hole_radius_mm": 1.1,
+    "hole_distance_mm": 3.65
+  },
+  "front_dxf": "C:\\Users\\Aprendiz Financeiro\\BRASIL BOTOES LTDA\\Desenvolvimento - Documentos\\facas\\13649-32.dxf",
+  "back_dxf": "C:\\Users\\Aprendiz Financeiro\\BRASIL BOTOES LTDA\\Desenvolvimento - Documentos\\facas\\op-40-44.dxf",
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\bruteforce-2026-10-19\\ref_13649_tam_32\\button_13649_32.blend",
+  "texture": null
+}

@@ -1,0 +1,26 @@
+{
+  "entidade_id": "user_108",
+  "entidade_nome": "OKTEX TEXTIL LTDA",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "3540015",
+      "modelo": "354",
+      "tamanho": "18",
+      "cor_codigo": "C001",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 00354 4F TAM 18 COR C001  FOSCO PERS      ",
+      "qtd_saldo": 3,
+      "unidade": "GR",
+      "cliente": "OKTEX TEXTIL LTDA",
+      "representante": "MARVIC TEXTIL REPRESENTACOES LTDA",
+      "foto": null
+    }
+  ]
+}

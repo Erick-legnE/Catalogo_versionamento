@@ -103,6 +103,7 @@ def classify(row):
  borda='BORDA' in text
  side='FUNDO' in text or 'MEIO' in text
  multi=re.search(r'\b(DUAS|DOIS|TRES|03|02|2|3)\s*CAMADAS?\b',text) is not None or (len(vals)>=2 and bool(re.search(r'[A-Z]{3,}\s*/\s*[A-Z]{3,}',desc)))
+ percent_mix=bool(re.search(r'\d+(?:[.,]\d+)?\s*%',text) and re.search(r'[/+]',desc) and len(vals)>=2)
  patterns={'tortoise':('TARTARUG','CASCO'), 'wood':('MADEIRA','MADERA'), 'marble':('MESCLAD','RAJAD','MARMORIZ','MARMORE','ONDULAD','MANCHAD','GOTAS','IMITACAO DE OSSO'), 'gradient':('DEGRADE','DEGRAD'), 'glitter':('GLITTER','PURPURINA','BRILHO METALIZADO')}
  matched=[k for k,keys in patterns.items() if any(q in text for q in keys)]
  if 'GLITTER' in text or 'FURTA COR' in text:effects.append('glitter' if 'GLITTER' in text else 'iridescent')
@@ -120,6 +121,8 @@ def classify(row):
   if len(vals)==1:vals.append(dict(name='variação aproximada',hex='#e8dac4' if vals[0]['hex']!='#f2f0e8' else '#555259'))
  elif 'gradient' in matched:
   kind='gradient';method='degradê aproximado';confidence='estimated' if vals else 'low'
+ elif percent_mix:
+  kind='layered';method='mistura percentual ilustrativa';confidence='estimated'
  elif borda and side:
   kind='border_core';method='borda/fundo interpretados do texto';confidence='estimated' if len(vals)>=2 else 'low'
  elif multi or (len(vals)>=2 and (' + ' in desc or '+' in obs)):

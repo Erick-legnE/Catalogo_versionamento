@@ -1,0 +1,86 @@
+{
+  "case_count": 3,
+  "all_checks_passed": true,
+  "all_structural_checks_passed": true,
+  "contact_sheet": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\engraving_matrix_contact_sheet.png",
+  "cases": [
+    {
+      "reference": "13646",
+      "size_tam": 18,
+      "text": "LUNA",
+      "font_family": "Arial",
+      "position_mm": [
+        -0.0,
+        5.212355212355212
+      ],
+      "rotation_degrees": -0.0,
+      "curvature": 0.7,
+      "curvature_transformation": "rigid_per_glyph",
+      "glyph_group_count": 4,
+      "glyph_size_max_radius_error": 1.02e-07,
+      "size_preserved": true,
+      "depth_mm": 0.35,
+      "vertices_before": 15914,
+      "vertices_after": 36590,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1689.212,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13646_tam_18_luna_rigid_curve.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13646_tam_18_luna_rigid_curve.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13646_tam_18_luna_rigid_curve_inspection.png",
+      "passed_structural_checks": true
+    },
+    {
+      "reference": "13654",
+      "size_tam": 24,
+      "text": "ARTHUR",
+      "font_family": "Georgia",
+      "position_mm": [
+        -0.0,
+        -6.949806949806949
+      ],
+      "rotation_degrees": 10.0,
+      "curvature": -0.65,
+      "curvature_transformation": "rigid_per_glyph",
+      "glyph_group_count": 6,
+      "glyph_size_max_radius_error": 2.35e-07,
+      "size_preserved": true,
+      "depth_mm": 0.45,
+      "vertices_before": 16066,
+      "vertices_after": 81642,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1547.312,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13654_tam_24_arthur_rigid_curve.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13654_tam_24_arthur_rigid_curve.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13654_tam_24_arthur_rigid_curve_inspection.png",
+      "passed_structural_checks": true
+    },
+    {
+      "reference": "13659",
+      "size_tam": 32,
+      "text": "ISABELA",
+      "font_family": "Trebuchet MS",
+      "position_mm": [
+        -1.2355212355212355,
+        8.957528957528957
+      ],
+      "rotation_degrees": -14.0,
+      "curvature": 0.9,
+      "curvature_transformation": "rigid_per_glyph",
+      "glyph_group_count": 7,
+      "glyph_size_max_radius_error": 1.18e-07,
+      "size_preserved": true,
+      "depth_mm": 0.55,
+      "vertices_before": 16170,
+      "vertices_after": 145708,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1645.313,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13659_tam_32_isabela_rigid_curve.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13659_tam_32_isabela_rigid_curve.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-size-preserved-2026-10-21\\personalized\\ref_13659_tam_32_isabela_rigid_curve_inspection.png",
+      "passed_structural_checks": true
+    }
+  ]
+}

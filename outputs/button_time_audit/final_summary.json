@@ -1,0 +1,29 @@
+{
+  "total": 32142,
+  "statusCounts": {
+    "CORRETO": 13536,
+    "OPERAÇÃO 6 AUSENTE": 5387,
+    "NÃO CADASTRADO": 6743,
+    "INCORRETO": 6306,
+    "MÚLTIPLAS OPERAÇÕES 6": 147,
+    "ACABAMENTO NÃO IDENTIFICADO": 23
+  },
+  "incorrectSheetRows": 11840,
+  "notRegisteredSheetRows": 6743,
+  "mismatchBySize": {
+    "14": 178,
+    "16": 392,
+    "18": 1091,
+    "20": 489,
+    "22": 287,
+    "24": 741,
+    "26": 256,
+    "28": 648,
+    "30": 233,
+    "32": 942,
+    "36": 417,
+    "40": 370,
+    "44": 176,
+    "54": 86
+  }
+}

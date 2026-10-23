@@ -1,0 +1,66 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13659_tam_32_helena.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "HELENA",
+  "image": null,
+  "face": "BACK",
+  "position_mm": [
+    4.633204633204634,
+    -8.957528957528957
+  ],
+  "surface_base_world": [
+    0.0,
+    2.0999999046325684,
+    0.0
+  ],
+  "rotation_degrees": 18.0,
+  "preview_style": "LIGHT",
+  "material_preset": false,
+  "geometry_diagnostics": {
+    "surface_point_world": [
+      4.633204,
+      1.429157,
+      -8.957529
+    ],
+    "surface_normal_world": [
+      -0.075015,
+      0.984488,
+      0.158605
+    ],
+    "surface_projection": 1.429157,
+    "cutter_inner_projection": 0.879157,
+    "cutter_outer_projection": 2.21,
+    "cutter_vertices": 213810,
+    "body_vertices_before": 16170,
+    "body_vertices_after": 117695,
+    "body_polygons_before": 15936,
+    "body_polygons_after": 114953,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "automation_context": {
+    "request_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\scripts\\fixtures\\engraving_matrix\\ref_13659_helena.json",
+    "layer": 1,
+    "text": "HELENA",
+    "font_family": "Arial",
+    "font_path": "C:\\Windows\\Fonts\\arial.ttf",
+    "mode": "ENGRAVE",
+    "depth_mm": 0.55,
+    "face": "BACK",
+    "source_face": "front",
+    "position_mm": [
+      4.633204633204634,
+      -8.957528957528957
+    ],
+    "rotation_degrees": 18.0,
+    "target_width_mm": 13.59073359073359,
+    "target_height_mm": 3.3976833976833976,
+    "flip_x": false,
+    "flip_y": false,
+    "mm_per_preview_px": 0.06177606177606178
+  },
+  "created_objects": [],
+  "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13659_tam_32_helena.png"
+}

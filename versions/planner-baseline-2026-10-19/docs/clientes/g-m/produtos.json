@@ -1,0 +1,45 @@
+{
+  "entidade_id": "user_075",
+  "entidade_nome": "G M D INDUSTRIA TEXTIL EIRELI",
+  "tipo": "clientes",
+  "produtos": [
+    {
+      "cod_red": "111330001",
+      "modelo": "11133",
+      "tamanho": "30",
+      "cor_codigo": "C001",
+      "tingimento": null,
+      "cor_nome": null,
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO PERS",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 11133 4F TAM 30 COR C001 FOSCO PERS",
+      "qtd_saldo": 23,
+      "unidade": "GR",
+      "cliente": "G M D INDUSTRIA TEXTIL EIRELI",
+      "representante": "J M PEREIRA E CIA LTDA.",
+      "foto": null
+    },
+    {
+      "cod_red": "111330003",
+      "modelo": "11133",
+      "tamanho": "30",
+      "cor_codigo": "C001",
+      "tingimento": null,
+      "cor_nome": "BRANCO ",
+      "cor_familia": null,
+      "cor_hex": null,
+      "furacao": "4F",
+      "acabamento": "FOSCO LISO",
+      "material": "POLIESTER",
+      "descricao": "BOTAO POL 11133 4F TAM 30 COR C001 FOSCO LISO",
+      "qtd_saldo": 60,
+      "unidade": "GR",
+      "cliente": "G M D INDUSTRIA TEXTIL EIRELI",
+      "representante": "J M PEREIRA E CIA LTDA.",
+      "foto": null
+    }
+  ]
+}

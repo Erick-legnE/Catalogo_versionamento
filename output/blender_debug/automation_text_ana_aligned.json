@@ -1,0 +1,66 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\output\\blender_debug\\automation_text_ana_aligned.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "ANA",
+  "image": null,
+  "face": "BACK",
+  "position_mm": [
+    -3.088803088803089,
+    2.471042471042471
+  ],
+  "surface_base_world": [
+    0.0,
+    2.0999999046325684,
+    0.0
+  ],
+  "rotation_degrees": -25.0,
+  "preview_style": "DARK",
+  "material_preset": false,
+  "geometry_diagnostics": {
+    "surface_point_world": [
+      -4.088803,
+      1.618195,
+      2.471042
+    ],
+    "surface_normal_world": [
+      0.011938,
+      0.999903,
+      -0.007155
+    ],
+    "surface_projection": 1.618195,
+    "cutter_inner_projection": 1.118195,
+    "cutter_outer_projection": 2.2,
+    "cutter_vertices": 153288,
+    "body_vertices_before": 16178,
+    "body_vertices_after": 82323,
+    "body_polygons_before": 15944,
+    "body_polygons_after": 80431,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "automation_context": {
+    "request_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\scripts\\fixtures\\automation_text_request.json",
+    "layer": 1,
+    "text": "ANA",
+    "font_family": "Arial",
+    "font_path": "C:\\Windows\\Fonts\\arial.ttf",
+    "mode": "ENGRAVE",
+    "depth_mm": 0.5,
+    "face": "BACK",
+    "source_face": "front",
+    "position_mm": [
+      -3.088803088803089,
+      2.471042471042471
+    ],
+    "rotation_degrees": -25.0,
+    "target_width_mm": 12.972972972972974,
+    "target_height_mm": 4.324324324324325,
+    "flip_x": false,
+    "flip_y": false,
+    "mm_per_preview_px": 0.06177606177606178
+  },
+  "created_objects": [],
+  "render": null
+}

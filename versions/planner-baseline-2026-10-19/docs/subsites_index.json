@@ -1,0 +1,962 @@
+[
+  {
+    "nome": "VISON REPRESENTACOES LTDA",
+    "slug": "vison",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 245,
+    "url": "representantes/vison/index.html"
+  },
+  {
+    "nome": "GABRIEL E PAPINI REPRESENTACOES LTDA",
+    "slug": "gabriel-papini",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 2,
+    "url": "representantes/gabriel-papini/index.html"
+  },
+  {
+    "nome": "MARVIC TEXTIL REPRESENTACOES LTDA",
+    "slug": "marvic-textil",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 112,
+    "url": "representantes/marvic-textil/index.html"
+  },
+  {
+    "nome": "CVI",
+    "slug": "cvi",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 26,
+    "url": "representantes/cvi/index.html"
+  },
+  {
+    "nome": "SUZANA M. FAINGOLD",
+    "slug": "suzana-m",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 4,
+    "url": "representantes/suzana-m/index.html"
+  },
+  {
+    "nome": "GRANDES CONTAS",
+    "slug": "grandes-contas",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 16,
+    "url": "representantes/grandes-contas/index.html"
+  },
+  {
+    "nome": "RONA REPRESENTACOES LTDA",
+    "slug": "rona",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 4,
+    "url": "representantes/rona/index.html"
+  },
+  {
+    "nome": "J M PEREIRA E CIA LTDA.",
+    "slug": "j-m",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 9,
+    "url": "representantes/j-m/index.html"
+  },
+  {
+    "nome": "E.P. REPRESENTACOES EIRELI",
+    "slug": "p",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 1,
+    "url": "representantes/p/index.html"
+  },
+  {
+    "nome": "STUDIO NEW REPRESENTACOES LTDA ME",
+    "slug": "studio-new",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 7,
+    "url": "representantes/studio-new/index.html"
+  },
+  {
+    "nome": "A H DE OLIVEIRA REPRESENTACOES",
+    "slug": "h-oliveira",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 3,
+    "url": "representantes/h-oliveira/index.html"
+  },
+  {
+    "nome": "VANESSA DANIELLE MEDEIROS CINTRA - COM DE ARTIGOS DO VEST",
+    "slug": "vanessa-danielle",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 1,
+    "url": "representantes/vanessa-danielle/index.html"
+  },
+  {
+    "nome": "MARVIC TEXTIL REPRESENTAÇOES LTDA",
+    "slug": "marvic-textil-2",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 3,
+    "url": "representantes/marvic-textil-2/index.html"
+  },
+  {
+    "nome": "JEAN PIERRE REPRESENTACOES TEXTEIS LTDA",
+    "slug": "jean-pierre",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 3,
+    "url": "representantes/jean-pierre/index.html"
+  },
+  {
+    "nome": "VENDA DIRETA",
+    "slug": "venda-direta",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 1,
+    "url": "representantes/venda-direta/index.html"
+  },
+  {
+    "nome": "VISON REPRESENTAÇOES LTDA",
+    "slug": "vison-2",
+    "tipo": "representante",
+    "badge": "Representante",
+    "qtd": 1,
+    "url": "representantes/vison-2/index.html"
+  },
+  {
+    "nome": "CIA. HERING",
+    "slug": "hering",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 52,
+    "url": "clientes/hering/index.html"
+  },
+  {
+    "nome": "GMLT4 INDUSTRIA E COMERCIO DE ARTIGO DO VESTUARIO LTDA",
+    "slug": "gmlt4-artigo",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/gmlt4-artigo/index.html"
+  },
+  {
+    "nome": "KYLY INDUSTRIA TEXTIL LTDA.",
+    "slug": "kyly-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 54,
+    "url": "clientes/kyly-textil/index.html"
+  },
+  {
+    "nome": "MUNDI TEXTIL LTDA",
+    "slug": "mundi-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/mundi-textil/index.html"
+  },
+  {
+    "nome": "LUNELLI INDUSTRIA DO VESTUARIO LTDA.",
+    "slug": "lunelli-vestuario",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 27,
+    "url": "clientes/lunelli-vestuario/index.html"
+  },
+  {
+    "nome": "BRANDILI TEXTIL LTDA.",
+    "slug": "brandili-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 44,
+    "url": "clientes/brandili-textil/index.html"
+  },
+  {
+    "nome": "IAEL - COMERCIO DE AVIAMENTOS LTDA",
+    "slug": "iael-aviamentos",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 11,
+    "url": "clientes/iael-aviamentos/index.html"
+  },
+  {
+    "nome": "SANCHES BABY COMPANY LTDA",
+    "slug": "sanches-baby",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/sanches-baby/index.html"
+  },
+  {
+    "nome": "VALISERE INDUSTRIA E COMERCIO LTDA",
+    "slug": "valisere",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/valisere/index.html"
+  },
+  {
+    "nome": "LUANDRI MALHAS LTDA.",
+    "slug": "luandri-malhas",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/luandri-malhas/index.html"
+  },
+  {
+    "nome": "RQ INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+    "slug": "rq-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/rq-confeccoes/index.html"
+  },
+  {
+    "nome": "BASICO&CO S.A.",
+    "slug": "basico-co",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/basico-co/index.html"
+  },
+  {
+    "nome": "MINIMAL CLUB LTDA",
+    "slug": "minimal-club",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/minimal-club/index.html"
+  },
+  {
+    "nome": "CONFECCOES LEZI LTDA.",
+    "slug": "confeccoes-lezi",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/confeccoes-lezi/index.html"
+  },
+  {
+    "nome": "G M D INDUSTRIA TEXTIL EIRELI",
+    "slug": "g-m",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/g-m/index.html"
+  },
+  {
+    "nome": "FAN PRUST JEANS LTDA",
+    "slug": "fan-prust",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/fan-prust/index.html"
+  },
+  {
+    "nome": "AD-FASHION COMERCIO DE ROUPAS LTDA-EPP",
+    "slug": "ad-fashion",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/ad-fashion/index.html"
+  },
+  {
+    "nome": "CH3 LTDA.",
+    "slug": "ch3",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/ch3/index.html"
+  },
+  {
+    "nome": "MARPA IND E COM DE CONFECCOES LTDA",
+    "slug": "marpa-ind",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/marpa-ind/index.html"
+  },
+  {
+    "nome": "DK INDUSTRIA DE MATERIAIS PARA CONSTRUCAO LTDA",
+    "slug": "dk-materiais",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/dk-materiais/index.html"
+  },
+  {
+    "nome": "MILA LTDA",
+    "slug": "mila",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 3,
+    "url": "clientes/mila/index.html"
+  },
+  {
+    "nome": "RAZAO",
+    "slug": "razao",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/razao/index.html"
+  },
+  {
+    "nome": "COMASK INDUSTRIA E COMERCIO LTDA",
+    "slug": "comask",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 3,
+    "url": "clientes/comask/index.html"
+  },
+  {
+    "nome": "VESTE S.A.ESTILO",
+    "slug": "veste-estilo",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 34,
+    "url": "clientes/veste-estilo/index.html"
+  },
+  {
+    "nome": "SALLO CONFECCAO E COMERCIO DE ROUPAS LTDA.",
+    "slug": "sallo-confeccao",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/sallo-confeccao/index.html"
+  },
+  {
+    "nome": "J. VANDERLEI DA SILVA - CONFECCOES LTDA",
+    "slug": "j-vanderlei",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/j-vanderlei/index.html"
+  },
+  {
+    "nome": "ACTUM INDUSTRIA E COMERCIO LTDA",
+    "slug": "actum",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/actum/index.html"
+  },
+  {
+    "nome": "TNG COMERCIO E INDUSTRIA DE ROUPAS LTDA",
+    "slug": "tng-roupas",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 3,
+    "url": "clientes/tng-roupas/index.html"
+  },
+  {
+    "nome": "K2 COMERCIO E INDUSTRIA LTDA",
+    "slug": "k2",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 6,
+    "url": "clientes/k2/index.html"
+  },
+  {
+    "nome": "ORACON COM. E IND. DE CONF. LTDA",
+    "slug": "oracon-com",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/oracon-com/index.html"
+  },
+  {
+    "nome": "PASQUINI & PASQUINI CONFECCOES LTDA.",
+    "slug": "pasquini-pasquini",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/pasquini-pasquini/index.html"
+  },
+  {
+    "nome": "KAESSE - BANA BANA CONFECCOES LTDA",
+    "slug": "kaesse-bana",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 6,
+    "url": "clientes/kaesse-bana/index.html"
+  },
+  {
+    "nome": "FLUEEM BRASIL LTDA",
+    "slug": "flueem-brasil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/flueem-brasil/index.html"
+  },
+  {
+    "nome": "M.J. MIRANDA CONFECCOES LTDA.",
+    "slug": "m-j",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 3,
+    "url": "clientes/m-j/index.html"
+  },
+  {
+    "nome": "ALENICE INDUSTRIA TEXTIL LTDA",
+    "slug": "alenice-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 10,
+    "url": "clientes/alenice-textil/index.html"
+  },
+  {
+    "nome": "MARISOL VESTUARIO SA",
+    "slug": "marisol-vestuario",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 12,
+    "url": "clientes/marisol-vestuario/index.html"
+  },
+  {
+    "nome": "F.M. MAGALHAES E CIA LTDA. - ME",
+    "slug": "f-m",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/f-m/index.html"
+  },
+  {
+    "nome": "TEXPA LTDA.",
+    "slug": "texpa",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 3,
+    "url": "clientes/texpa/index.html"
+  },
+  {
+    "nome": "APPLICATO CONFECCOES LTDA",
+    "slug": "applicato-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/applicato-confeccoes/index.html"
+  },
+  {
+    "nome": "CONFECCOES SIMON BRAUN LTDA",
+    "slug": "confeccoes-simon",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/confeccoes-simon/index.html"
+  },
+  {
+    "nome": "GAMBINO INDUSTRIA E COMERCIO LTDA",
+    "slug": "gambino",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/gambino/index.html"
+  },
+  {
+    "nome": "GREAT NEWS CONFECCOES LTDA.",
+    "slug": "great-news",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/great-news/index.html"
+  },
+  {
+    "nome": "ZAFIRELE - ZFRL - EIRELLI",
+    "slug": "zafirele-zfrl",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/zafirele-zfrl/index.html"
+  },
+  {
+    "nome": "CONFECCOES RAFREE LTDA.",
+    "slug": "confeccoes-rafree",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/confeccoes-rafree/index.html"
+  },
+  {
+    "nome": "DITONGO CONFECCOES LTDA EPP",
+    "slug": "ditongo-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/ditongo-confeccoes/index.html"
+  },
+  {
+    "nome": "CHAUBERT COMERCIO DE VESTUARIO LTDA",
+    "slug": "chaubert-vestuario",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/chaubert-vestuario/index.html"
+  },
+  {
+    "nome": "DELUXE NEGOCIOS DO VESTUARIO LTDA",
+    "slug": "deluxe-negocios",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/deluxe-negocios/index.html"
+  },
+  {
+    "nome": "GS2 IND_STRIA E COM. DE CONF. LTDA",
+    "slug": "gs2-ind",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/gs2-ind/index.html"
+  },
+  {
+    "nome": "DE FIL S CONFECCOES LTDA -ME",
+    "slug": "fil-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/fil-confeccoes/index.html"
+  },
+  {
+    "nome": "MARCYN CONFECCOES LTDA",
+    "slug": "marcyn-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/marcyn-confeccoes/index.html"
+  },
+  {
+    "nome": "DELLOSC TEXTIL LTDA.",
+    "slug": "dellosc-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/dellosc-textil/index.html"
+  },
+  {
+    "nome": "TEX COTTON IND. DE CONFECCOES LTDA.",
+    "slug": "tex-cotton",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/tex-cotton/index.html"
+  },
+  {
+    "nome": "IB COMERCIO E INDUSTRIA LTDA.",
+    "slug": "ib",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/ib/index.html"
+  },
+  {
+    "nome": "PAULINO E BERNARDINO",
+    "slug": "paulino-bernardino",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/paulino-bernardino/index.html"
+  },
+  {
+    "nome": "P E C CONFECCOES LTDA.",
+    "slug": "p-c",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/p-c/index.html"
+  },
+  {
+    "nome": "V2 INDUSTRIA E COMERCIO TEXTIL",
+    "slug": "v2-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/v2-textil/index.html"
+  },
+  {
+    "nome": "MALHARIA CRISTINA LTDA.",
+    "slug": "malharia-cristina",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 4,
+    "url": "clientes/malharia-cristina/index.html"
+  },
+  {
+    "nome": "GATTOS CONFECCOES LTDA.",
+    "slug": "gattos-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 4,
+    "url": "clientes/gattos-confeccoes/index.html"
+  },
+  {
+    "nome": "BRETZEL TRAJES TIPICOS LTDA",
+    "slug": "bretzel-trajes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/bretzel-trajes/index.html"
+  },
+  {
+    "nome": "KRINDGES INDUSTRIAL S/A",
+    "slug": "krindges",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/krindges/index.html"
+  },
+  {
+    "nome": "ELIAN INDUSTRIA TEXTIL LTDA.",
+    "slug": "elian-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 23,
+    "url": "clientes/elian-textil/index.html"
+  },
+  {
+    "nome": "PZAMA CONFECCOES LTDA",
+    "slug": "pzama-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 3,
+    "url": "clientes/pzama-confeccoes/index.html"
+  },
+  {
+    "nome": "SIGOSTA TEXTIL LTDA.",
+    "slug": "sigosta-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/sigosta-textil/index.html"
+  },
+  {
+    "nome": "A.M.C. TEXTIL LTDA.",
+    "slug": "m-c",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 5,
+    "url": "clientes/m-c/index.html"
+  },
+  {
+    "nome": "KAIANI MALHAS LTDA.",
+    "slug": "kaiani-malhas",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/kaiani-malhas/index.html"
+  },
+  {
+    "nome": "VIZOO BRASIL MODAS LTDA",
+    "slug": "vizoo-brasil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/vizoo-brasil/index.html"
+  },
+  {
+    "nome": "ROVITEX IND. E COM. DE MALHAS LTDA.",
+    "slug": "rovitex-ind",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 3,
+    "url": "clientes/rovitex-ind/index.html"
+  },
+  {
+    "nome": "PEREIRA FABRICA DE CONFECCOES LTDA",
+    "slug": "pereira-fabrica",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/pereira-fabrica/index.html"
+  },
+  {
+    "nome": "OKTEX TEXTIL LTDA",
+    "slug": "oktex-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/oktex-textil/index.html"
+  },
+  {
+    "nome": "IND E COM DE CONF DI MIRMAY LTDA",
+    "slug": "ind-com",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/ind-com/index.html"
+  },
+  {
+    "nome": "CONFECCOES ACONCHEGO DO BEBE LTDA.",
+    "slug": "confeccoes-aconchego",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/confeccoes-aconchego/index.html"
+  },
+  {
+    "nome": "BAMBOO JEANS LTDA",
+    "slug": "bamboo-jeans",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 4,
+    "url": "clientes/bamboo-jeans/index.html"
+  },
+  {
+    "nome": "DELIZ INDUSTRIA DO VESTUARIO LTDA.",
+    "slug": "deliz-vestuario",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 10,
+    "url": "clientes/deliz-vestuario/index.html"
+  },
+  {
+    "nome": "RIZLLEP INDUSTRIA DE CONFECCOES LTDA",
+    "slug": "rizllep-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 5,
+    "url": "clientes/rizllep-confeccoes/index.html"
+  },
+  {
+    "nome": "CONFECCOES ROLLU OUCC1 EM RECUPERACAO JUDICIAL EM RECUPERACA",
+    "slug": "confeccoes-rollu",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 3,
+    "url": "clientes/confeccoes-rollu/index.html"
+  },
+  {
+    "nome": "LECIMAR CONFECCOES LTDA",
+    "slug": "lecimar-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/lecimar-confeccoes/index.html"
+  },
+  {
+    "nome": "MALHAS RICO LTDA.",
+    "slug": "malhas-rico",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 4,
+    "url": "clientes/malhas-rico/index.html"
+  },
+  {
+    "nome": "BLUTEXTIL INDUSTRIA E COMERCIO LTDA",
+    "slug": "blutextil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/blutextil/index.html"
+  },
+  {
+    "nome": "INDORF TEXTIL LTDA",
+    "slug": "indorf-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 5,
+    "url": "clientes/indorf-textil/index.html"
+  },
+  {
+    "nome": "MARP INDUSTRIA TEXTIL LTDA.",
+    "slug": "marp-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/marp-textil/index.html"
+  },
+  {
+    "nome": "ROMITEX MALHAS LTDA",
+    "slug": "romitex-malhas",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/romitex-malhas/index.html"
+  },
+  {
+    "nome": "JOMAR INDUSTRIA E COMERCIO LTDA",
+    "slug": "jomar",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/jomar/index.html"
+  },
+  {
+    "nome": "TEMPO DE CRIANCA MODA INFANTIL LTDA",
+    "slug": "tempo-crianca",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/tempo-crianca/index.html"
+  },
+  {
+    "nome": "MAR - QUENTE CONFECCOES LTDA",
+    "slug": "mar-quente",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 9,
+    "url": "clientes/mar-quente/index.html"
+  },
+  {
+    "nome": "PS INDUSTRIA E CONFECCAO LTDA",
+    "slug": "ps-confeccao",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 3,
+    "url": "clientes/ps-confeccao/index.html"
+  },
+  {
+    "nome": "EDEX INDUSTRIA DE JEANS WEAR EIRELI -EPP",
+    "slug": "edex-jeans",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/edex-jeans/index.html"
+  },
+  {
+    "nome": "ALEXANDRE BITENCOURT ROSENDO",
+    "slug": "alexandre-bitencourt",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/alexandre-bitencourt/index.html"
+  },
+  {
+    "nome": "IND DE MALHAS FINAS HIGHSTIL LT",
+    "slug": "ind-malhas",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/ind-malhas/index.html"
+  },
+  {
+    "nome": "TEXDRINI INDUSTRIA TEXTIL LTDA.",
+    "slug": "texdrini-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/texdrini-textil/index.html"
+  },
+  {
+    "nome": "JORGEMAR CARDOSO VIEIRA",
+    "slug": "jorgemar-cardoso",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/jorgemar-cardoso/index.html"
+  },
+  {
+    "nome": "RICCIERI CONFECCOES LTDA",
+    "slug": "riccieri-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/riccieri-confeccoes/index.html"
+  },
+  {
+    "nome": "UNVP CONFECCOES LTDA",
+    "slug": "unvp-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/unvp-confeccoes/index.html"
+  },
+  {
+    "nome": "BAUMGARTEN INDUSTRIA DE CONFECCOES LTDA",
+    "slug": "baumgarten-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/baumgarten-confeccoes/index.html"
+  },
+  {
+    "nome": "FILO SA",
+    "slug": "filo",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/filo/index.html"
+  },
+  {
+    "nome": "CAMISARIA MILANI LTDA",
+    "slug": "camisaria-milani",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/camisaria-milani/index.html"
+  },
+  {
+    "nome": "MPL INDUSTRIA E COMERCIO DE ROUPAS LTDA",
+    "slug": "mpl-roupas",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 3,
+    "url": "clientes/mpl-roupas/index.html"
+  },
+  {
+    "nome": "GUSTAVO MIGUEL SCAGLIA ROBAINA",
+    "slug": "gustavo-miguel",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 5,
+    "url": "clientes/gustavo-miguel/index.html"
+  },
+  {
+    "nome": "SUED TEXTIL LTDA.",
+    "slug": "sued-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/sued-textil/index.html"
+  },
+  {
+    "nome": "AVIAMENTOS BRUSQUE LTDA.",
+    "slug": "aviamentos-brusque",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 5,
+    "url": "clientes/aviamentos-brusque/index.html"
+  },
+  {
+    "nome": "AVALON TEXTIL LTDA",
+    "slug": "avalon-textil",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/avalon-textil/index.html"
+  },
+  {
+    "nome": "CIA HERING - FILIAL ITORORO",
+    "slug": "hering-filial",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 1,
+    "url": "clientes/hering-filial/index.html"
+  },
+  {
+    "nome": "ABRANGE INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+    "slug": "abrange-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/abrange-confeccoes/index.html"
+  },
+  {
+    "nome": "FBR CONFECCOES LTDA.",
+    "slug": "fbr-confeccoes",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/fbr-confeccoes/index.html"
+  },
+  {
+    "nome": "DRC COM. DE ART. DE ARMARINHO LTDA.",
+    "slug": "drc-com",
+    "tipo": "cliente",
+    "badge": "Cliente Especial",
+    "qtd": 2,
+    "url": "clientes/drc-com/index.html"
+  }
+]

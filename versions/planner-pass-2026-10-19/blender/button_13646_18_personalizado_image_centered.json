@@ -1,0 +1,21 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\planner-pass-2026-10-19\\blender\\button_13646_18_personalizado_image_centered.blend",
+  "base_button": "Button_3D",
+  "mode": "RAISE",
+  "geometry": "VISUAL",
+  "text": null,
+  "image": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\imagens\\pastilhas\\pastilha_C003.png",
+  "position_mm": [
+    0.0,
+    0.0
+  ],
+  "button_centre_world": [
+    0.0,
+    0.0
+  ],
+  "rotation_degrees": 0.0,
+  "created_objects": [
+    "Personalizado_Image"
+  ],
+  "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\planner-pass-2026-10-19\\blender\\button_13646_18_personalizado_image_centered.png"
+}

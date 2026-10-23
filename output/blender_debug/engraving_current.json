@@ -1,0 +1,23 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\output\\blender_debug\\engraving_current.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "TESTE",
+  "image": null,
+  "face": "FRONT",
+  "position_mm": [
+    0.0,
+    0.0
+  ],
+  "surface_base_world": [
+    0.0,
+    -2.0999999046325684,
+    0.0
+  ],
+  "rotation_degrees": 0.0,
+  "preview_style": "LIGHT",
+  "material_preset": true,
+  "created_objects": [],
+  "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\output\\blender_debug\\engraving_current.png"
+}

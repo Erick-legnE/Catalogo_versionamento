@@ -1,0 +1,73 @@
+{
+  "case_count": 3,
+  "all_structural_checks_passed": true,
+  "contact_sheet": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-engraving-2026-10-21\\personalized\\engraving_matrix_contact_sheet.png",
+  "cases": [
+    {
+      "reference": "13646",
+      "size_tam": 18,
+      "text": "LUNA",
+      "font_family": "Arial",
+      "position_mm": [
+        -0.0,
+        5.212355212355212
+      ],
+      "rotation_degrees": -0.0,
+      "curvature": 0.7,
+      "depth_mm": 0.35,
+      "vertices_before": 15914,
+      "vertices_after": 35957,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1688.541,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-engraving-2026-10-21\\personalized\\ref_13646_tam_18_luna_curved.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-engraving-2026-10-21\\personalized\\ref_13646_tam_18_luna_curved.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-engraving-2026-10-21\\personalized\\ref_13646_tam_18_luna_curved_inspection.png",
+      "passed_structural_checks": true
+    },
+    {
+      "reference": "13654",
+      "size_tam": 24,
+      "text": "ARTHUR",
+      "font_family": "Georgia",
+      "position_mm": [
+        -0.0,
+        -6.949806949806949
+      ],
+      "rotation_degrees": 10.0,
+      "curvature": -0.65,
+      "depth_mm": 0.45,
+      "vertices_before": 16066,
+      "vertices_after": 79844,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1546.591,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-engraving-2026-10-21\\personalized\\ref_13654_tam_24_arthur_curved.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-engraving-2026-10-21\\personalized\\ref_13654_tam_24_arthur_curved.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-engraving-2026-10-21\\personalized\\ref_13654_tam_24_arthur_curved_inspection.png",
+      "passed_structural_checks": true
+    },
+    {
+      "reference": "13659",
+      "size_tam": 32,
+      "text": "ISABELA",
+      "font_family": "Trebuchet MS",
+      "position_mm": [
+        -1.2355212355212355,
+        8.957528957528957
+      ],
+      "rotation_degrees": -14.0,
+      "curvature": 0.9,
+      "depth_mm": 0.55,
+      "vertices_before": 16170,
+      "vertices_after": 143545,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1643.677,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-engraving-2026-10-21\\personalized\\ref_13659_tam_32_isabela_curved.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-engraving-2026-10-21\\personalized\\ref_13659_tam_32_isabela_curved.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\curved-engraving-2026-10-21\\personalized\\ref_13659_tam_32_isabela_curved_inspection.png",
+      "passed_structural_checks": true
+    }
+  ]
+}

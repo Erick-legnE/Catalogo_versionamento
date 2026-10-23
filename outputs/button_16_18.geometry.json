@@ -1,0 +1,26 @@
+{
+  "reference": "16",
+  "size": 18,
+  "thickness_mm": 2.2,
+  "hole_diameter_mm": 1.8,
+  "hole_count": 4,
+  "pattern": "four_square",
+  "points_mm": [
+    [
+      -1.71,
+      -1.71
+    ],
+    [
+      1.71,
+      -1.71
+    ],
+    [
+      -1.71,
+      1.71
+    ],
+    [
+      1.71,
+      1.71
+    ]
+  ]
+}

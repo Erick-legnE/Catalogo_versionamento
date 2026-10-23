@@ -1,0 +1,66 @@
+{
+  "output": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13649_tam_32_miguel.blend",
+  "base_button": "Button_3D",
+  "mode": "ENGRAVE",
+  "geometry": "BOOLEAN",
+  "text": "MIGUEL",
+  "image": null,
+  "face": "BACK",
+  "position_mm": [
+    -4.942084942084942,
+    8.957528957528957
+  ],
+  "surface_base_world": [
+    0.0,
+    2.0999999046325684,
+    0.0
+  ],
+  "rotation_degrees": -15.0,
+  "preview_style": "LIGHT",
+  "material_preset": false,
+  "geometry_diagnostics": {
+    "surface_point_world": [
+      -4.942085,
+      1.519871,
+      8.957529
+    ],
+    "surface_normal_world": [
+      -0.029806,
+      0.998318,
+      0.049729
+    ],
+    "surface_projection": 1.519871,
+    "cutter_inner_projection": 1.019871,
+    "cutter_outer_projection": 2.2,
+    "cutter_vertices": 193416,
+    "body_vertices_before": 16178,
+    "body_vertices_after": 99492,
+    "body_polygons_before": 15944,
+    "body_polygons_after": 96879,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "automation_context": {
+    "request_path": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\scripts\\fixtures\\engraving_matrix\\ref_13649_miguel.json",
+    "layer": 1,
+    "text": "MIGUEL",
+    "font_family": "Courier New",
+    "font_path": "C:\\Windows\\Fonts\\cour.ttf",
+    "mode": "ENGRAVE",
+    "depth_mm": 0.5,
+    "face": "BACK",
+    "source_face": "front",
+    "position_mm": [
+      -4.942084942084942,
+      8.957528957528957
+    ],
+    "rotation_degrees": -15.0,
+    "target_width_mm": 12.972972972972974,
+    "target_height_mm": 3.3976833976833976,
+    "flip_x": false,
+    "flip_y": false,
+    "mm_per_preview_px": 0.06177606177606178
+  },
+  "created_objects": [],
+  "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13649_tam_32_miguel.png"
+}

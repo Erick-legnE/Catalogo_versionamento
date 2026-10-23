@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brasil Botões — Prévia de Cores</title>
+<style>
+:root{--header:#4d5759;--bg:#f4fbfc;--card:#fff;--ink:#354247;--muted:#73878e;--border:#d6eaf0;--blue:#00bad2;--blue2:#008fa7;--shadow:0 3px 15px rgba(0,186,210,.09)}
+[data-theme=dark]{--header:#06111f;--bg:#0f172a;--card:#1e293b;--ink:#edf6f8;--muted:#95a9b4;--border:#35495b;--shadow:0 4px 12px rgba(0,0,0,.15)}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--ink);font:14px 'Nunito Sans',Arial,sans-serif;margin:0}button,input,select{font:inherit}
+header{background:var(--header);border-bottom:3px solid var(--blue);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:13px 24px;gap:16px}header strong{font-size:18px}header strong span{color:var(--blue)}.head-actions{display:flex;gap:8px}a.nav{padding:8px 11px;text-decoration:none;border:1px solid #62757c;color:white;border-radius:18px;font-size:12px;font-weight:800}
+main{max-width:1440px;margin:auto;padding:24px}.intro{display:flex;justify-content:space-between;gap:20px;align-items:start;margin-bottom:17px}.intro h1{font-size:27px;letter-spacing:-.04em;margin:0 0 6px}.intro p{font-size:12px;color:var(--muted);line-height:1.5;margin:0;max-width:800px}.pill{background:var(--card);border:1px solid var(--border);padding:6px 11px;border-radius:16px;font-weight:800;font-size:11px;white-space:nowrap}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;background:var(--card);border:1px solid var(--border);padding:14px;border-radius:13px;align-items:end;box-shadow:var(--shadow)}label{display:block;font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--blue2);margin-bottom:5px}input,select{padding:10px 11px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--ink);min-width:155px}input{flex:1;min-width:230px}button{border:0;border-radius:8px;padding:10px 13px;background:var(--blue);font-weight:900;color:white;cursor:pointer}.muted{color:var(--muted);font-size:11px}#count{margin:16px 0 11px}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}.card{background:var(--card);border:1px solid var(--border);border-radius:13px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}.visual{aspect-ratio:1.32;background:radial-gradient(ellipse at 30% 18%,#f9fcfc,#dcecef);display:grid;place-items:center;position:relative}.visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:radial-gradient(ellipse at 30% 18%,#f9fcfc,#dcecef)}.visual canvas{width:100%;height:100%;object-fit:contain}.card-body{padding:11px 12px;display:flex;flex-direction:column;gap:7px;flex:1}.code{font-weight:900;font-size:17px;letter-spacing:.01em}.desc{font-size:11px;line-height:1.45;min-height:34px;max-height:52px;overflow:hidden}.meta{display:flex;flex-wrap:wrap;gap:4px}.tag{border-radius:99px;padding:4px 7px;background:var(--bg);border:1px solid var(--border);font-size:9px;font-weight:800}.tag.photo{color:#166534;background:#dcfce7;border-color:#a7f3d0}.tag.unknown{color:#a45a13;background:#fff7ed;border-color:#fde68a}.tag.approx{color:#136d85;background:#e2f5fb;border-color:#b5e9f5}.action{margin-top:auto;color:var(--blue2);font-size:11px;font-weight:900;text-decoration:none;padding-top:8px}.action:hover{text-decoration:underline}.foot{display:flex;align-items:center;justify-content:center;gap:14px;padding:18px}.foot button{min-width:110px}.empty{padding:40px;text-align:center;color:var(--muted)}#error{display:none;background:#fef2f2;color:#991b1b;padding:14px;border-radius:8px;margin-top:15px}
+@media(max-width:700px){header{padding:12px;align-items:start}.intro{flex-direction:column}main{padding:13px}.toolbar{display:block}.toolbar>*{margin-bottom:8px}input,select{width:100%}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.card-body{padding:8px}.desc{font-size:10px}.visual{aspect-ratio:1}}
+</style>
+<script src="js/color_preview.js"></script>
+<script src="js/hole_preview.js"></script>
+</head>
+<body>
+<header><strong>Brasil <span>Botões</span> — Prévia de Cores</strong><nav class="head-actions"><a class="nav" href="index.html">Portal</a><a class="nav" href="automacao.html">Automação →</a></nav></header>
+<main>
+<div class="intro"><div><h1>Catálogo de cores · prévias ilustrativas</h1><p>Os desenhos são produzidos automaticamente a partir das descrições do <strong>Cores1.xlsx</strong>. Não representam medição RGB nem garantia do produto. Quando existe foto real cadastrada, mostramos a foto primeiro. Códigos com informação insuficiente ficam marcados para revisão.</p></div><span class="pill" id="total">Carregando…</span></div>
+<div class="toolbar"><div style="flex:2"><label for="search">Pesquisar código, descrição ou observação</label><input id="search" placeholder="C032, preto, rajado, tartaruga..." autocomplete="off"></div><div><label for="filter">Disponibilidade visual</label><select id="filter"><option value="all">Todas</option><option value="estimated">Prévia inferida</option><option value="unknown">Revisão necessária</option><option value="photo">Foto indexada</option><option value="no_photo">Sem foto cadastrada</option></select></div><div><label for="kind">Tipo de cor</label><select id="kind"><option value="all">Todos os tipos</option><option value="solid">Cor única</option><option value="border_core">Borda / fundo</option><option value="layered">Camadas</option><option value="marble">Rajado / mesclado</option><option value="tortoise">Tartaruga</option><option value="wood">Madeira</option><option value="gradient">Degradê</option><option value="transparent">Transparente</option><option value="unknown">Sem definição</option></select></div></div>
+<p id="count" class="muted"></p><div id="error"></div><section id="cards" class="cards"></section>
+<div class="foot"><button id="prev" type="button">← Anterior</button><span id="page" class="muted"></span><button id="next" type="button">Próxima →</button></div>
+</main>
+<script>
+let catalog={colors:{}}, overrides={colors:{}}, photos={},patterns={patterns:{}},list=[],page=0;
+const pageSize=42,el=id=>document.getElementById(id);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const kindName={solid:'Cor única',border_core:'Borda/fundo',layered:'Camadas',marble:'Rajado/mesclado',tortoise:'Tartaruga',wood:'Madeira',gradient:'Degradê',transparent:'Transparente',unknown:'Indefinida'};
+const load=async name=>{const r=await fetch(name);if(!r.ok)throw Error('Não foi possível ler '+name);return r.json()};
+async function init(){
+ try{[catalog,overrides,photos,patterns]=await Promise.all([
+  load('data/cores_catalogo.json'),load('data/cores_overrides.json'),load('data/pastilhas_fotos_index.json'),load('data/hole_patterns.json')]);
+  el('total').textContent=`${Object.keys(catalog.colors).length.toLocaleString('pt-BR')} códigos`;
+  ['search','filter','kind'].forEach(id=>el(id).addEventListener(id==='search'?'input':'change',()=>{page=0;filter()}));
+  el('prev').onclick=()=>{if(page>0){page--;render()}};
+  el('next').onclick=()=>{if((page+1)*pageSize<list.length){page++;render()}};
+  const q=new URLSearchParams(location.search);if(q.has('cor'))el('search').value=q.get('cor');filter();
+ }catch(e){el('error').style.display='block';el('error').textContent=e.message;console.error(e)}
+}
+function filter(){const term=el('search').value.trim().toUpperCase(),f=el('filter').value,k=el('kind').value;
+ list=Object.values(catalog.colors).filter(c=>{
+  const p=BBColorPreview.select(c.codigo,catalog,overrides).recipe;
+  const hasPhoto=!!photos[c.codigo]?.length;
+  if(term&&!([c.codigo,c.descricao,c.observacao,c.observacao_extra].join(' ').toUpperCase().includes(term)))return false;
+  if(k!=='all'&&p.kind!==k)return false;
+  if(f==='photo'&&!hasPhoto||f==='no_photo'&&hasPhoto||f==='estimated'&&p.confidence==='unknown'||f==='unknown'&&p.confidence!=='unknown')return false;
+  return true;
+ }).sort((a,b)=>a.codigo.localeCompare(b.codigo,'pt',{numeric:true}));render()}
+function render(){const slice=list.slice(page*pageSize,(page+1)*pageSize);
+ el('count').textContent=`${list.length.toLocaleString('pt-BR')} resultado(s) · exibindo ${list.length?page*pageSize+1:0}–${Math.min((page+1)*pageSize,list.length)}`;
+ el('page').textContent=`Página ${page+1} de ${Math.max(1,Math.ceil(list.length/pageSize))}`;
+ el('prev').disabled=page===0;el('next').disabled=(page+1)*pageSize>=list.length;
+ el('cards').innerHTML=slice.map(c=>{
+  const p=BBColorPreview.select(c.codigo,catalog,overrides).recipe;
+  const has=photos[c.codigo]?.length;
+  return `<article class="card" data-code="${esc(c.codigo)}"><div class="visual"><canvas width="240" height="185"></canvas>${has?`<img src="${esc(photos[c.codigo][0])}" alt="Amostra ${esc(c.codigo)}" loading="lazy" onerror="this.remove()">`:''}</div><div class="card-body"><span class="code">${esc(c.codigo)}</span><div class="desc" title="${esc(c.descricao)}">${esc(c.descricao||'Sem descrição')}</div><div class="meta"><span class="tag">${esc(kindName[p.kind]||p.kind)}</span>${has?'<span class="tag photo">Foto indexada</span>':p.confidence==='unknown'?'<span class="tag unknown">Revisar</span>':'<span class="tag approx">Estimativa</span>'}</div><a class="action" href="automacao.html?cor=${encodeURIComponent(c.codigo)}">Usar na Automação →</a></div></article>`;
+ }).join('')||'<div class="empty">Nenhuma cor encontrada.</div>';
+ const pat=patterns.patterns?.four_square;
+ el('cards').querySelectorAll('.card').forEach(card=>{const code=card.dataset.code,c=BBColorPreview.select(code,catalog,overrides),cv=card.querySelector('canvas');BBColorPreview.drawButton(cv,c.recipe,pat,code)});
+}
+init();
+</script>
+</body>
+</html>

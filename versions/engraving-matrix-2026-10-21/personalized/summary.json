@@ -1,0 +1,133 @@
+{
+  "case_count": 6,
+  "all_structural_checks_passed": true,
+  "contact_sheet": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\engraving_matrix_contact_sheet.png",
+  "cases": [
+    {
+      "reference": "13646",
+      "size_tam": 18,
+      "text": "LIA",
+      "font_family": "Arial",
+      "position_mm": [
+        -0.0,
+        5.386100386100386
+      ],
+      "rotation_degrees": -0.0,
+      "depth_mm": 0.35,
+      "vertices_before": 15914,
+      "vertices_after": 28455,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1682.646,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13646_tam_18_lia.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13646_tam_18_lia.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13646_tam_18_lia_inspection.png",
+      "passed_structural_checks": true
+    },
+    {
+      "reference": "13647",
+      "size_tam": 18,
+      "text": "NOAH",
+      "font_family": "Georgia",
+      "position_mm": [
+        -0.0,
+        -5.386100386100386
+      ],
+      "rotation_degrees": -0.0,
+      "depth_mm": 0.3,
+      "vertices_before": 15906,
+      "vertices_after": 44523,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1680.13,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13647_tam_18_noah.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13647_tam_18_noah.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13647_tam_18_noah_inspection.png",
+      "passed_structural_checks": true
+    },
+    {
+      "reference": "13648",
+      "size_tam": 18,
+      "text": "EVA",
+      "font_family": "Times New Roman",
+      "position_mm": [
+        2.9536679536679538,
+        4.517374517374518
+      ],
+      "rotation_degrees": 12.0,
+      "depth_mm": 0.4,
+      "vertices_before": 15890,
+      "vertices_after": 30320,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1926.429,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13648_tam_18_eva.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13648_tam_18_eva.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13648_tam_18_eva_inspection.png",
+      "passed_structural_checks": true
+    },
+    {
+      "reference": "13649",
+      "size_tam": 32,
+      "text": "MIGUEL",
+      "font_family": "Courier New",
+      "position_mm": [
+        -4.942084942084942,
+        8.957528957528957
+      ],
+      "rotation_degrees": -15.0,
+      "depth_mm": 0.5,
+      "vertices_before": 16178,
+      "vertices_after": 99492,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1673.231,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13649_tam_32_miguel.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13649_tam_32_miguel.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13649_tam_32_miguel_inspection.png",
+      "passed_structural_checks": true
+    },
+    {
+      "reference": "13654",
+      "size_tam": 24,
+      "text": "SOFIA",
+      "font_family": "Trebuchet MS",
+      "position_mm": [
+        -0.0,
+        6.949806949806949
+      ],
+      "rotation_degrees": -8.0,
+      "depth_mm": 0.45,
+      "vertices_before": 16066,
+      "vertices_after": 61219,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1525.865,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13654_tam_24_sofia.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13654_tam_24_sofia.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13654_tam_24_sofia_inspection.png",
+      "passed_structural_checks": true
+    },
+    {
+      "reference": "13659",
+      "size_tam": 32,
+      "text": "HELENA",
+      "font_family": "Arial",
+      "position_mm": [
+        4.633204633204634,
+        -8.957528957528957
+      ],
+      "rotation_degrees": 18.0,
+      "depth_mm": 0.55,
+      "vertices_before": 16170,
+      "vertices_after": 117695,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "render_variance": 1653.831,
+      "blend": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13659_tam_32_helena.blend",
+      "render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13659_tam_32_helena.png",
+      "inspection_render": "C:\\Users\\Aprendiz Financeiro\\Downloads\\Erick\\site\\versions\\engraving-matrix-2026-10-21\\personalized\\ref_13659_tam_32_helena_inspection.png",
+      "passed_structural_checks": true
+    }
+  ]
+}

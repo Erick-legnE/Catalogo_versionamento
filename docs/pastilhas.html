@@ -138,6 +138,30 @@
 
         .card:hover { transform: translateY(-4px); }
 
+        .face-pair {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: .35rem;
+            padding: .65rem;
+            background: linear-gradient(145deg, #f7fbfc, #e5eef1);
+            border-bottom: 1px solid var(--border);
+        }
+        .face-pair.single-face { grid-template-columns: 1fr; }
+        .face { min-width: 0; position: relative; margin: 0; }
+        .face img, .face-empty {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid rgba(15, 23, 42, .12);
+        }
+        .face-empty { display: grid; place-items: center; padding: .5rem; color: var(--text-muted); font-size: .7rem; text-align: center; }
+        .face figcaption { margin-top: .25rem; color: var(--text-muted); font-size: .68rem; font-weight: 900; text-align: center; text-transform: uppercase; letter-spacing: .05em; }
+        .color-description { margin-top: .25rem; color: var(--text-muted); font-size: .72rem; line-height: 1.3; }
+        .muted-face-note { margin-top: .25rem; color: var(--text-muted); font-size: .68rem; }
+
 .carousel-container {
     position: relative;
     width: 100%;
@@ -263,7 +287,7 @@
         let todosDados = [];
         let dadosFiltrados = [];
         let ponteiroAtual = 0;
-        const carouselStates = {};
+        let catalogoCores = { colors: {} };
 
         // System Dark Mode Preference & Storage Init
         if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -286,8 +310,12 @@
 
         async function carregarJSON() {
             try {
-                const res = await fetch('pastilhas.json');
-                todosDados = await res.json();
+                const [pastilhasRes, coresRes] = await Promise.all([
+                    fetch('pastilhas.json'),
+                    fetch('data/cores_catalogo.json')
+                ]);
+                todosDados = await pastilhasRes.json();
+                if (coresRes.ok) catalogoCores = await coresRes.json();
                 
                 // Read URL search params on load
                 const urlParams = new URLSearchParams(window.location.search);
@@ -308,6 +336,12 @@
             }
         }
 
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, ch => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[ch]));
+        }
+
         function renderizarLote(reset = false) {
             const grid = document.getElementById('pastilhas-grid');
             if (reset) {
@@ -326,24 +360,24 @@
 
             proximoLote.forEach((item, idxAbs) => {
                 const idx = ponteiroAtual + idxAbs;
-                const hasMultiple = item.imagens && item.imagens.length > 1;
-
+                const imagens = Array.isArray(item.imagens) ? item.imagens.slice(0, 2) : [];
+                const codigo = escapeHtml(item.cor_codigo);
+                const cor = catalogoCores.colors?.[String(item.cor_codigo || '').toUpperCase()] || {};
+                const descricao = cor.descricao || cor.observacao || '';
+                const faces = ['Frente', 'Verso'].map((label, faceIndex) => {
+                    const src = imagens.find((img, i) => {
+                        const name = String(img || '').toLowerCase();
+                        return faceIndex === 0 ? !/(verso|back)/.test(name) : /(verso|back)/.test(name);
+                    }) || imagens[faceIndex];
+                    return `<figure class="face">${src ? `<img src="${src}" alt="${item.cor_codigo} — ${label}" loading="${idx < 12 ? 'eager' : 'lazy'}">` : '<div class="face-empty">Sem foto</div>'}<figcaption>${label}</figcaption></figure>`;
+                }).join('');
                 const cardHtml = `
                     <div class="card">
-                        <div class="carousel-container">
-                            <div class="carousel-track" id="track-${idx}">
-                                ${item.imagens.map((img, i) => `
-                                    <img src="${img}" alt="${item.cor_codigo}" loading="${idx < 12 && i === 0 ? 'eager' : 'lazy'}">
-                                `).join('')}
-                            </div>
-                            ${hasMultiple ? `
-                                <button class="nav-btn prev" onclick="moveSlide(${idx}, -1)">❮</button>
-                                <button class="nav-btn next" onclick="moveSlide(${idx}, 1)">❯</button>
-                                <span class="photo-indicator" id="indicator-${idx}">1/${item.imagens.length}</span>
-                            ` : ''}
-                        </div>
+                        <div class="face-pair ${imagens.length < 2 ? 'single-face' : ''}">${faces}</div>
                         <div class="card-info">
-                            <div class="color-code">${item.cor_codigo}</div>
+                            <div class="color-code">${codigo}</div>
+                            ${descricao ? `<div class="color-description">${escapeHtml(descricao)}</div>` : ''}
+                            <div class="muted-face-note">Frente e verso da amostra</div>
                         </div>
                     </div>
                 `;
@@ -397,21 +431,6 @@
             }
 
             renderizarLote(true);
-        }
-
-        function moveSlide(cardIdx, direction) {
-            const track = document.getElementById(`track-${cardIdx}`);
-            const indicator = document.getElementById(`indicator-${cardIdx}`);
-            if (!track) return;
-
-            const totalImages = track.children.length;
-            if (!(cardIdx in carouselStates)) carouselStates[cardIdx] = 0;
-
-            carouselStates[cardIdx] = (carouselStates[cardIdx] + direction + totalImages) % totalImages;
-            const currentIdx = carouselStates[cardIdx];
-
-            track.style.transform = `translateX(-${currentIdx * 100}%)`;
-            if (indicator) indicator.textContent = `${currentIdx + 1}/${totalImages}`;
         }
 
         // IntersectionObserver for Infinite Scroll
